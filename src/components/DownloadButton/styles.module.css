@@ -1,0 +1,14 @@
+.downloadButtonsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.downloadButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  fill: var(--ifm-button-color);
+}

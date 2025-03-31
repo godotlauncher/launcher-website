@@ -1,0 +1,64 @@
+name: "🐛 Website Bug Report"
+description: Report an issue on the official Godot Launcher website
+title: "[Website Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a website issue! Please fill in the details below so we can fix it quickly.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "What's broken?"
+      description: Describe the bug or issue you encountered.
+      placeholder: "The footer link to the GitHub repo leads to a 404 page."
+    validations:
+      required: true
+
+  - type: input
+    id: page
+    attributes:
+      label: "Page or URL"
+      description: Paste the exact page or section where the issue appears.
+      placeholder: "https://godotlauncher.org/community"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: "What did you expect to happen?"
+      description: Tell us what you expected instead of the bug.
+      placeholder: "I expected the GitHub link to go to the launcher repo."
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: "Screenshot (optional)"
+      description: Add a screenshot if the issue is visual (e.g., layout or styling problems).
+      placeholder: "Drag and drop or paste image links here"
+
+  - type: input
+    id: browser
+    attributes:
+      label: "Browser & Version"
+      placeholder: "e.g. Chrome 123.0, Safari 17.2"
+    validations:
+      required: false
+
+  - type: input
+    id: os
+    attributes:
+      label: "Operating System"
+      placeholder: "e.g. Windows 11, macOS Sonoma, Android 14"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: log_consent
+    attributes:
+      label: "If more info is needed..."
+      options:
+        - label: I'm willing to help debug or test if needed

@@ -1,0 +1,54 @@
+name: "✨ Website Feature Request"
+description: Suggest a new idea or improvement for the Godot Launcher website
+title: "[Website Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea to improve the Godot Launcher website? We'd love to hear it!
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: "What's the feature or improvement?"
+      description: Describe the idea or suggestion clearly.
+      placeholder: "I'd like to see a section for..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: "Why is this useful?"
+      description: Let us know what problem this solves or why it would be valuable to users.
+      placeholder: "This would make it easier for people to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: "What would it look like?"
+      description: Describe how you imagine it working or looking. Include ideas, layout, or behavior if relevant.
+      placeholder: "Maybe a card layout with..."
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: "What part of the site does this affect?"
+      multiple: true
+      options:
+        - Content or copywriting
+        - Layout or design
+        - Navigation or menus
+        - Accessibility or performance
+        - Blogs
+        - Other (explain above)
+
+  - type: textarea
+    id: references
+    attributes:
+      label: "Additional context or examples"
+      description: Add screenshots, links, or references that help support your idea.
+      placeholder: "e.g. a similar section from another project, or a quick sketch"

@@ -1,0 +1,38 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.ctaBanner {
+  padding: 4rem 0;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  min-height: 200px;
+}
+
+.ctaTitle {
+  font-size: 2rem;
+}
+
+.heroLink {
+  color: var(--ifm-color-base);
+  text-decoration: underline;
+}
+
+.heroLink:hover {
+  color: var(--ifm-color-base);
+  text-decoration: underline;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}

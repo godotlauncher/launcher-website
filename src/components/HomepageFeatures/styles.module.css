@@ -1,0 +1,77 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.features strong {
+  color: var(--ifm-color-primary);
+}
+
+.featureImageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding: 16px;
+
+  overflow: hidden;
+}
+
+.featureImage {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+}
+
+.featureImage__quickSetup {
+  background-image: url('/img/features/Quick_Project_Setup_Light.webp');
+
+}
+
+[data-theme='dark'] .featureImage__quickSetup {
+  background-image: url('/img/features/Quick_Project_Setup_Dark.webp');
+}
+
+.featureImage__effortlessVersionManagement {
+  background-image: url('/img/features/Effortless_Godot_Version_Management_Light.webp');
+}
+
+[data-theme='dark'] .featureImage__effortlessVersionManagement {
+  background-image: url('/img/features/Effortless_Godot_Version_Management_Dark.webp');
+}
+
+.featureImage__perProjectEditorSettings {
+  background-image: url('/img/features/Per_Project_Editor_Settings_Light.webp');
+}
+
+[data-theme='dark'] .featureImage__perProjectEditorSettings {
+  background-image: url('/img/features/Per_Project_Editor_Settings_Dark.webp');
+}
+
+.featureImage__quickEditFromSystemTray {
+  background-image: url('/img/features/Quick_Edit_From_System_Tray_Light.webp');
+}
+
+[data-theme='dark'] .featureImage__quickEditFromSystemTray {
+  background-image: url('/img/features/Quick_Edit_From_System_Tray_Dark.webp');
+}
+
+.featureImage__automaticUpdates {
+  background-image: url('/img/features/Automatic_Updates_Light.webp');
+}
+
+[data-theme='dark'] .featureImage__automaticUpdates {
+  background-image: url('/img/features/Automatic_Updates_Dark.webp');
+}
+
+.featureImage__crossPlatform {
+  background-image: url('/img/features/Cross_Platform_Light.webp');
+}
+
+[data-theme='dark'] .featureImage__crossPlatform {
+  background-image: url('/img/features/Cross_Platform_Dark.webp');
+}

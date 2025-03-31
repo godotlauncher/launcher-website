@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+
+  --ifm-color-primary: #f06449;
+  --ifm-color-primary-dark: #ee4b2c;
+  --ifm-color-primary-darker: #ec3f1e;
+  --ifm-color-primary-darkest: #ca2f11;
+  --ifm-color-primary-light: #f27d66;
+  --ifm-color-primary-lighter: #f48974;
+  --ifm-color-primary-lightest: #f7aea0;
+
+  --ifm-background-color: #eeeeee;
+
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  --ifm-heading-font-family: 'Nunito Sans', sans-serif;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+
+
+  --ifm-color-primary: #f06449;
+  --ifm-color-primary-dark: #ee4b2c;
+  --ifm-color-primary-darker: #ec3f1e;
+  --ifm-color-primary-darkest: #ca2f11;
+  --ifm-color-primary-light: #f27d66;
+  --ifm-color-primary-lighter: #f48974;
+  --ifm-color-primary-lightest: #f7aea0;
+
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Noto Sans", sans-serif;
+  /* font-size: 18px; */
+}
+
+
+.navbar__item.navbar__link.button {
+  margin-right: 18px;
+  font-weight: 500;
+  font-size: 1rem;
+
+}
+
+.navbar__item.navbar__link.button:hover {
+  color: var(--ifm-button-color);
+}
+
+.secondary-tagline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  text-align: center;
+
+}
+
+.secondary-tagline h2 {
+  line-height: 150%;
+  font-weight: 600;
+  font-size: 30px;
+  margin: 0;
+}
+
+.secondary-tagline p {
+  max-width: 500px;
+  font-size: 20px;
+  margin-top: 16px;
+}
+
+@media screen and (max-width: 996px) {
+  .secondary-tagline {
+    text-align: center;
+    align-items: center;
+    margin: 32px 0;
+  }
+}
