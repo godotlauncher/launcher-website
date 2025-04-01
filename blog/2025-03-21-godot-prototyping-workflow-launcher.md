@@ -18,6 +18,7 @@ tags:
 ### (And Why I Open-Sourced Godot Launcher)
 
 As someone who loves making games, fresh ideas and mechanics frequently pop into my head. The challenge? Quickly testing these new ideas in isolation is part of how I approach prototyping in Godot. For example, I might want to experiment with a unique inventory system separately first. This approach lets me see if the idea enhances my main project without cluttering or complicating it. It also forces me to design systems that are reusable from the get-go.
+
 <!-- truncate -->
 
 Sometimes clients or collaborators request specific systems developed independently, making integration simpler down the line. Other times, experimenting with the latest Godot versions helps me safely explore new features or improvements. If something doesn't work out, I can easily revert to an earlier version without disruption.
@@ -39,6 +40,7 @@ But there's a downside: setting up new Godot projects repeatedly can become tedi
 Doing this once isn't an issue—but when done repeatedly, it quickly becomes cumbersome.
 
 ## Enter Godot Launcher
+
 ![Godot Launcher project creation screen](/img/blog/images/launcher-new-project-ui.webp)
 Initially, I wrote PowerShell scripts to speed up project setup, complete with standalone editor mode options. However, as I began working on a Mac (because building for Mac requires a Mac), maintaining cross-platform compatibility became increasingly complex. When others tried my scripts, they often struggled with configuration and platform-specific quirks, which created additional support overhead.
 
@@ -55,7 +57,6 @@ With Godot Launcher, each project automatically has dedicated editor settings, G
 After privately using Godot Launcher, I received great feedback from early users who found it dramatically improved their workflow. Inspired by their experiences, I decided to expand the tool and give back to the incredibly generous Godot community. If we found it helpful, chances are many others would too. So naturally, I open-sourced it!
 You can explore the source code or contribute on [GitHub](https://github.com/godotlauncher/launcher).
 
-
 I hope you find Godot Launcher useful and continue sharing your passion and ideas within the Godot community.
 
 ## Give It a Spin!
@@ -63,4 +64,3 @@ I hope you find Godot Launcher useful and continue sharing your passion and idea
 If you're someone like me—constantly juggling ideas and seeking a smoother workflow—check out [Godot Launcher](https://godotlauncher.org). It's completely open-source, community-driven, and frankly, makes prototyping in Godot fun and frustration-free again.
 
 Happy prototyping!
-

@@ -3,37 +3,52 @@ godot:
   permalink: /godot
   description: Godot related posts
 
-"godot-launcher":
+'godot-launcher':
   label: Godot Launcher
   permalink: /godot-launcher
   description: Posts about the Godot Launcher open-source tool
 
-"godot-workflow":
+'godot-workflow':
   label: Godot Workflow
   permalink: /godot-workflow
   description: Posts on improving development workflows in Godot
 
-"godot-project-setup":
+'godot-project-setup':
   label: Godot Project Setup
   permalink: /godot-project-setup
   description: Posts about creating and organizing Godot projects
 
-"prototyping-in-godot":
+'prototyping-in-godot':
   label: Prototyping in Godot
   permalink: /prototyping-in-godot
   description: Tips and tools for fast game prototyping using Godot
 
-"game-development":
+'game-development':
   label: Game Development
   permalink: /game-development
   description: General game dev tips, tools, and workflows
 
-"indie-game-dev":
+'indie-game-dev':
   label: Indie Game Dev
   permalink: /indie-game-dev
   description: Indie-focused game development posts and stories
 
-"open-source-tools":
+'open-source-tools':
   label: Open Source Tools
   permalink: /open-source-tools
   description: Posts about open source software for developers
+
+'vscode':
+  label: Visual Studio Code
+  permalink: /vscode
+  description: Posts about using Visual Studio Code with Godot
+
+'quality-of-life':
+  label: Quality of Life
+  permalink: /quality-of-life
+  description: Posts about features and tips that improve developer workflows with Godot
+
+'release':
+  label: Release
+  permalink: /release
+  description: Posts about Godot Launcher releases and updates
