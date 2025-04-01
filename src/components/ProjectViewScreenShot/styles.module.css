@@ -3,38 +3,43 @@
 }
 
 [data-theme='dark'] .projectView__image-mac {
-  max-width: 1704px;
+  max-width: 1010px;
+  aspect-ratio: 1.595;
   background: url(/img/Project_views/mac_screen_project_view_dark.webp);
 }
 
 [data-theme='light'] .projectView__image-mac {
-  max-width: 1704px;
+  max-width: 1010px;
+  aspect-ratio: 1.595;
   background: url(/img/Project_views/mac_screen_project_view_light.webp);
 }
 
 [data-theme='dark'] .projectView__image-linux {
-  max-width: 1052px;
+  max-width: 1010px;
+  aspect-ratio: 1.579;
   background: url(/img/Project_views/linux_screen_project_view_dark.webp);
 }
 
 [data-theme='light'] .projectView__image-linux {
-  max-width: 1052px;
+  max-width: 1010px;
+  aspect-ratio: 1.579;
   background: url(/img/Project_views/linux_screen_project_view_light.webp);
 }
 
 [data-theme='dark'] .projectView__image-windows {
   max-width: 1010px;
+  aspect-ratio: 1.7;
   background: url(/img/Project_views/win_screen_project_view_dark.webp);
 }
 
 [data-theme='light'] .projectView__image-windows {
   max-width: 1010px;
+  aspect-ratio: 1.7;
   background: url(/img/Project_views/win_screen_project_view_light.webp);
 }
 
+
 .projectView .projectView__image {
-  aspect-ratio: 1.49;
-  max-width: 1024px;
   margin: 0 auto;
   background-position: center center;
   background-size: contain;
