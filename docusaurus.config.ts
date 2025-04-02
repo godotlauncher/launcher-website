@@ -24,7 +24,7 @@ const config: Config = {
   organizationName: "godotlauncher", // Usually your GitHub org/user name.
   projectName: "launcher-website", // Usually your repo name.
 
-  onBrokenLinks: "warn",
+  onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
 
   baseUrlIssueBanner: false,
