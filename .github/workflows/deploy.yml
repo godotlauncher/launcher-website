@@ -39,6 +39,7 @@ jobs:
     permissions:
       pages: write # to deploy to Pages
       id-token: write # to verify the deployment originates from an appropriate source
+      contents: write # to create a tag
 
     # Deploy to the github-pages environment
     environment:
@@ -50,3 +51,16 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      
+      - name: Tag the source with package.json version
+        # Only run if the deployment is successful
+        if: success() 
+        run: |
+          VERSION=$(jq -r '.version' package.json)
+          TAG_NAME="v$VERSION"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git tag $TAG_NAME
+          git push origin $TAG_NAME
+        env:
+          GITHUB_TOKEN: ${{ secrets.SEC_GITHUB_TOKEN }}

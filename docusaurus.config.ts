@@ -24,8 +24,10 @@ const config: Config = {
   organizationName: "godotlauncher", // Usually your GitHub org/user name.
   projectName: "launcher-website", // Usually your repo name.
 
-  onBrokenLinks: "warn",
+  onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
+
+  baseUrlIssueBanner: false,
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
