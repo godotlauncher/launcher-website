@@ -1,6 +1,8 @@
 ---
 slug: godot-prototyping-workflow-launcher
 title: Fast Godot Prototyping with Godot Launcher
+description: Streamline your Godot prototyping workflow with Godot Launcher. Learn how this open-source tool simplifies project setup, version control, and editor configuration for game developers.
+image: https://godotlauncher.org/img/Project_views/mac_screen_project_view_dark.webp
 authors: [mariodebono]
 tags:
   - godot
