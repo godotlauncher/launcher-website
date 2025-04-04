@@ -17,6 +17,21 @@ export default function Faqs(): ReactNode {
         'Yes! Godot Launcher is completely free and open-source under the MIT license. You can use, modify, and contribute to it.',
     },
     {
+      question: 'How is Godot Launcher different from downloading Godot manually?',
+      answer:
+        'Godot Launcher simplifies the process of downloading and managing different versions of Godot, directly from the launcher (see: https://docs.godotlauncher.org/getting-started/install-editor/) making it easier to switch between them without manual installation.',
+      answerHTML: (
+        <>Godot Launcher simplifies the process of downloading and managing different versions of Godot, directly from the launcher (see: <Link href="https://docs.godotlauncher.org/getting-started/install-editor/">Installing an Editor</Link>) making it easier to switch between them without manual installation.</>
+      )
+    },
+    {
+      question: "Does it work offline?",
+      answer: "Yes, once you have downloaded the Godot versions you need, you can use them offline.",
+      answerHTML: (
+        <>Yes, once you have downloaded the Godot versions you need, you can use them offline.</>
+      )
+    },
+    {
       question: 'Which platforms does it support?',
       answer:
         'Godot Launcher is cross-platform and supports Windows, macOS, and Linux.',
@@ -55,9 +70,12 @@ export default function Faqs(): ReactNode {
         'Each project maintains dedicated settings, preventing conflicts between different projects. This ensures that project-specific configurations remain isolated. Godot Launcher achieves this by running Godot Editor in Self-Contained mode: Windows & macOS: Each project includes a copy of the selected Godot Editor version. Linux: A symbolic link to the editor is used instead. We are working on improving this feature to provide a more seamless experience with symbolic links on all platforms.',
     },
     {
-      question: 'Can I add existing Godot projects to the launcher?',
+      question: 'Can I use Godot Launcher with existing projects?',
       answer:
-        'Yes! Godot Launcher allows you to add existing projects, so you can manage them just like newly created ones. Simply use the "Add" button in the launcher projects to include your project and take advantage of version management, isolated settings, and other features.',
+        "Absolutely. Just use the 'Add' button to bring in any existing Godot project and assign it a specific engine version.",
+      answerHTML: (
+        <>Absolutely. Just use the 'Add' button to bring in any existing Godot project and assign it a specific engine version.</>
+      )
     },
     {
       question: 'Where can I find my project settings?',
