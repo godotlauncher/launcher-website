@@ -1,4 +1,4 @@
-import { FC, Fragment } from "react";
+import { FC, Fragment, JSX } from "react";
 import Heading from "@theme/Heading";
 
 interface FAQStructuredDataProps {
@@ -7,7 +7,7 @@ interface FAQStructuredDataProps {
         questions: {
             question: string;
             answer: string;
-            answerHTML?: string;
+            answerHTML?: JSX.Element;
         }[];
     }[];
 }
