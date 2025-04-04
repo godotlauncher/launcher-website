@@ -13,10 +13,10 @@ export const HomepageHeader: FC = () => {
   return (
     <header className={clsx('hero shadow--lw', styles.heroBanner)}>
       <div className="container">
-        <Heading as="h1" className="hero__title">
+        <Heading as="h1" className={clsx("hero__title", styles.hero__title)}>
           {siteConfig.title}
         </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className={clsx("hero__subtitle", styles.hero__subtitle)}>{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <HeroDownloadButton color="primary" />
         </div>

@@ -31,4 +31,8 @@
   .heroBanner {
     padding: 2rem;
   }
+
+  .hero__subtitle {
+    font-size: 1.3rem;
+  }
 }
