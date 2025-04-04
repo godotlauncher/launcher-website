@@ -14,23 +14,32 @@ const ration = 291 / 286;
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Quick Project Setup',
-    // Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    imageClassName: styles.featureImage__quickSetup,
-    size: { width: 300, height: 234 },
-    description: (
-      <>
-        Start a new project and have VSCode & Git automatically initialized, complete with an initial commit. No extra steps required.
-      </>
-    ),
-  },
-  {
     title: 'Effortless Godot Version Management',
     imageClassName: styles.featureImage__effortlessVersionManagement,
     size: { width: 300, height: 234 },
     description: (
       <>
-        Seamlessly download and manage multiple Godot Editor versions. Experiment with the latest pre-releases, or fall back to stable editions in seconds.
+        Easily <strong>download and manage multiple Godot Engine versions</strong> in one place. Switch between stable releases and experimental builds with just a few clicks — no manual installs needed.
+      </>
+    ),
+  },
+  {
+    title: 'Cross-Platform Godot Downloads',
+    imageClassName: styles.featureImage__crossPlatform,
+    size: { width: 300, height: 234 },
+    description: (
+      <>
+        Download and launch Godot on <strong>Windows, macOS, and Linux</strong>. The Launcher works wherever you develop, with full support for all major operating systems.
+      </>
+    ),
+  },
+  {
+    title: 'Quick Project Setup with Git & VSCode',
+    imageClassName: styles.featureImage__quickSetup,
+    size: { width: 300, height: 234 },
+    description: (
+      <>
+        Start a new Godot project instantly with <strong>Git and VSCode initialized automatically</strong>. Your repo is ready to go with an initial commit — no extra setup required.
       </>
     ),
   },
@@ -40,17 +49,17 @@ const FeatureList: FeatureItem[] = [
     size: { width: 300, height: 234 },
     description: (
       <>
-        Each project can maintain its own editor preferences, so you never have to worry about conflicting settings across multiple projects.
+        Keep your editor preferences isolated per project. Godot Launcher ensures <strong>no conflicting settings</strong>, no matter how many projects you're working on.
       </>
     ),
   },
   {
-    title: 'Quick Edit from System Tray',
+    title: 'Quick Access from System Tray',
     imageClassName: styles.featureImage__quickEditFromSystemTray,
     size: { width: 300, height: 234 },
     description: (
       <>
-        Jump back into any project with a single click—no need to relaunch or sift through folders. This keeps your creative flow uninterrupted and ready at a moment’s notice.
+        Instantly reopen recent projects from the system tray. <strong>No need to relaunch Godot manually</strong> or browse folders — stay in the flow.
       </>
     ),
   },
@@ -60,17 +69,7 @@ const FeatureList: FeatureItem[] = [
     size: { width: 300, height: 234 },
     description: (
       <>
-        Receive notifications whenever a new version of the launcher is available, so you’re always up to date with the latest features and improvements.
-      </>
-    ),
-  },
-  {
-    title: 'Cross-Platform Support',
-    imageClassName: styles.featureImage__crossPlatform,
-    size: { width: 300, height: 234 },
-    description: (
-      <>
-        Fully supported for those developing on <strong>Windows</strong>, <strong>macOS</strong>, and <strong>Linux</strong>. No matter your operating system, the Godot Launcher has you covered.
+        Stay up to date with the latest improvements. The Launcher <strong>notifies you when new versions are available</strong>, so you're always running the best version of Godot.
       </>
     ),
   },
