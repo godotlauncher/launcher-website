@@ -26,7 +26,7 @@ export const HeroDownloadButton: FC<HeroDownloadButtonProps> = ({ className, col
   }
   else {
     return (
-      <Link to="/download" className={clsx("button button--secondary button--lg", styles.downloadButton)}>Download Godot Launcher</Link>
+      <Link to="/download" className={clsx("button button--primary button--lg", styles.downloadButton)}>Download Godot Launcher</Link>
     );
   }
 
