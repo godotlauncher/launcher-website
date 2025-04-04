@@ -10,7 +10,7 @@ const config: Config = {
   title: "The Companion App for Godot Engine",
 
   tagline:
-    "A standalone app to streamline editor downloads, manage multiple versions, and automate new project setups—so you can focus on building great games.",
+    "A standalone app to streamline Godot downloads, manage multiple Godot versions, and automate new project setups—so you can focus on building great games.",
   favicon: "img/favicon-16x16.png",
 
   // Set the production url of your site here
