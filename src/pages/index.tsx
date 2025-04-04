@@ -26,8 +26,8 @@ export default function Home(): ReactNode {
       <main>
         <ProjectViewScreenShot />
         <div className="container secondary-tagline ">
-          <Heading as="h2">Launch Godot Projects Without the Overhead</Heading>
-          <p>A streamlined tool designed to help you focus on creating incredible Godot projects instead of wrestling with setup and configuration.</p>
+          <Heading as="h2">Why use Godot Launcher?</Heading>
+          <p>Godot Launcher is a companion app for Godot Engine. It simplifies the Godot download experience by allowing you to install, and switch between multiple Godot versions without hassle.</p>
         </div>
         <HomepageFeatures />
         <CTADownload />
