@@ -21,7 +21,7 @@ export const HomepageHeader: FC = () => {
           <HeroDownloadButton color="primary" />
         </div>
 
-        <p>Looking for <Link className={styles.heroLink} to="/download/archive">older versions</Link>?</p>
+        <p>Available for Windows, macOS, and Linux. Looking for <Link className={styles.heroLink} to="/download/archive">older versions</Link>?</p>
 
       </div>
     </header>
