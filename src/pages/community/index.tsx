@@ -7,11 +7,14 @@ export default function Community(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
 
   return (
-    <Layout title="Community - Godot Launcher" description="Discover and connect with the Godot Launcher community. Join discussions, share ideas, and collaborate with fellow users and developers.">
+    <Layout
+      title="Community - Godot Launcher"
+      description="Discover and connect with the Godot Launcher community. Join discussions, share ideas, and collaborate with fellow users and developers."
+    >
       <div className="container">
         <main className="padding-vert--lg">
           <section className="padding-vert--lg">
-            <h2>Official Community</h2>
+            <h1>Official Community</h1>
             <div className="card_discord col col--4 ">
               <div className="card">
                 <div className="card__header">
