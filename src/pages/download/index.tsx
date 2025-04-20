@@ -22,7 +22,7 @@ export default function DownloadPage() {
 
   return (
     <Layout
-      title="Godot Download Made Easy – Get Godot Launcher"
+      title="Godot Download Made Easy – Get The Launcher"
       description="Easily download and manage Godot Engine versions with Godot Launcher. One simple tool to install and run any Godot version. Free, open source, and cross-platform."
     >
       <header className={clsx("hero shadow--lw", styles.heroBanner)}>

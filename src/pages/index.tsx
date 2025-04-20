@@ -16,7 +16,10 @@ export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
 
   return (
-    <Layout title="Godot Launcher" description={siteConfig.tagline}>
+    <Layout
+      title="The Companion App for Godot Engine"
+      description={siteConfig.tagline}
+    >
       <Head>
         <script type="application/ld+json">
           {JSON.stringify({
