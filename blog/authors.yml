@@ -1,9 +1,19 @@
 mariodebono:
   name: Mario Debono
-  title: Godot Launcher maintainer
+  title: Godot Launcher Maintainer
   url: https://github.com/godotlauncher
   image_url: https://www.gravatar.com/avatar/c62d077a0f1cd52240bca735abac5224?size=128
   page: true
   socials:
     x: _mariodebono
     github: mariodebono
+    bluesky: mariodebono.bsky.social
+
+paulskii:
+  name: Jean Paul Grech
+  title: Godot Launcher Contributor - UX/UI Designer
+  url: https://www.paulskii.com/
+  image_url: https://images.squarespace-cdn.com/content/v1/5cd70264b10f252dce370cfe/cf0ef580-d840-44fa-a79f-f1acce9a7389/paulskii-2024-logo.png?format=128w
+  page: true
+  socials:
+    www: https://www.paulskii.com/
