@@ -15,9 +15,7 @@ tags:
   - open-source-tools
 ---
 
-# My Fast and Friendly Godot Prototyping Workflow
-
-### (And Why I Open-Sourced Godot Launcher)
+## My Fast and Friendly Godot Prototyping Workflow (And Why I Open-Sourced Godot Launcher)
 
 As someone who loves making games, fresh ideas and mechanics frequently pop into my head. The challenge? Quickly testing these new ideas in isolation is part of how I approach prototyping in Godot. For example, I might want to experiment with a unique inventory system separately first. This approach lets me see if the idea enhances my main project without cluttering or complicating it. It also forces me to design systems that are reusable from the get-go.
 
