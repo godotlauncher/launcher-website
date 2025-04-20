@@ -9,7 +9,6 @@ tags:
   - godot-workflow
   - godot-project-setup
   - quality-of-life
-  - release
   - open-source-tools
 ---
 
@@ -71,7 +70,7 @@ As part of this update, we also improved the visual clarity of the existing badg
 - **(c#)** for projects using .NET
 - **(pr)** for pre-release projects
 
-[All badges](https://docs.godotlauncer.org/project-badges/) now include tooltips when you hover over them, making the interface clearer and more informative at a glance. This is part of our ongoing effort to improve usability across the launcher.
+[All badges](https://docs.godotlauncher.org/project-badges/) now include tooltips when you hover over them, making the interface clearer and more informative at a glance. This is part of our ongoing effort to improve usability across the launcher.
 
 ## Using Godot 4.4 or Above?
 
@@ -89,7 +88,7 @@ The best way to download and manage **Godot Editor** versions is through the **G
 
 To take advantage of this new feature, just look for the update notification in the launcher and update to 1.2.0.
 
-If you're not using the launcher yet, this is a great reason to start. Get Godot Launcher from [godotlauncher.org/download](https://godotlauncher.org/download).
+If you're not using the launcher yet, this is a great reason to start. Get Godot Launcher from [https://godotlauncher.org/download](/download/).
 
 ## Documentation and Guides
 
@@ -105,7 +104,7 @@ It explains how the launcher integrates with this change for Godot 4.4+.
 - Godot Launcher 1.2.0 adds an **optional per-project "Open Windowed" setting**.
 - This removes the need to always open in a window, giving users more flexibility.
 - You can launch projects from either the **Launcher main window** or the **system tray**.
-- [Project Badges](https://docs.godotlauncer.org/project-badges/) visual indicators for (c#), (pr), and (w) now include tooltips.
-- Download the latest launcher at: [https://godotlauncher.org/download/](https://godotlauncher.org/download/)
+- [Project Badges](https://docs.godotlauncher.org/project-badges/) visual indicators for (c#), (pr), and (w) now include tooltips.
+- Download the latest launcher at: [https://godotlauncher.org/download/](/download/)
 
 With these updates, **launching Godot projects** is more intuitive, flexible, and user-friendly than ever.
