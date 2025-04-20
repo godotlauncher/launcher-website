@@ -7,7 +7,7 @@ import "dotenv/config";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "The Companion App for Godot Engine",
+  title: "Godot Launcher",
 
   tagline:
     "A standalone app to streamline Godot downloads, manage multiple Godot versions, and automate new project setups—so you can focus on building great games.",
@@ -38,9 +38,7 @@ const config: Config = {
     locales: ["en"],
   },
 
-  plugins: [
-    require.resolve("./plugins/github-releases"),
-  ],
+  plugins: [require.resolve("./plugins/github-releases")],
   presets: [
     [
       "classic",
@@ -51,9 +49,10 @@ const config: Config = {
           routeBasePath: "/blog",
           showReadingTime: true,
           blogTitle: "Godot Launcher Blog",
-          blogDescription: "Stay up to date with the latest news and updates from the Godot Launcher team.",
-          blogSidebarTitle: 'All posts',
-          blogSidebarCount: 'ALL',
+          blogDescription:
+            "Stay up to date with the latest news and updates from the Godot Launcher team.",
+          blogSidebarTitle: "All posts",
+          blogSidebarCount: "ALL",
         },
         pages: {
           path: "./src/pages",

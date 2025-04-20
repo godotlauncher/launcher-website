@@ -8,7 +8,7 @@ export default function Community(): ReactNode {
 
   return (
     <Layout
-      title="Community - Godot Launcher"
+      title="Community"
       description="Discover and connect with the Godot Launcher community. Join discussions, share ideas, and collaborate with fellow users and developers."
     >
       <div className="container">
