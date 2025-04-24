@@ -4,6 +4,7 @@ slug: launch-godot-projects-windowed-mode
 description: Learn how the new Godot Launcher 1.2.0 makes it optional to launch Godot projects in windowed mode, taking full advantage of Godot 4.4’s new window size and position memory.
 authors: [mariodebono]
 date: 2025-04-20 13:02:54
+image: /img/blog/images/godot-launcher-project-windowed-mode-ui-anim.gif
 tags:
   - godot
   - godot-launcher
