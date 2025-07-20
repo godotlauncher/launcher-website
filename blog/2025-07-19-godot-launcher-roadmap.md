@@ -5,14 +5,14 @@ authors: [mariodebono]
 tags:
   ['godot-launcher', 'release', 'open-source-tools', 'quality-of-life', 'godot']
 slug: /godot-launcher-roadmap
-image: /img/blog/images/godot-launcher-roadmap-og.png
+image: /img/blog/images/Godot-Launcher-Roadmap-og.png
 ---
 
 > The Godot Launcher just got a public roadmap. Here's why it matters and how you can follow along.
 
 <!-- truncate -->
 
-![Overview of the public roadmap for Godot Launcher](/img/blog/images/godot-launcher-roadmap-og.png)
+![Overview of the public roadmap for Godot Launcher](/img/blog/images/Godot-Launcher-Roadmap-og.png)
 
 ---
 
