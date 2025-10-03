@@ -33,4 +33,5 @@ Grab the latest release from the [GitHub Releases page](https://github.com/godot
 
 ---
 
-Found a bug or want to suggest something? [Open an issue](https://github.com/godotlauncher/launcher/issues).
+💡 Found a bug or have feedback? [Open an issue](https://github.com/godotlauncher/launcher/issues) or join the conversation on [Discord](https://discord.gg/Ju9jkFJGvz).
+
