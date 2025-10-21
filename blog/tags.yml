@@ -67,3 +67,10 @@ godot:
   label: Branding
   permalink: /branding
   description: Posts about branding strategies and visual identity
+
+"localisation":
+  label: Localisation
+  permalink: /localisation
+  description: Posts about translating and localising Godot Launcher
+
+

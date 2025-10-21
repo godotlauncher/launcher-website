@@ -141,6 +141,7 @@ const config: Config = {
                         { label: "Blog", to: "/blog" },
                         { label: "FAQs", to: "/faq" },
                         { label: "Contribute", to: "/contribute" },
+                        { label: "Contribute Translations", to: "/contributing/translations" },
                         { label: "Community", to: "/community" },
                         { label: "Roadmap", href: "https://github.com/orgs/godotlauncher/projects/1" },
                     ],

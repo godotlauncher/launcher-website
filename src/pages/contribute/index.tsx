@@ -109,16 +109,22 @@ export default function Contribute(): ReactNode {
               file.
             </li>
             <li>
-              <strong>🌎 Translations:</strong> We aim to make Godot Launcher
-              accessible to users around the world. If you're fluent in another
-              language and want to help translate the launcher, please join our{" "}
+              <strong>🌎 Translations:</strong> The launcher now ships with 14
+              locales, and we’re ready to keep expanding. If you’re fluent in
+              another language, check the{" "}
+              <Link to="/contributing/translations" title="Read the translation contribution guide">
+                translation contribution guide
+              </Link>{" "}
+              for tips on reviewing existing strings or adding a brand-new
+              locale. You can still drop into our{" "}
               <Link to="/community" title="Join our community">
                 community
               </Link>{" "}
-              and let us know!
+              to coordinate efforts or ask questions.
               <p className="alert alert--info margin-top--md">
-                We are also looking for developers to help us implement the
-                translations in the launcher
+                Developers interested in the technical side will find links to
+                the localisation docs, test suite, and pull request checklist in
+                the guide as well.
               </p>
             </li>
           </ul>
