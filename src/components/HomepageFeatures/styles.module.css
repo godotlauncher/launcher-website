@@ -9,6 +9,10 @@
   color: var(--ifm-color-primary);
 }
 
+.featureRow {
+  justify-content: center;
+}
+
 .featureImageContainer {
   display: flex;
   flex-direction: column;
@@ -74,4 +78,12 @@
 
 [data-theme='dark'] .featureImage__crossPlatform {
   background-image: url('/img/features/Cross_Platform_Dark.webp');
+}
+
+.featureImage__multilingualInterface {
+  background-image: url('/img/features/Multilingual_Interface_Light.webp');
+}
+
+[data-theme='dark'] .featureImage__multilingualInterface {
+  background-image: url('/img/features/Multilingual_Interface_Dark.webp');
 }
