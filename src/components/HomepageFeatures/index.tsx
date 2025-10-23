@@ -34,6 +34,16 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
+    title: 'Multilingual Experience Out of the Box',
+    imageClassName: styles.featureImage__multilingualInterface,
+    size: { width: 300, height: 234 },
+    description: (
+      <>
+        Let every teammate feel at home with <strong>automatic language detection and 13+ localised interfaces</strong>. Switch languages anytime and the entire launcher — menus, dialogs, and tray — updates instantly.
+      </>
+    ),
+  },
+  {
     title: 'Quick Project Setup with Git & VSCode',
     imageClassName: styles.featureImage__quickSetup,
     size: { width: 300, height: 234 },
@@ -95,7 +105,7 @@ export default function HomepageFeatures(): ReactNode {
 
       <section id="features" className={styles.features}>
         <div className="container">
-          <div className="row">
+          <div className={clsx('row', styles.featureRow)}>
             {FeatureList.map((props, idx) => (
               <Feature key={idx} {...props} />
             ))}
