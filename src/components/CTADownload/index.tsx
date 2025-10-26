@@ -1,11 +1,9 @@
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Heading from '@theme/Heading';
-import Link from "@docusaurus/Link";
 import clsx from "clsx";
 
-import styles from './styles.module.css';
-import { HeroDownloadButton } from "../HeroDownloadButton";
 import { FC } from "react";
+import { HeroDownloadButton } from "../HeroDownloadButton";
+import styles from './styles.module.css';
 
 export const CTADownload: FC = () => {
 
