@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Layout from "@theme/Layout";
 import useGlobalData from "@docusaurus/useGlobalData";
 import Link from "@docusaurus/Link";
@@ -10,7 +10,7 @@ import { useAgent } from "@site/src/hooks/useAgent";
 import Admonition from "@theme/Admonition";
 
 import styles from "./styles.module.css";
-import { Check, Copy } from "lucide-react";
+import { WingetCommandList } from "@site/src/components/WingetCommandList";
 
 export default function DownloadPage() {
   const globalData = useGlobalData();
@@ -19,20 +19,6 @@ export default function DownloadPage() {
   const latest = pluginData.latest;
 
   const { os } = useAgent();
-  const [copiedCommand, setCopiedCommand] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (!copiedCommand) {
-      return;
-    }
-    const timeout = setTimeout(() => setCopiedCommand(null), 3000);
-    return () => clearTimeout(timeout);
-  }, [copiedCommand]);
-
-  const handleCopy = (command: string) => {
-    navigator.clipboard.writeText(command);
-    setCopiedCommand(command);
-  };
 
   const wingetCommands = [
     {
@@ -118,41 +104,22 @@ export default function DownloadPage() {
         </div>
 
         {os === "Windows" && (
-          <Admonition
-            type="info"
-            title="Install instantly with winget"
-            className="margin-top--md"
-          >
-            <div className={styles.wingetCard}>
-              <p className={styles.wingetIntro}>
-                Prefer the command line? Install or upgrade Godot Launcher with
-                winget and stay current with each Windows release.
-              </p>
-              <div className={styles.codeGroup}>
-                {wingetCommands.map(({ label, command }) => (
-                  <div key={command} className={styles.codeBlock}>
-                    <div className={styles.codeLabel}>{label}</div>
-                    <div className={styles.codeText}>&gt; {command}</div>
-                    <button
-                      className={styles.copyButton}
-                      title={`Copy ${command}`}
-                      onClick={() => handleCopy(command)}
-                    >
-                      {copiedCommand === command ? (
-                        <Check width={16} color="#4caf50" />
-                      ) : (
-                        <Copy width={16} />
-                      )}
-                    </button>
-                  </div>
-                ))}
-              </div>
-              <p className={styles.wingetHint}>
-                All commands pull the same signed installer we publish above.
-                Learn more in our{" "}
-                <Link to="/blog/godot-launcher-winget">winget announcement</Link>.
-              </p>
-            </div>
+          <Admonition type="info" title="Install instantly with winget" className="margin-top--md">
+            <WingetCommandList
+              commands={wingetCommands}
+              intro={
+                <>
+                  Prefer the command line? Install or upgrade Godot Launcher with winget and stay
+                  current with each Windows release.
+                </>
+              }
+              hint={
+                <>
+                  All commands pull the same signed installer we publish above. Learn more in our{" "}
+                  <Link to="/blog/godot-launcher-winget">winget announcement</Link>.
+                </>
+              }
+            />
           </Admonition>
         )}
 

@@ -2,6 +2,7 @@ import Layout from "@theme/Layout";
 import { ReactNode } from "react";
 import FAQStructuredData from "../../components/FAQStructuredData";
 import Link from "@docusaurus/Link";
+import { WingetCommandList } from "@site/src/components/WingetCommandList";
 
 export default function Faqs(): ReactNode {
   const general = [
@@ -137,6 +138,39 @@ export default function Faqs(): ReactNode {
           </Link>{" "}
           page.
         </>
+      ),
+    },
+    {
+      question: "Can I install Godot Launcher via winget?",
+      answer:
+        "Yes. On Windows, use winget install GodotLauncher.Launcher or winget install \"godot Launcher\" to install the latest release, and winget upgrade GodotLauncher.Launcher to stay up to date.",
+      answerHTML: (
+        <WingetCommandList
+          commands={[
+            {
+              label: "Install (Package Identifier)",
+              command: "winget install GodotLauncher.Launcher",
+            },
+            {
+              label: "Install (Display Name)",
+              command: 'winget install "godot Launcher"',
+            },
+            {
+              label: "Upgrade to Latest",
+              command: "winget upgrade GodotLauncher.Launcher",
+            },
+          ]}
+          intro="Yes. On Windows you can run these commands from PowerShell or Command Prompt:"
+          hint={
+            <>
+              These commands install the same signed binaries we ship on the{" "}
+              <Link to="/download" title="Godot Launcher downloads">
+                download page
+              </Link>{" "}
+              and are kept current with every release.
+            </>
+          }
+        />
       ),
     },
     {
