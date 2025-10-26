@@ -5,6 +5,7 @@ date: 2025-10-24 20:00:00
 authors: [mariodebono]
 tags: [release, godot-launcher]
 slug: godot-launcher-winget
+image: /img/blog/images/Godot_Launcher_winget-opengraph.png
 ---
 
 # Godot Launcher on winget
