@@ -10,7 +10,7 @@ import { useAgent } from "@site/src/hooks/useAgent";
 import Admonition from "@theme/Admonition";
 
 import styles from "./styles.module.css";
-import { HeroDownloadButton } from "@site/src/components/HeroDownloadButton";
+import { WingetCommandList } from "@site/src/components/WingetCommandList";
 
 export default function DownloadPage() {
   const globalData = useGlobalData();
@@ -19,6 +19,21 @@ export default function DownloadPage() {
   const latest = pluginData.latest;
 
   const { os } = useAgent();
+
+  const wingetCommands = [
+    {
+      label: "Install (Package Identifier)",
+      command: "winget install GodotLauncher.Launcher",
+    },
+    {
+      label: "Install (Display Name)",
+      command: 'winget install "godot Launcher"',
+    },
+    {
+      label: "Upgrade to Latest",
+      command: "winget upgrade GodotLauncher.Launcher",
+    },
+  ];
 
   return (
     <Layout
@@ -88,6 +103,26 @@ export default function DownloadPage() {
           </div>
         </div>
 
+        {os === "Windows" && (
+          <Admonition type="info" title="Install instantly with winget" className="margin-top--md">
+            <WingetCommandList
+              commands={wingetCommands}
+              intro={
+                <>
+                  Prefer the command line? Install or upgrade Godot Launcher with winget and stay
+                  current with each Windows release.
+                </>
+              }
+              hint={
+                <>
+                  All commands pull the same signed installer we publish above. Learn more in our{" "}
+                  <Link to="/blog/godot-launcher-winget">winget announcement</Link>.
+                </>
+              }
+            />
+          </Admonition>
+        )}
+
         <p className="padding-vert--sm text--right">
           Looking for <Link to="/download/archive">older versions</Link>?
         </p>
@@ -108,6 +143,15 @@ export default function DownloadPage() {
           <p>
             AppImage builds include most dependencies — Make sure FUSE is
             available on your system.
+          </p>
+          <p>
+            If the launcher fails to start with Chromium sandbox errors, run it
+            with <code>--no-sandbox</code> (or <code>--disable-sandbox</code>) or set{" "}
+            <code>GODOT_LAUNCHER_DISABLE_SANDBOX=1</code> before launching. See the{" "}
+            <Link to="https://docs.godotlauncher.org/guides/linux-no-sandbox">
+              Linux no-sandbox guide
+            </Link>{" "}
+            for detailed steps and security considerations.
           </p>
         </Admonition>
         <ul>

@@ -1,6 +1,6 @@
 {
   "name": "launcher-website",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -21,6 +21,7 @@
     "clsx": "^2.0.0",
     "estree-util-value-to-estree": "^3.3.3",
     "image-size": "^2.0.2",
+    "lucide-react": "^0.548.0",
     "prism-react-renderer": "^2.3.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"

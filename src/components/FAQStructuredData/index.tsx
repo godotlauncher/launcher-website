@@ -1,5 +1,8 @@
-import { FC, Fragment, JSX } from "react";
+import { FC, JSX } from "react";
 import Heading from "@theme/Heading";
+import clsx from "clsx";
+
+import styles from "./styles.module.css";
 
 interface FAQStructuredDataProps {
     sections: {
@@ -32,14 +35,16 @@ const FAQStructuredData: FC<FAQStructuredDataProps> = ({ sections }) => {
     const faqStructuredData = {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        mainEntity: sections.map((section) => section.questions.map((faq) => ({
-            '@type': 'Question',
-            name: faq.question,
-            acceptedAnswer: {
-                '@type': 'Answer',
-                text: faq.answer,
-            },
-        })))
+        mainEntity: sections.flatMap((section) =>
+            section.questions.map((faq) => ({
+                '@type': 'Question',
+                name: faq.question,
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: faq.answer,
+                },
+            }))
+        ),
     };
 
     return (
@@ -50,12 +55,14 @@ const FAQStructuredData: FC<FAQStructuredDataProps> = ({ sections }) => {
             />
 
             {sections.map((section) => (
-                <section className="padding-top--md faq-section" key={section.title}>
+                <section className={clsx("padding-top--md", styles.section)} key={section.title}>
                     <Heading as="h2" id={section.title.toLowerCase()}>{section.title}</Heading>
                     {section.questions.map((faq) => (
-                        <div key={faq.question} className="padding--md">
-                            <h3 className="faq-section__question">{faq.question}</h3>
-                            <p className="faq-section__answer">{faq.answerHTML || faq.answer}</p>
+                        <div key={faq.question} className={clsx("padding--md", styles.card)}>
+                            <h3 className={styles.question}>{faq.question}</h3>
+                            <div className={styles.answer}>
+                                {faq.answerHTML ?? <p>{faq.answer}</p>}
+                            </div>
                         </div>
                     ))}
                 </section>
