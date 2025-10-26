@@ -27,6 +27,64 @@
   text-decoration: underline;
 }
 
+.codeBlock {
+  position: relative;
+  background-color: var(--ifm-color-emphasis-0);
+  border-radius: 8px;
+  padding: 1rem;
+  padding-top : 1.75rem;
+  padding-right: 4rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: fit-content;
+  gap: 24px;
+
+  text-align: left;
+
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.codeLabel {
+  color: var(--ifm-color-secondary);
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  position: absolute;
+  top: -0rem;
+  left: 1rem;
+  font-weight: 600;
+  /* faint colour */
+  opacity: 0.6;
+}
+
+.codeText {
+  color: var(--ifm-color-base);
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.copyButton {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--ifm-color-secondary);
+  transition: color 0.2s ease;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  opacity: 0.8;
+ 
+}
+
+.copyButton:hover {
+  color: var(--ifm-color-base);
+}
+
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
