@@ -47,7 +47,7 @@ export const WingetCommandList: FC<WingetCommandListProps> = ({
             <div className={styles.codeLabel}>{label}</div>
             <div className={styles.codeText}>&gt; {command}</div>
             <button
-              className={styles.copyButton}
+              className={clsx(styles.copyButton, "winget-button--copy")}
               title={`Copy ${command}`}
               onClick={() => handleCopy(command)}
             >

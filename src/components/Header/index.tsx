@@ -56,7 +56,7 @@ export const HomepageHeader: FC = () => {
                 <div className={styles.codeText}>
                   &gt; winget install "Godot Launcher"
                 </div>
-                <button title="Copy to clipboard" className={styles.copyButton} onClick={handleCopy}>
+                <button title="Copy to clipboard" className={clsx(styles.copyButton, "winget-button--copy")} onClick={handleCopy}>
                   {!swapped ? <Copy width={16} /> : <Check color="#4caf50" width={16} />}
                 </button>
 
