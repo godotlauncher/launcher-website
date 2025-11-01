@@ -16,6 +16,7 @@
 !.vscode/extensions.json
 .idea
 .DS_Store
+.internal-docs
 
 # Misc
 .DS_Store
