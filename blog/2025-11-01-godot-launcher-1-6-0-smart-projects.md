@@ -3,7 +3,7 @@ title: ⚙️ Godot Launcher 1.6.0 – Smarter Projects, Resilient Installs
 slug: godot-launcher-1-6-0-smart-projects
 description: Godot Launcher 1.6.0 keeps project tooling in sync, hardens release validation, and puts VS Code and Git toggles in every project menu.
 authors: [mariodebono]
-date: 2025-12-10 09:30:00
+date: 2025-11-01 23:32:00
 image: /img/blog/images/1.6.0/Godot_Launcher_1_6_0-opengraph.png
 tags:
   - godot
