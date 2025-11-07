@@ -5,6 +5,10 @@ import Link from "@docusaurus/Link";
 
 import styles from "./styles.module.css";
 import { DownloadButton } from "@site/src/components/DownloadButton";
+import {
+  SUPPORTED_PLATFORMS,
+  extractPlatformGroup,
+} from "@site/src/utils/releases";
 
 export default function ReleasesPage() {
   const globalData = useGlobalData();
@@ -55,27 +59,43 @@ export default function ReleasesPage() {
               </div>
 
               <div className={styles.release__downloads}>
-                <DownloadButton
-                  release={latest}
-                  platform="Windows"
-                  title="Windows"
-                  size="md"
-                  className={styles.release__button}
-                />
-                <DownloadButton
-                  release={latest}
-                  platform="macOS"
-                  title="macOS"
-                  size="md"
-                  className={styles.release__button}
-                />
-                <DownloadButton
-                  release={latest}
-                  platform="Linux"
-                  title="Linux (AppImage)"
-                  size="md"
-                  className={styles.release__button}
-                />
+                {SUPPORTED_PLATFORMS.map((platform) => {
+                  const group = extractPlatformGroup(latest, platform);
+                  if (!group.primary) {
+                    return null;
+                  }
+
+                  return (
+                    <div key={`${latest.id}-${platform}`} className={styles.platformCard}>
+                      <DownloadButton
+                        platform={platform}
+                        title={`${platform} – ${group.primary.archLabel}`}
+                        href={group.primary.href}
+                        size="md"
+                        color="primary"
+                        className={styles.platformPrimary}
+                      />
+                      {group.options.length > 0 && (
+                        <div className={styles.platformVariants} role="group" aria-label={`${platform} installers`}>
+                          {group.options
+                            .filter((option) => option.id !== group.primary?.id)
+                            .map((option) => (
+                              <DownloadButton
+                                key={option.id}
+                                platform={platform}
+                                title={option.label}
+                                href={option.href}
+                                size="sm"
+                                color="secondary"
+                                showIcon={false}
+                                className={styles.variantButton}
+                              />
+                            ))}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             </div>
 
@@ -109,27 +129,43 @@ export default function ReleasesPage() {
                 </div>
 
                 <div className={styles.release__downloads}>
-                  <DownloadButton
-                    release={release}
-                    platform="Windows"
-                    title="Windows"
-                    size="md"
-                    className={styles.release__button}
-                  />
-                  <DownloadButton
-                    release={release}
-                    platform="macOS"
-                    title="macOS"
-                    size="md"
-                    className={styles.release__button}
-                  />
-                  <DownloadButton
-                    release={release}
-                    platform="Linux"
-                    title="Linux (AppImage)"
-                    size="md"
-                    className={styles.release__button}
-                  />
+                  {SUPPORTED_PLATFORMS.map((platform) => {
+                    const group = extractPlatformGroup(release, platform);
+                    if (!group.primary) {
+                      return null;
+                    }
+
+                    return (
+                      <div key={`${release.id}-${platform}`} className={styles.platformCard}>
+                        <DownloadButton
+                          platform={platform}
+                          title={`${platform} – ${group.primary.archLabel}`}
+                          href={group.primary.href}
+                          size="md"
+                          color="primary"
+                          className={styles.platformPrimary}
+                        />
+                        {group.options.length > 0 && (
+                          <div className={styles.platformVariants} role="group" aria-label={`${platform} installers`}>
+                            {group.options
+                              .filter((option) => option.id !== group.primary?.id)
+                              .map((option) => (
+                                <DownloadButton
+                                  key={option.id}
+                                  platform={platform}
+                                  title={option.label}
+                                  href={option.href}
+                                  size="sm"
+                                  color="secondary"
+                                  showIcon={false}
+                                  className={styles.variantButton}
+                                />
+                              ))}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </>

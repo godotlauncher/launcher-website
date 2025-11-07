@@ -1,14 +1,15 @@
-.downloadButton {
-  display: inline-block;
-  align-items: center;
-  gap: 8px;
-
+.heroDownloadGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
-@media screen and (max-width: 996px) {
-  .downloadButton {
-    display: flex;
-    flex-direction: column;
-  }
+.heroDownloadButton {
+  width: 100%;
+}
 
+.downloadButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }

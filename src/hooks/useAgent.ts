@@ -5,8 +5,13 @@ import { useState, useEffect } from 'react';
 
 export const useAgent = () => {
     const [os, setOS] = useState<OS>('Unknown');
+    const [preferArmBuild, setPreferArmBuild] = useState(false);
 
     useEffect(() => {
+        if (typeof navigator === 'undefined') {
+            return;
+        }
+
         const agent = navigator.userAgent.toLowerCase();
         let detectedOS: OS = 'Unknown';
 
@@ -29,8 +34,16 @@ export const useAgent = () => {
         }
 
         setOS(detectedOS);
+
+        const architecture = (navigator as any)?.userAgentData?.architecture?.toLowerCase?.();
+        const prefersArm =
+            agent.includes('arm64') ||
+            agent.includes('aarch64') ||
+            agent.includes('apple silicon') ||
+            (architecture && architecture.includes('arm'));
+
+        setPreferArmBuild(prefersArm);
     }, []);
 
-    return { os };
+    return { os, preferArmBuild };
 };
-

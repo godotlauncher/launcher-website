@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import Layout from "@theme/Layout";
 import useGlobalData from "@docusaurus/useGlobalData";
 import Link from "@docusaurus/Link";
@@ -11,6 +11,12 @@ import Admonition from "@theme/Admonition";
 
 import styles from "./styles.module.css";
 import { WingetCommandList } from "@site/src/components/WingetCommandList";
+import {
+  SUPPORTED_PLATFORMS,
+  extractPlatformGroup,
+  selectPreferredDownloadOption,
+  type SupportedPlatform,
+} from "@site/src/utils/releases";
 
 export default function DownloadPage() {
   const globalData = useGlobalData();
@@ -18,7 +24,19 @@ export default function DownloadPage() {
     .default as PluginGithubReleaseContent;
   const latest = pluginData.latest;
 
-  const { os } = useAgent();
+  const { os, preferArmBuild } = useAgent();
+  const isSupported = SUPPORTED_PLATFORMS.includes(os as SupportedPlatform);
+  const agentPlatform = isSupported ? (os as SupportedPlatform) : null;
+
+  const platformGroups = useMemo(() => {
+    return SUPPORTED_PLATFORMS.map((platform) => {
+      const group = extractPlatformGroup(latest, platform);
+      const preferArm = preferArmBuild && platform === agentPlatform;
+      const primary = selectPreferredDownloadOption(group, { preferArmBuild: preferArm });
+      const variants = group.options.filter((option) => option.id !== primary?.id);
+      return { platform, group, primary, variants };
+    }).filter(({ group }) => group.options.length > 0);
+  }, [agentPlatform, latest, preferArmBuild]);
 
   const wingetCommands = [
     {
@@ -27,7 +45,7 @@ export default function DownloadPage() {
     },
     {
       label: "Install (Display Name)",
-      command: 'winget install "godot Launcher"',
+      command: 'winget install "Godot Launcher"',
     },
     {
       label: "Upgrade to Latest",
@@ -37,7 +55,7 @@ export default function DownloadPage() {
 
   return (
     <Layout
-      title="Godot Download Made Easy – Get The Launcher"
+      title="Godot Download Made Easy - Get The Launcher"
       description="Easily download and manage Godot Engine versions with Godot Launcher. One simple tool to install and run any Godot version. Free, open source, and cross-platform."
     >
       <header className={clsx("hero shadow--lw", styles.heroBanner)}>
@@ -47,10 +65,10 @@ export default function DownloadPage() {
             <br />
             {["macOS", "Windows", "Linux"].includes(os) && `for ${os}`}
           </Heading>
-          <p className="hero__subtitle">
-            The Easiest Way To Download Godot Engine Versions And Manage Godot
-            Projects On Windows, macOS, And Linux.
-          </p>
+            <p className="hero__subtitle">
+            The easiest way to download Godot Engine versions and manage Godot
+            projects on Windows, macOS, and Linux.
+            </p>
         </div>
       </header>
       <div className="container margin-vert--lg">
@@ -79,27 +97,40 @@ export default function DownloadPage() {
           </div>
 
           <div className={styles.release__downloads}>
-            <DownloadButton
-              release={latest}
-              platform="Windows"
-              title="Windows"
-              size="md"
-              className={styles.release__button}
-            />
-            <DownloadButton
-              release={latest}
-              platform="macOS"
-              title="macOS"
-              size="md"
-              className={styles.release__button}
-            />
-            <DownloadButton
-              release={latest}
-              platform="Linux"
-              title="Linux (AppImage)"
-              size="md"
-              className={styles.release__button}
-            />
+            {platformGroups.map(({ platform, group, primary, variants }) => (
+              <div key={`${latest.id}-${platform}`} className={styles.platformCard}>
+                {primary ? (
+                  <>
+                    <DownloadButton
+                      platform={platform}
+                      title={`${platform} – ${primary.archLabel}`}
+                      href={primary.href}
+                      size="md"
+                      color="primary"
+                      className={styles.platformPrimary}
+                    />
+                    {variants.length > 0 && (
+                      <div className={styles.platformVariants} role="group" aria-label={`${platform} installers`}>
+                        {variants.map((option) => (
+                          <DownloadButton
+                            key={option.id}
+                            platform={platform}
+                            title={option.label}
+                            href={option.href}
+                            size="sm"
+                            color="secondary"
+                            showIcon={false}
+                            className={styles.variantButton}
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <p className={styles.platformEmpty}>No installers published for this platform.</p>
+                )}
+              </div>
+            ))}
           </div>
         </div>
 

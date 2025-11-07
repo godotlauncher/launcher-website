@@ -1,14 +1,23 @@
-.downloadButtonsContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 16px;
-}
-
 .downloadButton {
-  display: flex;
-  flex-direction: row;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   fill: var(--ifm-button-color);
+  text-align: left;
+}
+
+.downloadButtonContent {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.downloadButtonIcon {
+  display: inline-flex;
+}
+
+.downloadButtonLabel {
+  display: inline-flex;
+  line-height: 1.2;
 }
