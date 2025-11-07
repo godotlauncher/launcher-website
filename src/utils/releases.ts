@@ -177,8 +177,8 @@ export const extractAllPlatformGroups = (release: Release): PlatformDownloadGrou
 
 const PLATFORM_ARCH_FALLBACK: Record<SupportedPlatform, ArchKey[]> = {
   Windows: ['neutral', 'universal', 'x64', 'x86_64', 'x86', 'arm64', 'unknown'],
-  macOS: ['universal', 'arm64', 'x86_64', 'x64', 'neutral', 'unknown'],
-  Linux: ['x86_64', 'arm64', 'universal', 'neutral', 'unknown'],
+  macOS: ['universal', 'x86_64', 'x64', 'arm64', 'unknown'],
+  Linux: ['x86_64', 'arm64', 'unknown'],
 };
 
 type PreferredOptionParams = {
