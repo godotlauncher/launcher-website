@@ -96,7 +96,7 @@ export default function Home(): ReactNode {
                           Godot Launcher simplifies the process of downloading
                           and managing different versions of Godot, directly
                           from the launcher (see:{" "}
-                          <Link href="https://docs.godotlauncher.org/getting-started/install-editor/">
+                          <Link style={{ display: 'contents' }} href="https://docs.godotlauncher.org/getting-started/install-editor/">
                             Installing an Editor
                           </Link>
                           ) making it easier to switch between them without

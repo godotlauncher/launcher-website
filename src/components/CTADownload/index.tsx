@@ -1,20 +1,66 @@
-import Heading from '@theme/Heading';
+import Heading from "@theme/Heading";
 import clsx from "clsx";
 
-import { FC } from "react";
-import { HeroDownloadButton } from "../HeroDownloadButton";
-import styles from './styles.module.css';
+import { FC, useMemo } from "react";
+import styles from "./styles.module.css";
+import useGlobalData from "@docusaurus/useGlobalData";
+import { DownloadButton } from "../DownloadButton";
+import {
+  SUPPORTED_PLATFORMS,
+  extractPlatformGroup,
+  selectPreferredDownloadOption,
+  type SupportedPlatform,
+} from "@site/src/utils/releases";
+import { useAgent } from "@site/src/hooks/useAgent";
+import Link from "@docusaurus/Link";
 
 export const CTADownload: FC = () => {
+  const globalData = useGlobalData();
+  const pluginData = globalData["docusaurus-plugin-github-releases"]
+    .default as PluginGithubReleaseContent;
+  const latest = pluginData.latest;
+
+  const { os, preferArmBuild } = useAgent();
+  const isSupported = SUPPORTED_PLATFORMS.includes(os as SupportedPlatform);
+  const platform = isSupported ? (os as SupportedPlatform) : null;
+
+  const platformGroup = useMemo(() => {
+    if (!platform) {
+      return undefined;
+    }
+
+    return extractPlatformGroup(latest, platform);
+  }, [latest, platform]);
+
+  const selectedOption = selectPreferredDownloadOption(platformGroup, { preferArmBuild });
 
   return (
-    <header className={clsx('hero', styles.ctaBanner)}>
+    <header className={clsx("hero", styles.ctaBanner)}>
       <div className="container">
         <Heading as="h2" className={styles.ctaTitle}>
           Download Godot Launcher for Windows, macOS, and Linux
         </Heading>
-        <div className={styles.buttons}>
-          <HeroDownloadButton color="primary" />
+        <p className={styles.ctaSubtitle}>Latest release: {latest.tag_name}</p>
+        <div className={styles.ctaActions}>
+          {platform && selectedOption ? (
+            <>
+              <DownloadButton
+                platform={platform}
+                title={`Download for ${platform} (${latest.tag_name})`}
+                href={selectedOption.href}
+                size="md"
+                color="primary"
+                className={styles.ctaPrimary}
+              />
+            </>
+          ) : (
+            <>
+              <Link to="/download" className={clsx("button button--primary button--md", styles.ctaPrimary)}>
+                Download Godot Launcher ({latest.tag_name})
+              </Link>
+              <p className={styles.ctaMeta}>Choose your OS to grab the right installer.</p>
+            </>
+          )}
         </div>
       </div>
     </header>

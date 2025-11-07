@@ -15,24 +15,25 @@
   font-size: 2rem;
 }
 
-.heroLink {
-  color: var(--ifm-color-base);
-  text-decoration: underline;
+.ctaSubtitle {
+  margin-top: 0.5rem;
+  color: var(--ifm-color-emphasis-800);
 }
 
-.heroLink:hover {
-  color: var(--ifm-color-base);
-  text-decoration: underline;
-}
-
-.buttons {
+.ctaActions {
   display: flex;
-  align-items: center;
-  justify-content: start;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.ctaPrimary {
+  width: auto;
+}
+
+.ctaMeta {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
 }

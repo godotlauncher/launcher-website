@@ -24,8 +24,8 @@ export default function Faqs(): ReactNode {
       answerHTML: (
         <>
           Godot Launcher simplifies the process of downloading and managing
-          different versions of Godot, directly from the launcher (see:{" "}
-          <Link href="https://docs.godotlauncher.org/getting-started/install-editor/">
+          different versions of Godot, directly from the launcher (see:{' '}
+          <Link style={{ display: 'contents' }} href="https://docs.godotlauncher.org/getting-started/install-editor/">
             Installing an Editor
           </Link>
           ) making it easier to switch between them without manual installation.
@@ -60,6 +60,7 @@ export default function Faqs(): ReactNode {
           Godot 3 support, you can discuss the possibility of reintroducing it
           in the <strong>#launcher-discussions</strong> channel on the official{" "}
           <Link
+            style={{ display: 'contents' }}
             href="https://discord.gg/Ju9jkFJGvz"
             target="_blank"
             title="Join the official Discord server"
@@ -125,11 +126,13 @@ export default function Faqs(): ReactNode {
       answerHTML: (
         <>
           You can download the latest release from the official{" "}
-          <Link to="/download" title="Visit the download page">
+          <Link style={{ display: 'contents' }}
+            to="/download" title="Visit the download page">
             website
           </Link>{" "}
           or from the{" "}
           <Link
+            style={{ display: 'contents' }}
             href="https://github.com/godotlauncher/launcher/releases"
             target="_blank"
             title="View GitHub releases"
@@ -164,7 +167,7 @@ export default function Faqs(): ReactNode {
           hint={
             <>
               These commands install the same signed binaries we ship on the{" "}
-              <Link to="/download" title="Godot Launcher downloads">
+              <Link style={{ display: 'contents' }} to="/download" title="Godot Launcher downloads">
                 download page
               </Link>{" "}
               and are kept current with every release.
@@ -189,6 +192,7 @@ export default function Faqs(): ReactNode {
         <>
           You can report bugs or feature requests on our{" "}
           <Link
+            style={{ display: 'contents' }}
             href="https://github.com/godotlauncher/launcher/issues/new/choose"
             target="_blank"
             title="Report an issue on GitHub"
@@ -208,6 +212,7 @@ export default function Faqs(): ReactNode {
         <>
           Absolutely! Contributions are welcome. Check the{" "}
           <Link
+            style={{ display: 'contents' }}
             href="https://github.com/godotlauncher/launcher/blob/main/CONTRIBUTING.md"
             target="_blank"
             title="Read the CONTRIBUTING.md file"
@@ -215,7 +220,7 @@ export default function Faqs(): ReactNode {
             CONTRIBUTING.md
           </Link>{" "}
           file for guidelines. There is also a detailed{" "}
-          <Link to="/contribute" title="Learn how to contribute">
+          <Link style={{ display: 'contents' }} to="/contribute" title="Learn how to contribute">
             page about contributing
           </Link>
         </>
