@@ -15,7 +15,7 @@ Godot Launcher 1.7.0 lands today as a focused patch release. It brings native Wi
 
 <!-- truncate -->
 
-![Godot Launcher 1.7.0 hero image showing download options](/img/blog/images/1.7.0/Godot_Launcher_1-7-0_refresh_cache-UI.webp)
+![Godot Launcher 1.7.0 Hero Image Showing Settings Installs](/img/blog/images/1.7.0/Godot_Launcher_1-7-0_refresh_cache-UI.webp)
 
 ## Native Windows ARM64 downloads
 
@@ -23,7 +23,7 @@ Windows ARM64 users no longer have to run the x86_64 build or guess which editor
 
 Most importantly, Godot Launcher will download the right Godot editor for your OS and architecture automatically. If you pick the ARM64 installer, the editor sync flow respects that choice and pulls ARM64 editor builds where available, keeping storage lean and launch times fast.
 
-Huge thanks to [Zack Polson](https://bsky.app/profile/zack.polson.dev) for contributing the groundwork that made the Windows ARM64 builds possible.
+🤝 Huge thanks to [Zack Polson](https://bsky.app/profile/zack.polson.dev) for contributing the groundwork that made the Windows ARM64 builds possible.
 
 ## Refresh cache with one click
 
