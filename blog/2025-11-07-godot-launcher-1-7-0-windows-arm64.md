@@ -23,6 +23,8 @@ Windows ARM64 users no longer have to run the x86_64 build or guess which editor
 
 Most importantly, Godot Launcher will download the right Godot editor for your OS and architecture automatically. If you pick the ARM64 installer, the editor sync flow respects that choice and pulls ARM64 editor builds where available, keeping storage lean and launch times fast.
 
+Huge thanks to [Zack Polson](https://bsky.app/profile/zack.polson.dev) for contributing the groundwork that made the Windows ARM64 builds possible.
+
 ## Refresh cache with one click
 
 Need to clear out old editor downloads or force the latest builds straight from the official Godot Engine release repos? Head to `Settings → Installs` and use the new **Refresh cache** button. It wipes previously cached releases and repopulates them so you always see the most up-to-date options for every OS and architecture, which was essential for rolling out the new Windows arm 64 packages.
