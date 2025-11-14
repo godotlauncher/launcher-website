@@ -6,10 +6,8 @@ import styles from "./styles.module.css";
 import useGlobalData from "@docusaurus/useGlobalData";
 import { DownloadButton } from "../DownloadButton";
 import {
-  SUPPORTED_PLATFORMS,
   extractPlatformGroup,
   selectPreferredDownloadOption,
-  type SupportedPlatform,
 } from "@site/src/utils/releases";
 import { useAgent } from "@site/src/hooks/useAgent";
 import Link from "@docusaurus/Link";
@@ -20,9 +18,7 @@ export const CTADownload: FC = () => {
     .default as PluginGithubReleaseContent;
   const latest = pluginData.latest;
 
-  const { os, preferArmBuild } = useAgent();
-  const isSupported = SUPPORTED_PLATFORMS.includes(os as SupportedPlatform);
-  const platform = isSupported ? (os as SupportedPlatform) : null;
+  const { platform, architecture, hasExactArch } = useAgent();
 
   const platformGroup = useMemo(() => {
     if (!platform) {
@@ -32,7 +28,11 @@ export const CTADownload: FC = () => {
     return extractPlatformGroup(latest, platform);
   }, [latest, platform]);
 
-  const selectedOption = selectPreferredDownloadOption(platformGroup, { preferArmBuild });
+  const preferredArch = hasExactArch ? architecture : null;
+  const selectedOption = selectPreferredDownloadOption(platformGroup, {
+    preferredArch,
+    preferGeneralFallback: Boolean(platform && !hasExactArch),
+  });
 
   return (
     <header className={clsx("hero", styles.ctaBanner)}>

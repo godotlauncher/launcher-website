@@ -15,7 +15,6 @@ import {
   SUPPORTED_PLATFORMS,
   extractPlatformGroup,
   selectPreferredDownloadOption,
-  type SupportedPlatform,
 } from "@site/src/utils/releases";
 
 export default function DownloadPage() {
@@ -24,19 +23,22 @@ export default function DownloadPage() {
     .default as PluginGithubReleaseContent;
   const latest = pluginData.latest;
 
-  const { os, preferArmBuild } = useAgent();
-  const isSupported = SUPPORTED_PLATFORMS.includes(os as SupportedPlatform);
-  const agentPlatform = isSupported ? (os as SupportedPlatform) : null;
+  const { os, platform: agentPlatform, architecture, hasExactArch, preferArmBuild } = useAgent();
 
   const platformGroups = useMemo(() => {
     return SUPPORTED_PLATFORMS.map((platform) => {
       const group = extractPlatformGroup(latest, platform);
-      const preferArm = preferArmBuild && platform === agentPlatform;
-      const primary = selectPreferredDownloadOption(group, { preferArmBuild: preferArm });
+      const isAgentPlatform = platform === agentPlatform;
+      const preferredArch = isAgentPlatform && hasExactArch ? architecture : null;
+      const preferArm = preferArmBuild && isAgentPlatform;
+      const primary = selectPreferredDownloadOption(group, {
+        preferredArch,
+        preferArmBuild: preferArm,
+      });
       const variants = group.options.filter((option) => option.id !== primary?.id);
       return { platform, group, primary, variants };
     }).filter(({ group }) => group.options.length > 0);
-  }, [agentPlatform, latest, preferArmBuild]);
+  }, [agentPlatform, architecture, hasExactArch, latest, preferArmBuild]);
 
   const wingetCommands = [
     {
