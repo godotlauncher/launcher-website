@@ -23,7 +23,7 @@ export type ArchKey =
   | "arm64"
   | "x86_64"
   | "x64"
-  | "x86"
+  | "ia32"
   | "unknown";
 
 const PLATFORM_MATCHERS: Record<SupportedPlatform, RegExp[]> = {
@@ -44,12 +44,12 @@ const ARCH_PATTERNS: { key: ArchKey; label: string; tokens: RegExp[] }[] = [
   { key: "arm64", label: "ARM64", tokens: [/arm64/, /aarch64/] },
   { key: "x86_64", label: "x86_64", tokens: [/x86_64/] },
   { key: "x64", label: "x64", tokens: [/x64/] },
-  { key: "x86", label: "x86", tokens: [/x86/] },
+  { key: "ia32", label: "ia32", tokens: [/ia32/] },
   { key: "unknown", label: "Standard", tokens: [] },
 ];
 
 const PLATFORM_ARCH_ORDER: Record<SupportedPlatform, ArchKey[]> = {
-  Windows: ["x64", "x86_64", "arm64", "x86", "neutral", "unknown"],
+  Windows: ["x64", "x86_64", "arm64", "ia32", "neutral", "unknown"],
   macOS: ["arm64", "x64", "universal", "unknown"],
   Linux: ["x86_64", "arm64", "unknown"],
 };
@@ -100,9 +100,9 @@ const detectArch = (
       return { key: "x64", label: "x64" };
     }
     if (/ia32|x86/.test(lower)) {
-      return { key: "x86", label: "x86" };
+      return { key: "ia32", label: "ia32" };
     }
-    return { key: "neutral", label: "(32/64 bit)" };
+    return { key: "neutral", label: "neutral" };
   }
 
   const match = ARCH_PATTERNS.find((arch) =>
@@ -200,7 +200,7 @@ export const extractAllPlatformGroups = (
   );
 
 const PLATFORM_ARCH_FALLBACK: Record<SupportedPlatform, ArchKey[]> = {
-  Windows: ["x64", "x86_64", "arm64", "x86", "neutral", "unknown"],
+  Windows: ["x64", "x86_64", "arm64", "ia32", "neutral", "unknown"],
   macOS: ["arm64", "x64", "universal", "unknown"],
   Linux: ["x86_64", "arm64", "unknown"],
 };
