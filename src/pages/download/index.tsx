@@ -14,7 +14,6 @@ import { WingetCommandList } from "@site/src/components/WingetCommandList";
 import {
   SUPPORTED_PLATFORMS,
   extractPlatformGroup,
-  selectPreferredDownloadOption,
 } from "@site/src/utils/releases";
 
 export default function DownloadPage() {
@@ -23,22 +22,18 @@ export default function DownloadPage() {
     .default as PluginGithubReleaseContent;
   const latest = pluginData.latest;
 
-  const { os, platform: agentPlatform, architecture, hasExactArch, preferArmBuild } = useAgent();
+  const { os } = useAgent();
 
   const platformGroups = useMemo(() => {
     return SUPPORTED_PLATFORMS.map((platform) => {
       const group = extractPlatformGroup(latest, platform);
-      const isAgentPlatform = platform === agentPlatform;
-      const preferredArch = isAgentPlatform && hasExactArch ? architecture : null;
-      const preferArm = preferArmBuild && isAgentPlatform;
-      const primary = selectPreferredDownloadOption(group, {
-        preferredArch,
-        preferArmBuild: preferArm,
-      });
-      const variants = group.options.filter((option) => option.id !== primary?.id);
+      const primary = group.primary;
+      const variants = primary
+        ? group.options.filter((option) => option.id !== primary.id)
+        : group.options;
       return { platform, group, primary, variants };
     }).filter(({ group }) => group.options.length > 0);
-  }, [agentPlatform, architecture, hasExactArch, latest, preferArmBuild]);
+  }, [latest]);
 
   const wingetCommands = [
     {

@@ -35,13 +35,13 @@ const PLATFORM_MATCHERS: Record<SupportedPlatform, RegExp[]> = {
 const REQUIRED_EXTENSIONS: Record<SupportedPlatform, string[]> = {
   Windows: [".exe"],
   macOS: [".dmg"],
-  Linux: [".appimage"],
+  Linux: [".appimage", ".deb", ".rpm"],
 };
 
 const ARCH_PATTERNS: { key: ArchKey; label: string; tokens: RegExp[] }[] = [
-  { key: "neutral", label: "(32/64 bit)", tokens: [/neutral/] },
+  { key: "neutral", label: "Neutral", tokens: [/neutral/] },
   { key: "universal", label: "Universal", tokens: [/universal/] },
-  { key: "arm64", label: "ARM64", tokens: [/arm64/, /aarch64/] },
+  { key: "arm64", label: "arm64", tokens: [/arm64/, /aarch64/] },
   { key: "x86_64", label: "x86_64", tokens: [/x86_64/] },
   { key: "x64", label: "x64", tokens: [/x64/] },
   { key: "ia32", label: "ia32", tokens: [/ia32/] },
@@ -49,8 +49,8 @@ const ARCH_PATTERNS: { key: ArchKey; label: string; tokens: RegExp[] }[] = [
 ];
 
 const PLATFORM_ARCH_ORDER: Record<SupportedPlatform, ArchKey[]> = {
-  Windows: ["x64", "x86_64", "arm64", "ia32", "neutral", "unknown"],
-  macOS: ["arm64", "x64", "universal", "unknown"],
+  Windows: ["neutral", "arm64", "x64", "ia32", "unknown"],
+  macOS: ["universal", "arm64", "x64", "unknown"],
   Linux: ["x86_64", "arm64", "unknown"],
 };
 
@@ -91,7 +91,7 @@ const detectArch = (
 
   if (platform === "Windows") {
     if (/arm64|aarch64/.test(lower)) {
-      return { key: "arm64", label: "ARM64" };
+      return { key: "arm64", label: "arm64" };
     }
     if (/x86_64/.test(lower)) {
       return { key: "x86_64", label: "x86_64" };
