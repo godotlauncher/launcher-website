@@ -8,8 +8,6 @@ import clsx from "clsx";
 import {
   extractPlatformGroup,
   selectPreferredDownloadOption,
-  SUPPORTED_PLATFORMS,
-  type SupportedPlatform,
 } from "@site/src/utils/releases";
 
 interface HeroDownloadButtonProps {
@@ -23,10 +21,7 @@ export const HeroDownloadButton: FC<HeroDownloadButtonProps> = ({ className, col
   const pluginData = globalData['docusaurus-plugin-github-releases'].default as PluginGithubReleaseContent;
   const latest = pluginData.latest;
 
-  const { os, preferArmBuild } = useAgent();
-
-  const isSupported = SUPPORTED_PLATFORMS.includes(os as SupportedPlatform);
-  const platform = isSupported ? (os as SupportedPlatform) : null;
+  const { platform, architecture, hasExactArch } = useAgent();
   const preferredColor = color ?? "primary";
 
   const downloads = useMemo(() => {
@@ -36,12 +31,16 @@ export const HeroDownloadButton: FC<HeroDownloadButtonProps> = ({ className, col
     return extractPlatformGroup(latest, platform);
   }, [latest, platform]);
 
+  const preferredArch = hasExactArch ? architecture : null;
+  const preferGeneralFallback = Boolean(platform && !hasExactArch);
+
   const selectedOption = useMemo(
     () =>
       selectPreferredDownloadOption(downloads ?? undefined, {
-        preferArmBuild,
+        preferredArch,
+        preferGeneralFallback,
       }),
-    [downloads, preferArmBuild],
+    [downloads, preferGeneralFallback, preferredArch],
   );
 
   if (platform && selectedOption) {

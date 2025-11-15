@@ -47,7 +47,7 @@ export const HomepageHeader: FC = () => {
         </div>
 
         {os === "Windows" && (
-          <p className={clsx("margin-top--sm")}>
+          <div className={clsx("margin-top--sm")}>
             <div className="margin--md">Or run</div>
             <center>
               <code className={styles.codeBlock}>
@@ -64,7 +64,7 @@ export const HomepageHeader: FC = () => {
             </center>
 
 
-          </p>
+          </div>
         )}
 
         <p>
