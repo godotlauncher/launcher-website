@@ -3,12 +3,13 @@ title: 🚀 Godot Launcher 1.8.0 - Drag Projects In, Start Faster
 description: Add projects instantly, try betas, and enjoy an updated macOS icon.
 slug: /godot-launcher-1-8-0-drag-projects-in-start-faster
 date: 2025-11-23
-tags:
-  - release
-  - godot launcher
-image: /img/og/drag-projects-in-start-faster.png
+image: /img/blog/images/1.8.0/drag-projects-in-start-faster_og.png
 authors:
   - mariodebono
+tags:
+  - godot
+  - godot-launcher
+  - release
 ---
 
 Add projects faster with a simple drag and drop flow. Drop a project.godot file, or many at once, 
