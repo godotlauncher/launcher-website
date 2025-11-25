@@ -72,15 +72,43 @@ const detectPlatform = (name: string): SupportedPlatform | null => {
   const lower = name.toLowerCase();
   return (
     (Object.keys(PLATFORM_MATCHERS) as SupportedPlatform[]).find((platform) => {
-      const matchesName = PLATFORM_MATCHERS[platform].some((pattern) =>
-        pattern.test(lower)
-      );
+      const matchesExtension = hasRequiredExtension(platform, lower);
+      if (!matchesExtension) {
+        return false;
+      }
+      const matchesName =
+        PLATFORM_MATCHERS[platform].some((pattern) => pattern.test(lower)) ||
+        platform === "Linux";
       if (!matchesName) {
         return false;
       }
-      return hasRequiredExtension(platform, lower);
+      return matchesExtension;
     }) || null
   );
+};
+
+const extractLinuxArchToken = (name: string): string | null => {
+  const lastDot = name.lastIndexOf(".");
+  const withoutExt = lastDot === -1 ? name : name.slice(0, lastDot);
+
+  const linuxSpecific = withoutExt.match(/linux[_-]([A-Za-z0-9]+)$/i);
+  if (linuxSpecific?.[1]) {
+    return linuxSpecific[1];
+  }
+
+  const trailingSegment = withoutExt.match(/[_-]([A-Za-z0-9]+)$/);
+  return trailingSegment?.[1] ?? null;
+};
+
+const mapLinuxArchToken = (token: string): { key: ArchKey; label: string } => {
+  const normalized = token.toLowerCase();
+  if (/arm64|aarch64/.test(normalized)) {
+    return { key: "arm64", label: token };
+  }
+  if (/x86_64|amd64|x64/.test(normalized)) {
+    return { key: "x86_64", label: token };
+  }
+  return { key: "unknown", label: token };
 };
 
 const detectArch = (
@@ -88,6 +116,22 @@ const detectArch = (
   platform?: SupportedPlatform
 ): { key: ArchKey; label: string } => {
   const lower = name.toLowerCase();
+
+  if (platform === "Windows" && /(?:^|[_-])win\.exe$/i.test(lower)) {
+    return { key: "neutral", label: "neutral" };
+  }
+
+  const hasExplicitX86_64Suffix = /[_-]x86_64\.[^.]+$/i.test(name);
+  if (hasExplicitX86_64Suffix) {
+    return { key: "x86_64", label: "x86_64" };
+  }
+
+  if (platform === "Linux") {
+    const archToken = extractLinuxArchToken(name);
+    if (archToken) {
+      return mapLinuxArchToken(archToken);
+    }
+  }
 
   if (platform === "Windows") {
     if (/arm64|aarch64/.test(lower)) {
@@ -130,6 +174,14 @@ const getFileExtension = (filename: string): string => {
   return rawExt.toUpperCase();
 };
 
+const getLinuxExtensionRank = (extension: string): number => {
+  const normalized = extension.toLowerCase();
+  if (normalized === "appimage") return 0;
+  if (normalized === "deb") return 1;
+  if (normalized === "rpm") return 2;
+  return 3;
+};
+
 const sortByPreference = (
   platform: SupportedPlatform,
   options: PlatformDownloadOption[]
@@ -140,8 +192,16 @@ const sortByPreference = (
     const indexB = order.indexOf(b.arch);
     const rankA = indexA === -1 ? order.length : indexA;
     const rankB = indexB === -1 ? order.length : indexB;
+    const extRankA =
+      platform === "Linux" ? getLinuxExtensionRank(a.fileExtension) : 0;
+    const extRankB =
+      platform === "Linux" ? getLinuxExtensionRank(b.fileExtension) : 0;
+
     if (rankA !== rankB) {
       return rankA - rankB;
+    }
+    if (extRankA !== extRankB) {
+      return extRankA - extRankB;
     }
     return a.asset.name.localeCompare(b.asset.name);
   });
@@ -166,12 +226,16 @@ export const extractPlatformGroup = (
         fileExtension.length > 0
           ? `${arch.label} (${fileExtension})`
           : arch.label;
+      const archLabel =
+        platform === "Linux" && fileExtension.length > 0
+          ? `${arch.label} (${fileExtension})`
+          : arch.label;
 
       const option = {
         id: asset.id,
         platform,
         arch: arch.key,
-        archLabel: arch.label,
+        archLabel,
         label,
         href: asset.browser_download_url,
         fileExtension,

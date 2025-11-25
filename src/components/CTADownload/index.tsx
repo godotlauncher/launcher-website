@@ -33,6 +33,7 @@ export const CTADownload: FC = () => {
     preferredArch,
     preferGeneralFallback: Boolean(platform && !hasExactArch),
   });
+  const isLinux = platform === "Linux";
 
   return (
     <header className={clsx("hero", styles.ctaBanner)}>
@@ -42,7 +43,7 @@ export const CTADownload: FC = () => {
         </Heading>
         <p className={styles.ctaSubtitle}>Latest release: {latest.tag_name}</p>
         <div className={styles.ctaActions}>
-          {platform && selectedOption ? (
+          {platform && selectedOption && !isLinux ? (
             <>
               <DownloadButton
                 platform={platform}
@@ -52,6 +53,18 @@ export const CTADownload: FC = () => {
                 color="primary"
                 className={styles.ctaPrimary}
               />
+            </>
+          ) : platform === "Linux" ? (
+            <>
+              <DownloadButton
+                platform="Linux"
+                title="Choose your Linux package"
+                href="/download"
+                size="md"
+                color="primary"
+                className={styles.ctaPrimary}
+              />
+              <p className={styles.ctaMeta}>Pick AppImage, deb, or rpm from the download page.</p>
             </>
           ) : (
             <>
