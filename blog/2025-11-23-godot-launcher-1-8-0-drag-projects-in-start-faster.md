@@ -1,0 +1,53 @@
+---
+title: 🚀 Godot Launcher 1.8.0 - Drag Projects In, Start Faster
+description: Add projects instantly, try betas, and enjoy an updated macOS icon.
+slug: /godot-launcher-1-8-0-drag-projects-in-start-faster
+date: 2025-11-23
+image: /img/blog/images/1.8.0/drag-projects-in-start-faster_og.png
+authors:
+  - mariodebono
+tags:
+  - godot
+  - godot-launcher
+  - release
+---
+
+Add projects faster with a simple drag and drop flow. Drop a project.godot file, or many at once, 
+and watch them appear with a live progress indicator. You can also opt into prerelease 
+updates from Preferences to try beta builds early, macOS users will see a refreshed icon 
+tuned for macOS 26, and Linux builds now ship as `deb` and `rpm` starting with 1.8.0.
+
+<!-- truncate -->
+
+**Highlights**
+- Drag project.godot files (or multiple projects) directly into the Launcher to add them instantly.
+- See a loading progress indicator when adding multiple items so you always know what is happening.
+- Opt into prerelease (beta) updates from Preferences to receive early Launcher builds before stable releases.
+- Refreshed macOS app icon updated for macOS 26 for a cleaner look on macOS.
+
+## Drop projects straight in
+Skip extra dialogs by dropping project.godot files onto the Launcher window. You can drop several files at once and the Launcher shows progress as it imports each one, so bulk additions stay predictable.
+
+![Projects view showing added entries](/img/screenshots/screen_projects_view_dark.webp)
+
+## Try prerelease builds
+If you like early access, turn on prerelease updates in Preferences. You will receive beta builds ahead of stable releases and can switch the setting off whenever you want. It is a simple way to preview features and share feedback sooner.
+
+![Settings view with updates options](/img/screenshots/screen_settings_updates_dark.webp)
+
+## Updated macOS icon
+The app icon now targets the macOS 26 style. It looks cleaner in the Dock and App Switcher, matching the rest of the system more closely.
+
+## Linux packages
+Starting with 1.8.0, Linux builds are now packaged as both deb and rpm.
+
+Update now to drag projects in faster, see clear progress as they import, and try the latest builds when you are ready.
+
+Give the update a spin and tell me how it feels for your projects.
+
+## Related resources
+
+- [Download Godot Launcher](/download/)
+- [Report feedback or issues](https://github.com/godotlauncher/launcher/issues/new/choose)
+- [Join the community discussions](/community/)
+- [Visit the documentation pages](https://docs.godotlauncher.org)
