@@ -1,41 +1,46 @@
 .projectView {
-  padding: 24px;
+  margin: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 8px;
 }
 
 [data-theme='dark'] .projectView__image-mac {
   max-width: 1010px;
   aspect-ratio: 1.595;
-  background: url(/img/Project_views/mac_screen_project_view_dark.webp);
+  background: url(/img/screenshots/screen_projects_view_dark.webp);
 }
 
 [data-theme='light'] .projectView__image-mac {
   max-width: 1010px;
   aspect-ratio: 1.595;
-  background: url(/img/Project_views/mac_screen_project_view_light.webp);
+  background: url(/img/screenshots/screen_projects_view_light.webp);
 }
 
 [data-theme='dark'] .projectView__image-linux {
   max-width: 1010px;
   aspect-ratio: 1.579;
-  background: url(/img/Project_views/linux_screen_project_view_dark.webp);
+  background: url(/img/screenshots/screen_projects_view_dark.webp);
 }
 
 [data-theme='light'] .projectView__image-linux {
   max-width: 1010px;
   aspect-ratio: 1.579;
-  background: url(/img/Project_views/linux_screen_project_view_light.webp);
+  background: url(/img/screenshots/screen_projects_view_light.webp);
 }
 
 [data-theme='dark'] .projectView__image-windows {
   max-width: 1010px;
   aspect-ratio: 1.7;
-  background: url(/img/Project_views/win_screen_project_view_dark.webp);
+  background: url(/img/screenshots/screen_projects_view_dark.webp);
 }
 
 [data-theme='light'] .projectView__image-windows {
   max-width: 1010px;
   aspect-ratio: 1.7;
-  background: url(/img/Project_views/win_screen_project_view_light.webp);
+  background: url(/img/screenshots/screen_projects_view_light.webp);
 }
 
 

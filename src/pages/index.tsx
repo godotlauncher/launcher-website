@@ -35,7 +35,7 @@ export default function Home(): ReactNode {
               integration, system tray access, and per-project settings.`,
             url: "https://godotlauncher.org",
             image:
-              "https://godotlauncher.org/img/Project_views/mac_screen_project_view_dark.webp",
+              "https://godotlauncher.org/img/screenshots/screen_projects_view_dark.webp",
             author: {
               "@type": "Organization",
               name: "Godot Launcher Project",
