@@ -28,12 +28,12 @@ tuned for macOS 26, and Linux builds now ship as `deb` and `rpm` starting with 1
 ## Drop projects straight in
 Skip extra dialogs by dropping project.godot files onto the Launcher window. You can drop several files at once and the Launcher shows progress as it imports each one, so bulk additions stay predictable.
 
-![Projects view showing added entries](/img/screenshots/screen_projects_view_dark.png)
+![Projects view showing added entries](/img/screenshots/screen_projects_view_dark.webp)
 
 ## Try prerelease builds
 If you like early access, turn on prerelease updates in Preferences. You will receive beta builds ahead of stable releases and can switch the setting off whenever you want. It is a simple way to preview features and share feedback sooner.
 
-![Settings view with updates options](/img/screenshots/screen_settings_updates_dark.png)
+![Settings view with updates options](/img/screenshots/screen_settings_updates_dark.webp)
 
 ## Updated macOS icon
 The app icon now targets the macOS 26 style. It looks cleaner in the Dock and App Switcher, matching the rest of the system more closely.
