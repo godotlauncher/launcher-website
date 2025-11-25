@@ -13,3 +13,13 @@
   align-items: center;
   gap: 8px;
 }
+
+.heroVariants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.heroVariantButton {
+  flex: 1 1 140px;
+}
