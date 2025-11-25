@@ -1,6 +1,7 @@
 .projectView {
   margin: 24px;
-
+  display:flex;
+  justify-content: center;
 }
 
 .projectView .projectView__image {
