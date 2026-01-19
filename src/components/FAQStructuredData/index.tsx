@@ -3,17 +3,19 @@ import Heading from "@theme/Heading";
 import clsx from "clsx";
 
 import styles from "./styles.module.css";
+import { FAQSection } from "@site/src/data/faqs";
 
 interface FAQStructuredDataProps {
-    sections: {
-        title: string;
-        questions: {
-            question: string;
-            answer: string;
-            answerHTML?: JSX.Element;
-        }[];
-    }[];
-}
+    sections: FAQSection[]
+    // {
+    //     title: string;
+    //     questions: {
+    //         question: string;
+    //         answer: string;
+    //         answerHTML?: JSX.Element;
+    //     }[];
+};
+
 
 interface FAQQuestionStructuredData {
     '@type': 'Question';

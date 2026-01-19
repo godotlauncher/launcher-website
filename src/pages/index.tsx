@@ -9,11 +9,27 @@ import { ProjectViewScreenShot } from "../components/ProjectViewScreenShot";
 import { HomepageHeader } from "../components/Header";
 import { CTADownload } from "../components/CTADownload";
 import FAQStructuredData from "../components/FAQStructuredData";
-import Link from "@docusaurus/Link";
 import Head from "@docusaurus/Head";
+import Link from "@docusaurus/Link";
+import { faqSections } from "../data/faqs";
 
 export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
+
+  const featuredQuestions = faqSections
+    .flatMap((section, sectionIdx) =>
+      section.questions.map((question, questionIdx) => ({
+        question,
+        fallbackOrder: sectionIdx * 100 + questionIdx,
+      })),
+    )
+    .filter(({ question }) => question.featured)
+    .sort(
+      (a, b) =>
+        (a.question.featureOrder ?? a.fallbackOrder) -
+        (b.question.featureOrder ?? b.fallbackOrder),
+    )
+    .map(({ question }) => question);
 
   return (
     <Layout
@@ -85,62 +101,7 @@ export default function Home(): ReactNode {
               sections={[
                 {
                   title: "FAQs",
-                  questions: [
-                    {
-                      question:
-                        "How is Godot Launcher different from downloading Godot manually?",
-                      answer:
-                        "Godot Launcher simplifies the process of downloading and managing different versions of Godot, directly from the launcher (see: https://docs.godotlauncher.org/getting-started/install-editor/) making it easier to switch between them without manual installation.",
-                      answerHTML: (
-                        <>
-                          Godot Launcher simplifies the process of downloading
-                          and managing different versions of Godot, directly
-                          from the launcher (see:{" "}
-                          <Link style={{ display: 'contents' }} href="https://docs.godotlauncher.org/getting-started/install-editor/">
-                            Installing an Editor
-                          </Link>
-                          ) making it easier to switch between them without
-                          manual installation.
-                        </>
-                      ),
-                    },
-                    {
-                      question:
-                        "Can I use Godot Launcher with existing projects?",
-                      answer:
-                        "Absolutely. Just use the 'Add' button to bring in any existing Godot project and assign it a specific engine version.",
-                      answerHTML: (
-                        <>
-                          Absolutely. Just use the 'Add' button to bring in any
-                          existing Godot project and assign it a specific engine
-                          version.
-                        </>
-                      ),
-                    },
-                    {
-                      question: "Do I need to install Godot separately?",
-                      answer:
-                        "No, Godot Launcher lets you download and manage Godot versions right from the launcher — no separate installation required.",
-                      answerHTML: (
-                        <>
-                          No, Godot Launcher lets you download and manage Godot
-                          versions right from the launcher — no separate
-                          installation required.
-                        </>
-                      ),
-                    },
-                    {
-                      question: "Does it work offline?",
-                      answer:
-                        "Yes, once you have downloaded the Godot versions you need, you can use them offline.",
-                      answerHTML: (
-                        <>
-                          Yes, once you have downloaded the Godot versions you
-                          need, you can use them offline.
-                        </>
-                      ),
-                    },
-                  ],
+                  questions: featuredQuestions,
                 },
               ]}
             />
