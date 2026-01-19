@@ -18,15 +18,17 @@ interface HeroDownloadButtonProps {
 export const HeroDownloadButton: FC<HeroDownloadButtonProps> = ({ className, color }) => {
 
   const globalData = useGlobalData();
-  const pluginData = globalData['docusaurus-plugin-github-releases'].default as PluginGithubReleaseContent;
-  const latest = pluginData.latest;
+  const pluginData = globalData['docusaurus-plugin-github-releases']
+    ?.default as PluginGithubReleaseContent | undefined;
+  const latest = pluginData?.latest;
+  const releaseLabel = latest?.tag_name ?? "latest";
 
   const { platform, architecture, hasExactArch } = useAgent();
   const isLinux = platform === "Linux";
   const preferredColor = color ?? "primary";
 
   const downloads = useMemo(() => {
-    if (!platform) {
+    if (!platform || !latest) {
       return null;
     }
     return extractPlatformGroup(latest, platform);
@@ -106,7 +108,7 @@ export const HeroDownloadButton: FC<HeroDownloadButtonProps> = ({ className, col
       <div className={clsx(styles.heroDownloadGroup, className)}>
         <DownloadButton
           platform={platform}
-          title={`Download for ${platform} (${latest.tag_name})`}
+          title={`Download for ${platform} (${releaseLabel})`}
           href={selectedOption.href}
           size="lg"
           color={preferredColor}
@@ -118,7 +120,7 @@ export const HeroDownloadButton: FC<HeroDownloadButtonProps> = ({ className, col
 
   return (
     <Link to="/download" className={clsx("button button--primary button--lg", styles.downloadButton)}>
-      Download Godot Launcher ({latest.tag_name})
+      Download Godot Launcher ({releaseLabel})
     </Link>
   );
 };
