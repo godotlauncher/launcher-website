@@ -12,6 +12,9 @@ export default function CopyrightWrapper(props: Props): ReactNode {
   return (
     <>
       <hr className={styles.separator} />
+      <div className={styles.disclaimer}>
+        Godot Launcher is not affiliated with or endorsed by the Godot Engine.
+      </div>
       <div className={styles.copyright}>
         <div>
           Copyright © {new Date().getFullYear()} Mario Debono and{" "}
