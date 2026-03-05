@@ -28,7 +28,7 @@ tuned for macOS 26, and Linux builds now ship as `deb` and `rpm` starting with 1
 ## Drop projects straight in
 Skip extra dialogs by dropping project.godot files onto the Launcher window. You can drop several files at once and the Launcher shows progress as it imports each one, so bulk additions stay predictable.
 
-![Projects view showing added entries](/img/screenshots/screen_projects_view_dark.webp)
+![Projects view showing added entries](/img/screenshots/screen_projects_drop_overlay_dark.webp)
 
 ## Try prerelease builds
 If you like early access, turn on prerelease updates in Preferences. You will receive beta builds ahead of stable releases and can switch the setting off whenever you want. It is a simple way to preview features and share feedback sooner.
