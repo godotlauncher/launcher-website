@@ -13,7 +13,7 @@ export default function CopyrightWrapper(props: Props): ReactNode {
     <>
       <hr className={styles.separator} />
       <div className={styles.disclaimer}>
-        Godot Launcher is not affiliated with or endorsed by the Godot Engine.
+        Godot Launcher is not affiliated with or endorsed by the Godot Engine or the Godot Foundation.
       </div>
       <div className={styles.copyright}>
         <div>
