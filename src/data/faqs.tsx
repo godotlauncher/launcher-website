@@ -42,7 +42,7 @@ export const faqSections: FAQSection[] = [
             Yes! Godot Launcher is completely free and open-source under the{" "}
             <Link
               style={{ display: "contents" }}
-              href="license"
+              to="/license/"
               title="View license"
             >
               MIT license
