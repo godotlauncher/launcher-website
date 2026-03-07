@@ -1,6 +1,6 @@
 ---
-title: 🚀 Godot Launcher 1.9.0 - Choose Your Project Folder
-description: Create new projects anywhere with the new Overwrite Project Path toggle.
+title: 🚀 Godot Launcher 1.9.0 - Choose Your Project Folder and Control Updates
+description: Create new projects anywhere and decide when to download or install Godot Launcher updates.
 slug: /godot-launcher-1-9-0-choose-your-project-folder
 date: 2026-03-05
 image: /img/screenshots/screen_projects_new_project_overwrite_path_dark.webp
@@ -14,14 +14,15 @@ tags:
   - release
 ---
 
-Godot Launcher 1.9.0 adds a small switch that makes project creation fit real-world folder layouts: **Overwrite Project Path**. Turn it on when creating a new project and choose the parent folder you actually want, whether that is a monorepo, an external SSD, or a dedicated workspace for a client. Your default Projects Location stays the same.
+Godot Launcher 1.9.0 brings two practical quality-of-life improvements. You can now create a new project in the parent folder you actually want with **Overwrite Project Path**, and app updates now follow a clearer two-step flow: download when you are ready, then restart once the update is prepared.
 
 <!-- truncate -->
 
 **Highlights**
-- Choose a custom parent folder for a new project, without changing your global default.
-- Browse for a folder (or type a path) and see the final path before you create.
-- Safer creation: the launcher refuses non-empty target folders to avoid accidental overwrites.
+- Choose a custom parent folder for a new project without changing your default Projects Location.
+- Browse for a folder or type a path and confirm the final project path before you create it.
+- Download launcher updates only when you want, then restart once the update is ready.
+- Skip one update version and bring it back from Settings later if you change your mind.
 
 ## Pick where new projects live
 
@@ -37,28 +38,27 @@ The name sounds scary, but it does not overwrite your files. If the target proje
 
 If you meant to bring an existing project into the launcher, use the Add Project flow instead.
 
-## How to use it (quick steps)
+## Control app updates before you install
 
-1. Go to `Projects` and click **New Project**.
-1. Enter your project name and pick an installed Godot version.
-1. Enable **Overwrite Project Path**.
-1. Type a folder path or click the folder button to browse.
-1. Click **Create Project**.
+Until now, launcher updates downloaded automatically and only asked for a restart at the end. In 1.9.0 the flow is manual.
 
-Example parent folders:
-- Windows: `D:\Godot\Projects`
-- macOS: `/Users/you/Godot/Projects`
-- Linux: `/home/you/Godot/Projects`
+When an update is available, you can choose **Download now**. Once the download finishes, the launcher switches to a clear **Restart now** step so you decide when the install happens.
 
-## Tips for common workflows
+This gives you a better moment to download the update, especially if you are in the middle of work and do not want the launcher to start pulling files in the background.
 
-- Monorepo: set the overwrite path to your repo folder so each project lands in its own `{repo}/{project-name}` directory.
-- External drive: point projects at your SSD so large assets stay off your system disk.
-- Quick reset: use **Use default path** to snap back to your normal Projects Location.
+![Projects view with update available banner](/img/screenshots/screen_projects_update_available_dark.webp)
+
+## Skip a version and come back later
+
+If an update is not for today, you can choose **Skip this version**. Regular update checks stay quiet for that version, so the launcher does not keep prompting you.
+
+If you change your mind later, open `Settings -> Updates` and run a manual check. The launcher can still show that skipped release there, so you can download it anyway without waiting for a newer version.
+
+![Settings view showing a skipped update manually restored](/img/screenshots/screen_settings_updates_manual_override_dark.webp)
 
 ## Update to 1.9.0
 
-Update inside the app or grab the latest installer. Try it with your next project and tell me if it matches how you organise your folders.
+Update inside the app or grab the latest installer. If you want more control over where projects live and when launcher updates install, 1.9.0 makes both simpler.
 
 ## Related resources
 
