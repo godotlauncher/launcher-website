@@ -14,6 +14,8 @@ tags:
   - release
 ---
 
+import ThemedImage from '@theme/ThemedImage';
+
 Godot Launcher 1.9.0 brings two practical quality-of-life improvements. You can now create a new project in the parent folder you actually want with **Overwrite Project Path**, and app updates now follow a clearer two-step flow: download when you are ready, then restart once the update is prepared.
 
 <!-- truncate -->
@@ -30,7 +32,18 @@ By default, the launcher creates new projects inside your configured Projects Lo
 
 Enable **Overwrite Project Path**, pick a parent folder, and the launcher creates a clean `{parent}/{project-name}` folder for you. The input shows the parent folder and the UI appends your project name, so you can confirm the final path before you click Create.
 
-![New Project view with Overwrite Project Path enabled](/img/screenshots/screen_projects_new_project_overwrite_path_dark.webp)
+<p>
+  <ThemedImage
+    className="blogThemedImage"
+    alt="New Project view with Overwrite Project Path enabled"
+    decoding="async"
+    loading="lazy"
+    sources={{
+      light: '/img/screenshots/screen_projects_new_project_overwrite_path_light.webp',
+      dark: '/img/screenshots/screen_projects_new_project_overwrite_path_dark.webp',
+    }}
+  />
+</p>
 
 ## How overwrite path stays safe
 
@@ -46,7 +59,18 @@ When an update is available, you can choose **Download now**. Once the download 
 
 This gives you a better moment to download the update, especially if you are in the middle of work and do not want the launcher to start pulling files in the background.
 
-![Projects view with update available banner](/img/screenshots/screen_projects_update_available_dark.webp)
+<p>
+  <ThemedImage
+    className="blogThemedImage"
+    alt="Projects view with update available banner"
+    decoding="async"
+    loading="lazy"
+    sources={{
+      light: '/img/screenshots/screen_projects_update_available_light.webp',
+      dark: '/img/screenshots/screen_projects_update_available_dark.webp',
+    }}
+  />
+</p>
 
 ## Skip a version and come back later
 
@@ -54,7 +78,18 @@ If an update is not for today, you can choose **Skip this version**. Regular upd
 
 If you change your mind later, open `Settings -> Updates` and run a manual check. The launcher can still show that skipped release there, so you can download it anyway without waiting for a newer version.
 
-![Settings view showing a skipped update manually restored](/img/screenshots/screen_settings_updates_manual_override_dark.webp)
+<p>
+  <ThemedImage
+    className="blogThemedImage"
+    alt="Settings view showing a skipped update manually restored"
+    decoding="async"
+    loading="lazy"
+    sources={{
+      light: '/img/screenshots/screen_settings_updates_manual_override_light.webp',
+      dark: '/img/screenshots/screen_settings_updates_manual_override_dark.webp',
+    }}
+  />
+</p>
 
 ## Update to 1.9.0
 
