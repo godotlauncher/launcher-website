@@ -37,7 +37,7 @@ export const HomepageHeader: FC = () => {
     <header className={clsx("hero shadow--lw", styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className={clsx("hero__title", styles.hero__title)}>
-          The Companion App for Godot Engine
+          A Companion App for Godot Engine
         </Heading>
         <p className={clsx("hero__subtitle", styles.hero__subtitle)}>
           {siteConfig.tagline}

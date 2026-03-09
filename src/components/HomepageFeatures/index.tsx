@@ -1,21 +1,24 @@
-import type { ReactNode } from 'react';
+import type { ComponentProps, ReactNode } from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
+import ThemedImage from '@theme/ThemedImage';
 import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  imageClassName: string;
+  sources: ComponentProps<typeof ThemedImage>['sources'];
+  alt?: string;
   size: { width: number, height: number; };
   description: ReactNode;
 };
 
-const ration = 291 / 286;
-
 const FeatureList: FeatureItem[] = [
   {
     title: 'Effortless Godot Version Management',
-    imageClassName: styles.featureImage__effortlessVersionManagement,
+    sources: {
+      light: '/img/features/Effortless_Godot_Version_Management_Light.webp',
+      dark: '/img/features/Effortless_Godot_Version_Management_Dark.webp',
+    },
     size: { width: 300, height: 234 },
     description: (
       <>
@@ -25,7 +28,10 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Cross-Platform Godot Downloads',
-    imageClassName: styles.featureImage__crossPlatform,
+    sources: {
+      light: '/img/features/Cross_Platform_Light.webp',
+      dark: '/img/features/Cross_Platform_Dark.webp',
+    },
     size: { width: 300, height: 234 },
     description: (
       <>
@@ -35,7 +41,10 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Multilingual Experience Out of the Box',
-    imageClassName: styles.featureImage__multilingualInterface,
+    sources: {
+      light: '/img/features/Multilingual_Interface_Light.webp',
+      dark: '/img/features/Multilingual_Interface_Dark.webp',
+    },
     size: { width: 300, height: 234 },
     description: (
       <>
@@ -45,7 +54,10 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Quick Project Setup with Git & VSCode',
-    imageClassName: styles.featureImage__quickSetup,
+    sources: {
+      light: '/img/features/Quick_Project_Setup_Light.webp',
+      dark: '/img/features/Quick_Project_Setup_Dark.webp',
+    },
     size: { width: 300, height: 234 },
     description: (
       <>
@@ -55,7 +67,10 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Per-Project Editor Settings',
-    imageClassName: styles.featureImage__perProjectEditorSettings,
+    sources: {
+      light: '/img/features/Per_Project_Editor_Settings_Light.webp',
+      dark: '/img/features/Per_Project_Editor_Settings_Dark.webp',
+    },
     size: { width: 300, height: 234 },
     description: (
       <>
@@ -65,7 +80,10 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Quick Access from System Tray',
-    imageClassName: styles.featureImage__quickEditFromSystemTray,
+    sources: {
+      light: '/img/features/Quick_Edit_From_System_Tray_Light.webp',
+      dark: '/img/features/Quick_Edit_From_System_Tray_Dark.webp',
+    },
     size: { width: 300, height: 234 },
     description: (
       <>
@@ -75,7 +93,10 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Automatic Updates',
-    imageClassName: styles.featureImage__automaticUpdates,
+    sources: {
+      light: '/img/features/Automatic_Updates_Light.webp',
+      dark: '/img/features/Automatic_Updates_Dark.webp',
+    },
     size: { width: 300, height: 234 },
     description: (
       <>
@@ -85,11 +106,17 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({ title, description, imageClassName, size }: FeatureItem) {
+function Feature({ title, description, sources, alt, size }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className={styles.featureImageContainer}>
-        <div role="img" className={clsx(styles.featureImage, imageClassName)} style={size ? size : {}} />
+        <ThemedImage
+          alt={alt ?? title}
+          className={styles.featureImage}
+          height={size.height}
+          sources={sources}
+          width={size.width}
+        />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>

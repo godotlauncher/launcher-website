@@ -20,6 +20,13 @@
   opacity: .25;
 }
 
+.disclaimer {
+  font-size: 1rem;
+  opacity: 0.8;
+  text-align: left;
+
+}
+
 @media screen and (max-width: 996px) {
   .copyright {
     flex-direction: column;

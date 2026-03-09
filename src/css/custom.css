@@ -25,6 +25,12 @@
 
   --ifm-heading-font-family: 'Nunito Sans', sans-serif;
 
+  /* Blog images */
+  --blog-image-border: rgba(15, 23, 42, 0.08);
+  --blog-image-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.08),
+    0 2px 8px rgba(15, 23, 42, 0.05);
+
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -40,6 +46,12 @@
   --ifm-color-primary-lightest: #f7aea0;
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  /*  blog images */
+  --blog-image-border: rgba(255, 255, 255, 0.12);
+  --blog-image-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.35),
+    0 2px 10px rgba(0, 0, 0, 0.24);
 }
 
 
@@ -89,4 +101,16 @@ html {
     align-items: center;
     margin: 32px 0;
   }
+}
+
+
+.blog-wrapper.blog-post-page #__blog-post-container .blogThemedImage {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.25rem auto;
+  border: 1px solid var(--blog-image-border);
+  box-shadow: var(--blog-image-shadow);
+  border-radius: 12px;
+  background: var(--ifm-background-color);
 }
