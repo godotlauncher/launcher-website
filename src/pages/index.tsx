@@ -89,7 +89,7 @@ export default function Home(): ReactNode {
           <div className="secondary-tagline ">
             <Heading as="h2">Why use Godot Launcher?</Heading>
             <p>
-              Godot Launcher is a companion app for Godot Engine. It simplifies
+              Godot Launcher is the companion app for Godot Engine. It simplifies
               the Godot download experience by allowing you to install, and
               switch between multiple Godot versions without hassle.
             </p>
