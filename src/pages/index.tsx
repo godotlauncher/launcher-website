@@ -45,10 +45,8 @@ export default function Home(): ReactNode {
             operatingSystem: "Windows, macOS, Linux",
             applicationCategory: "DeveloperApplication",
             description: `Godot Launcher is a cross-platform, open-source tool that helps
-              you and download, manage, and organize multiple versions of the Godot
-              Engine. Whether you're developing 2D or 3D games, this tool
-              streamlines your workflow with powerful features like Git
-              integration, system tray access, and per-project settings.`,
+              you download official Godot versions, use custom-built Godot editors,
+              manage projects, and keep per-project settings organized.`,
             url: "https://godotlauncher.org",
             image:
               "https://godotlauncher.org/img/screenshots/screen_projects_view_dark.webp",
@@ -77,10 +75,8 @@ export default function Home(): ReactNode {
             <h2>What is Godot Launcher?</h2>
             <p>
               Godot Launcher is a cross-platform, open-source tool that helps
-              you and download, manage, and organize multiple versions of the
-              Godot Engine. Whether you're developing 2D or 3D games, this tool
-              streamlines your workflow with powerful features like Git
-              integration, system tray access, and per-project settings.
+              you download official Godot versions, register custom-built Godot
+              editors, manage projects, and keep per-project settings organized.
             </p>
           </div>
 
@@ -90,8 +86,8 @@ export default function Home(): ReactNode {
             <Heading as="h2">Why use Godot Launcher?</Heading>
             <p>
               Godot Launcher is the companion app for Godot Engine. It simplifies
-              the Godot download experience by allowing you to install, and
-              switch between multiple Godot versions without hassle.
+              the Godot download experience and keeps official releases,
+              custom-built Godot editors, and project workflows in one place.
             </p>
           </div>
           <HomepageFeatures />

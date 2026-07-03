@@ -1,7 +1,7 @@
 ---
 title: You No Longer Have to Launch Godot Projects in Windowed Mode (Unless You Want To)
 slug: launch-godot-projects-windowed-mode
-description: Learn how the new Godot Launcher 1.2.0 makes it optional to launch Godot projects in windowed mode, taking full advantage of Godot 4.4’s new window size and position memory.
+description: Learn how the new Godot Launcher 1.2.0 makes it optional to launch Godot projects in windowed mode, taking full advantage of Godot 4.4's new window size and position memory.
 authors: [mariodebono]
 date: 2025-04-20 13:02:54
 image: /img/blog/images/godot-launcher-project-windowed-mode-ui-anim.gif
@@ -44,9 +44,9 @@ This change is especially helpful for users with **ultrawide monitors**, who oft
 
 In **Godot Launcher 1.2.0**, there is a new setting per project. By default, this setting is **disabled**, meaning projects are launched without the `-w` flag unless you enable it manually:
 
-> **Open Windowed** – If enabled, the launcher will start the editor with the `-w` flag (windowed mode).
+> **Open Windowed** - If enabled, the launcher will start the editor with the `-w` flag (windowed mode).
 
-If disabled, the launcher won’t pass the `-w` flag, letting the editor handle the window state as remembered from the last session. This gives users more control, especially when working with **Godot 4.4+**.
+If disabled, the launcher won't pass the `-w` flag, letting the editor handle the window state as remembered from the last session. This gives users more control, especially when working with **Godot 4.4+**.
 
 This feature works:
 
@@ -61,7 +61,7 @@ No matter where you launch from, your per-project windowed mode setting is respe
 2. In the **Project View**, click the more options button (3 dots) next to your project.
 3. From the menu, toggle the **"Open Windowed"** option.
 
-That’s it. The setting is saved per project. You can now control window behavior without touching any command-line flags.
+That's it. The setting is saved per project. You can now control window behavior without touching any command-line flags.
 
 ## Visual Indicators: Now with Tooltips
 

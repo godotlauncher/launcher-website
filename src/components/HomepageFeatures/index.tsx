@@ -14,7 +14,7 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Effortless Godot Version Management',
+    title: 'Official And Custom-Built Godot Editors',
     sources: {
       light: '/img/features/Effortless_Godot_Version_Management_Light.webp',
       dark: '/img/features/Effortless_Godot_Version_Management_Dark.webp',
@@ -22,7 +22,7 @@ const FeatureList: FeatureItem[] = [
     size: { width: 300, height: 234 },
     description: (
       <>
-        Easily <strong>download and manage multiple Godot Engine versions</strong> in one place. Switch between stable releases and experimental builds with just a few clicks — no manual installs needed.
+        Download official Godot releases, register custom-built Godot editors, and use the right editor for each project without managing installs by hand.
       </>
     ),
   },
@@ -48,7 +48,7 @@ const FeatureList: FeatureItem[] = [
     size: { width: 300, height: 234 },
     description: (
       <>
-        Let every teammate feel at home with <strong>automatic language detection and 13+ localised interfaces</strong>. Switch languages anytime and the entire launcher — menus, dialogs, and tray — updates instantly.
+        Let every teammate feel at home with <strong>automatic language detection and 13+ localised interfaces</strong>. Switch languages anytime and the entire launcher - menus, dialogs, and tray - updates instantly.
       </>
     ),
   },
@@ -61,7 +61,7 @@ const FeatureList: FeatureItem[] = [
     size: { width: 300, height: 234 },
     description: (
       <>
-        Start a new Godot project instantly with <strong>Git and VSCode initialized automatically</strong>. Your repo is ready to go with an initial commit — no extra setup required.
+        Start a new Godot project instantly with <strong>Git and VSCode initialized automatically</strong>. Your repo is ready to go with an initial commit - no extra setup required.
       </>
     ),
   },
@@ -87,7 +87,7 @@ const FeatureList: FeatureItem[] = [
     size: { width: 300, height: 234 },
     description: (
       <>
-        Instantly reopen recent projects from the system tray. <strong>No need to relaunch Godot manually</strong> or browse folders — stay in the flow.
+        Instantly reopen recent projects from the system tray. <strong>No need to relaunch Godot manually</strong> or browse folders - stay in the flow.
       </>
     ),
   },

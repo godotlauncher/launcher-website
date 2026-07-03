@@ -100,7 +100,7 @@ export default function DownloadPage() {
                   <>
                     <DownloadButton
                       platform={platform}
-                      title={`${platform} – ${primary.archLabel}`}
+                      title={`${platform} - ${primary.archLabel}`}
                       href={primary.href}
                       size="md"
                       color="primary"
@@ -130,6 +130,11 @@ export default function DownloadPage() {
             ))}
           </div>
         </div>
+
+        <p className={styles.release__signing}>
+          Free code signing provided by <Link href="https://signpath.io/">SignPath.io</Link>, certificate by{" "}
+          <Link href="https://signpath.org/">SignPath Foundation</Link>.
+        </p>
 
         {os === "Windows" && (
           <Admonition type="info" title="Install instantly with winget" className="margin-top--md">
@@ -169,14 +174,14 @@ export default function DownloadPage() {
         <h3>Linux</h3>
         <Admonition type="info" title="Note: Linux AppImage">
           <p>
-            AppImage builds include most dependencies — Make sure FUSE is
+            AppImage builds include most dependencies - Make sure FUSE is
             available on your system.
           </p>
           <p>
             If the launcher fails to start with Chromium sandbox errors, run it
             with <code>--no-sandbox</code> (or <code>--disable-sandbox</code>) or set{" "}
             <code>GODOT_LAUNCHER_DISABLE_SANDBOX=1</code> before launching. See the{" "}
-            <Link to="https://docs.godotlauncher.org/guides/linux-no-sandbox">
+            <Link to="https://docs.godotlauncher.org/guides/linux-no-sandbox/">
               Linux no-sandbox guide
             </Link>{" "}
             for detailed steps and security considerations.

@@ -18,7 +18,7 @@ export default function Contribute(): ReactNode {
             <strong>Godot Launcher</strong> is a community-driven, open-source
             project. Whether you're a developer, designer, writer, or just who
             enjoys Godot Launcher, there are many ways you can get involved.
-            Your contributions—big or small—make a real difference.
+            Your contributions - big or small - make a real difference.
           </p>
 
           <h2>Technical Contributions</h2>
@@ -110,7 +110,7 @@ export default function Contribute(): ReactNode {
             </li>
             <li>
               <strong>🌎 Translations:</strong> The launcher now ships with 14
-              locales, and we’re ready to keep expanding. If you’re fluent in
+              locales, and we're ready to keep expanding. If you're fluent in
               another language, check the{" "}
               <Link to="/contributing/translations" title="Read the translation contribution guide">
                 translation contribution guide

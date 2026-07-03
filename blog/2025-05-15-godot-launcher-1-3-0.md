@@ -1,5 +1,5 @@
 ---
-title: "🚀 Godot Launcher 1.3.0 – Project Sorting, Duplicate Detection, and Icon Refresh"
+title: "🚀 Godot Launcher 1.3.0 - Project Sorting, Duplicate Detection, and Icon Refresh"
 description: "New in Godot Launcher 1.3.0: sort your projects, prevent duplicate names, and enjoy a cleaner icon set with Lucide."
 date: 2025-05-15 21:00:00
 authors: [mariodebono]
@@ -13,7 +13,7 @@ Godot Launcher v1.3.0 is out. This release focuses on small but impactful qualit
 
 <!-- truncate -->
 
-## 🆕 What’s New
+## 🆕 What's New
 
 - **Duplicate Project Name Detection**  
   Adding a project with the same name as an existing one now triggers an error. This helps avoid accidental overwrites and keeps your project list tidy.  
@@ -24,7 +24,7 @@ Godot Launcher v1.3.0 is out. This release focuses on small but impactful qualit
   [[PR#11]](https://github.com/godotlauncher/launcher/pull/11)
 
 - **Lucide Icons Refactor (Partial)**  
-  We’ve updated most icons across the app to use the Lucide set for a more consistent look. Some pop-up menus still use system defaults for now.  
+  We've updated most icons across the app to use the Lucide set for a more consistent look. Some pop-up menus still use system defaults for now.  
   [[PR#10]](https://github.com/godotlauncher/launcher/pull/10)
 
 ## 📦 Get the Update

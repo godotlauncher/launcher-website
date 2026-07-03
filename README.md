@@ -15,7 +15,7 @@ Feel free to fix typos, improve, or add new content. To contribute:
 
 Make sure to follow the existing structure and style for consistency.
 
-> Keep in mind that this website is the public face of the Godot Launcher project. For that reason, major edits or structural changes should be approached thoughtfully. While you don’t need to submit a formal proposal, it’s highly recommended to open an issue in this repo or start a discussion in the Godot Launcher Discord, where community conversations about the website and project happen regularly.
+> Keep in mind that this website is the public face of the Godot Launcher project. For that reason, major edits or structural changes should be approached thoughtfully. While you don't need to submit a formal proposal, it's highly recommended to open an issue in this repo or start a discussion in the Godot Launcher Discord, where community conversations about the website and project happen regularly.
 
 ## 🚀 Development
 
@@ -61,10 +61,10 @@ npm run serve
 ## 🧩 Project Structure
 
 - `/blog` - Blog articles
-- `/src` – Website source (components, pages, etc.)
+- `/src` - Website source (components, pages, etc.)
 - `/src/pages` - Website pages
-- `/static` – Static assets (images, icons, etc.)
-- `docusaurus.config.js` – Site configuration
+- `/static` - Static assets (images, icons, etc.)
+- `docusaurus.config.js` - Site configuration
 
 ---
 

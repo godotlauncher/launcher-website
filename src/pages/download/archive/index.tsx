@@ -69,7 +69,7 @@ export default function ReleasesPage() {
                     <div key={`${latest.id}-${platform}`} className={styles.platformCard}>
                       <DownloadButton
                         platform={platform}
-                        title={`${platform} – ${group.primary.archLabel}`}
+                        title={`${platform} - ${group.primary.archLabel}`}
                         href={group.primary.href}
                         size="md"
                         color="primary"
@@ -139,7 +139,7 @@ export default function ReleasesPage() {
                       <div key={`${release.id}-${platform}`} className={styles.platformCard}>
                         <DownloadButton
                           platform={platform}
-                          title={`${platform} – ${group.primary.archLabel}`}
+                          title={`${platform} - ${group.primary.archLabel}`}
                           href={group.primary.href}
                           size="md"
                           color="primary"

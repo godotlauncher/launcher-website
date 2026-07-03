@@ -25,8 +25,8 @@ export default function License(): ReactNode {
             <Link to="https://github.com/godotlauncher/launcher/blob/main/build/license_en.txt">
               MIT license
             </Link>
-            . You are free to use, modify, and distribute it — including in
-            commercial projects — as long as the terms of the license are
+            . You are free to use, modify, and distribute it - including in
+            commercial projects - as long as the terms of the license are
             respected.
           </p>
           <h2>License Text</h2>
