@@ -1,36 +1,31 @@
 ---
 title: Help Translate Godot Launcher
-description: Learn how to review or contribute translations so Godot Launcher feels native in more languages.
+description: Learn where to review Godot Launcher translations, report wording issues, and find the full translation contribution checklist.
 ---
 
-# How to Contribute Translations
+# Help Translate Godot Launcher
 
-Godot Launcher 1.5.0 introduced internationalisation with 14 locales ready to use. That's a big step, and it only works long-term if people like you keep the wording natural and accurate. Whether you just spotted an odd phrase or you're ready to bring an entirely new language online, here's how you can help.
+Godot Launcher includes localized interface strings. Translation contributions help keep the app clear, accurate, and natural for more users.
 
-## Start with what's already shipped
+## Quick ways to help
 
 - **Try the launcher in your language.** Switch to your locale in `Settings > Appearance > Language` and note any phrases that feel off.
-- **Share quick fixes.** Small corrections are perfect for a GitHub issue or a Discord message if you don't have time for a full pull request.
-- **Track what's covered.** The current release includes System auto-detect plus English, Italiano, Português, Português (Brasil), 简体中文, 繁體中文, Deutsch, Français, Español, Polski, Русский, 日本語, Türkçe, and Malti.
+- **Report wording issues.** Small corrections are good candidates for a GitHub issue or a Discord message. You do not need to open a pull request for every typo.
+- **Review existing translations.** If you know a supported language well, review interface text for accuracy, tone, and missing context.
 
-If you just want to report a typo, open a [GitHub issue](https://github.com/godotlauncher/launcher/issues/new/choose) or drop a note in the [community hub](/community/). We'll make sure it gets reviewed.
+If you only want to report a typo or awkward phrase, open a [GitHub issue](https://github.com/godotlauncher/launcher/issues/new/choose) or leave a note in the [community hub](/community/).
 
-## Ready to contribute directly?
+## Full checklist
 
-1. **Read the translation contribution checklist.** It walks through the JSON structure, validation tests, and review process: 
-    - on the Docs page [https://docs.godotlauncher.org/contributing/translations/](https://docs.godotlauncher.org/contributing/translations/), or
-    - on GitHub [https://github.com/godotlauncher/launcher/blob/main/CONTRIBUTING_TRANSLATIONS.md](https://github.com/godotlauncher/launcher/blob/main/CONTRIBUTING_TRANSLATIONS.md)
-2. **Fork the main repo.** The localisation files live under `src/locales/` and are grouped by namespace (projects, installs, settings, and so on).
-3. **Keep the keys, translate the values.** The tests check that interpolation tokens and markup stay intact, so translate only the human-readable parts.
-4. **Run the tests.** `npm test:unit` validates that there are no errors, nothing is missing, and all placeholders line up.
-5. **Open your pull request.** Mention the language you touched and anything reviewers should pay extra attention to.
+For translation pull requests, use the full contribution checklist:
 
-We seed new locales with AI to save time, so your human input is what makes the experience truly feel native.
+- [Translation contribution docs](https://docs.godotlauncher.org/contributing/translations/)
+- [CONTRIBUTING_TRANSLATIONS.md](https://github.com/godotlauncher/launcher/blob/main/CONTRIBUTING_TRANSLATIONS.md)
 
-## Need a walkthrough or partner?
+The checklist covers file locations, JSON rules, placeholders, validation tests, and pull request expectations.
 
-- Coordinate with other translators or reviewers on [Discord](https://discord.gg/Ju9jkFJGvz).
-- Visit the main [Contribute page](/contribute/) for broader project roles if you want to help beyond language work.
-- Not sure how technical you need to be? The checklist includes detailed steps, so you can follow along even if you're new to GitHub.
+## Coordinate
 
-Thanks for helping make Godot Launcher accessible to more people. Every string you polish helps a creative team feel right at home.
+- Coordinate with other translators or reviewers on [Discord](https://discord.gg/Ju9jkFJGvz), especially when a phrase depends on Godot terminology or platform behavior.
+- Visit the main [Contribute page](/contribute/) for broader project roles.
+- Use the docs checklist when you are ready to open a pull request.

@@ -14,6 +14,7 @@ import { WingetCommandList } from "@site/src/components/WingetCommandList";
 import {
   SUPPORTED_PLATFORMS,
   extractPlatformGroup,
+  formatReleaseDate,
 } from "@site/src/utils/releases";
 
 export default function DownloadPage() {
@@ -52,8 +53,8 @@ export default function DownloadPage() {
 
   return (
     <Layout
-      title="Godot Download Made Easy - Get The Launcher"
-      description="Easily download and manage Godot Engine versions with Godot Launcher. One simple tool to install and run any Godot version. Free, open source, and cross-platform."
+      title="Download Godot Launcher for Windows, macOS, and Linux"
+      description="Download Godot Launcher, the open source Godot version manager and companion app for Windows, macOS, and Linux. Manage Godot versions, custom Godot builds, and project setup from one app."
     >
       <header className={clsx("hero shadow--lw", styles.heroBanner)}>
         <div className="container ">
@@ -62,18 +63,31 @@ export default function DownloadPage() {
             <br />
             {["macOS", "Windows", "Linux"].includes(os) && `for ${os}`}
           </Heading>
-            <p className="hero__subtitle">
-            The easiest way to download Godot Engine versions and manage Godot
-            projects on Windows, macOS, and Linux.
-            </p>
+          <p className="hero__subtitle">
+            Download the open source Godot version manager and companion app for
+            Windows, macOS, and Linux. Manage Godot versions, custom Godot
+            builds, and project setup from one app.
+          </p>
         </div>
       </header>
       <div className="container margin-vert--lg">
-        <Heading as="h2">What is Godot Launcher?</Heading>
+        <Heading as="h2">Download and manage Godot versions</Heading>
         <p>
-          Godot Launcher is a fast way to manage Godot versions and projects.
-          Open-source, cross-platform, and built for Godot developers.
+          Godot Launcher helps you download and manage Godot editor versions,
+          register custom Godot builds, and keep per-project editor settings
+          organized. Choose the installer or package for your operating system
+          below.
         </p>
+
+        <div className={styles.engineClarification}>
+          <strong>Looking for Godot Engine itself?</strong> Godot Launcher is an
+          independent app that helps manage Godot editor downloads and project
+          setup. You can download Godot Engine directly from the{" "}
+          <Link href="https://godotengine.org/download/">
+            Godot Engine website
+          </Link>
+          .
+        </div>
 
         <div key={latest.id} className={styles.release}>
           <div className={styles.release__content}>
@@ -83,7 +97,7 @@ export default function DownloadPage() {
             </div>
 
             <p className={styles.release__meta}>
-              {new Date(latest.published_at).toLocaleDateString()}
+              {formatReleaseDate(latest.published_at)}
               <Link
                 to={`https://github.com/godotlauncher/launcher/releases/tag/${latest.tag_name}`}
                 className={styles.release__link}
@@ -95,24 +109,31 @@ export default function DownloadPage() {
 
           <div className={styles.release__downloads}>
             {platformGroups.map(({ platform, group, primary, variants }) => (
-              <div key={`${latest.id}-${platform}`} className={styles.platformCard}>
+              <div
+                key={`${latest.id}-${platform}`}
+                className={styles.platformCard}
+              >
                 {primary ? (
                   <>
                     <DownloadButton
                       platform={platform}
-                      title={`${platform} - ${primary.archLabel}`}
+                      title={`Download for ${platform}: ${primary.archLabel}`}
                       href={primary.href}
                       size="md"
                       color="primary"
                       className={styles.platformPrimary}
                     />
                     {variants.length > 0 && (
-                      <div className={styles.platformVariants} role="group" aria-label={`${platform} installers`}>
+                      <div
+                        className={styles.platformVariants}
+                        role="group"
+                        aria-label={`${platform} installers`}
+                      >
                         {variants.map((option) => (
                           <DownloadButton
                             key={option.id}
                             platform={platform}
-                            title={option.label}
+                            title={`Download ${platform}: ${option.label}`}
                             href={option.href}
                             size="sm"
                             color="secondary"
@@ -124,31 +145,121 @@ export default function DownloadPage() {
                     )}
                   </>
                 ) : (
-                  <p className={styles.platformEmpty}>No installers published for this platform.</p>
+                  <p className={styles.platformEmpty}>
+                    No installers published for this platform.
+                  </p>
                 )}
               </div>
             ))}
           </div>
         </div>
 
-        <p className={styles.release__signing}>
-          Free code signing provided by <Link href="https://signpath.io/">SignPath.io</Link>, certificate by{" "}
-          <Link href="https://signpath.org/">SignPath Foundation</Link>.
-        </p>
+        <section className={styles.platformGuide} aria-labelledby="package-options">
+          <Heading as="h2" id="package-options">
+            Which package should I choose?
+          </Heading>
+          <div className={styles.platformGuide__grid}>
+            <div>
+              <h3>Windows</h3>
+              <p>
+                Use the Windows installer, or install and upgrade from the
+                command line with winget when it is available on your system.
+              </p>
+            </div>
+            <div>
+              <h3>macOS</h3>
+              <p>
+                Use the macOS disk image. Open the .dmg file and move Godot
+                Launcher into your Applications folder.
+              </p>
+            </div>
+            <div>
+              <h3>Linux</h3>
+              <p>
+                Use AppImage for a portable package, or choose .deb or .rpm
+                when the package matches your distribution.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.trustPanel} aria-labelledby="release-trust">
+          <Heading as="h2" id="release-trust">
+            Release and trust details
+          </Heading>
+          <div className={styles.trustPanel__grid}>
+            <div>
+              <h3>GitHub releases</h3>
+              <p>
+                Download assets are published from the{" "}
+                <Link
+                  href={`https://github.com/godotlauncher/launcher/releases/tag/${latest.tag_name}`}
+                >
+                  {latest.tag_name} GitHub release
+                </Link>
+                .
+              </p>
+            </div>
+            <div>
+              <h3>Source and license</h3>
+              <p>
+                Godot Launcher is open source. Review the{" "}
+                <Link href="https://github.com/godotlauncher/launcher">
+                  source code
+                </Link>{" "}
+                and the <Link to="/license">MIT license</Link>.
+              </p>
+            </div>
+            <div>
+              <h3>Signed releases</h3>
+              <div className={styles.trustDetails}>
+                <p>
+                  <strong>Windows:</strong> Builds are signed through SignPath.
+                </p>
+                <p className={styles.signPathAttribution}>
+                  Free code signing provided by{" "}
+                  <Link href="https://signpath.io/">SignPath.io</Link>,
+                  certificate by{" "}
+                  <Link href="https://signpath.org/">SignPath Foundation</Link>.
+                </p>
+                <p>
+                  <strong>macOS:</strong> Builds are signed with a Developer ID
+                  Application certificate issued to Mario DEBONO and notarized by
+                  Apple.
+                </p>
+                <p>
+                  <strong>Linux:</strong> Signing for .deb and .rpm packages is
+                  planned.
+                </p>
+              </div>
+            </div>
+            <div>
+              <h3>Independent project</h3>
+              <p>
+                Godot Launcher is maintained independently and is not affiliated
+                with the Godot Foundation.
+              </p>
+            </div>
+          </div>
+        </section>
 
         {os === "Windows" && (
-          <Admonition type="info" title="Install instantly with winget" className="margin-top--md">
+          <Admonition
+            type="info"
+            title="Install with winget"
+            className="margin-top--md"
+          >
             <WingetCommandList
               commands={wingetCommands}
               intro={
                 <>
-                  Prefer the command line? Install or upgrade Godot Launcher with winget and stay
-                  current with each Windows release.
+                  Prefer the command line? Install or upgrade Godot Launcher
+                  with winget and stay current with each Windows release.
                 </>
               }
               hint={
                 <>
-                  All commands pull the same signed installer we publish above. Learn more in our{" "}
+                  These commands install the same Windows release published above. Learn more in our{" "}
                   <Link to="/blog/godot-launcher-winget">winget announcement</Link>.
                 </>
               }
@@ -174,17 +285,15 @@ export default function DownloadPage() {
         <h3>Linux</h3>
         <Admonition type="info" title="Note: Linux AppImage">
           <p>
-            AppImage builds include most dependencies - Make sure FUSE is
+            AppImage builds include most dependencies. Make sure FUSE is
             available on your system.
           </p>
           <p>
-            If the launcher fails to start with Chromium sandbox errors, run it
-            with <code>--no-sandbox</code> (or <code>--disable-sandbox</code>) or set{" "}
-            <code>GODOT_LAUNCHER_DISABLE_SANDBOX=1</code> before launching. See the{" "}
+            If the launcher fails to start with Chromium sandbox errors, see the{" "}
             <Link to="https://docs.godotlauncher.org/guides/linux-no-sandbox/">
               Linux no-sandbox guide
             </Link>{" "}
-            for detailed steps and security considerations.
+            for workaround steps and security considerations.
           </p>
         </Admonition>
         <ul>

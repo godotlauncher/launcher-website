@@ -12,6 +12,13 @@
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+.engineClarification {
+  margin: 1.25rem 0 1.5rem;
+  padding-left: 1rem;
+  border-left: 4px solid var(--ifm-color-primary);
+  color: var(--ifm-color-emphasis-800);
+}
+
 .release__content {
   display: flex;
   flex-direction: column;
@@ -85,11 +92,47 @@
   border-top: 1px solid var(--ifm-color-emphasis-200);
 }
 
-.release__signing {
-  margin: 0.75rem 0 0;
-  color: var(--ifm-color-emphasis-700);
-  font-size: 0.875rem;
-  text-align: right;
+.platformGuide,
+.trustPanel {
+  margin-top: 2rem;
+}
+
+.platformGuide__grid,
+.trustPanel__grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.platformGuide__grid > div,
+.trustPanel__grid > div {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: var(--ifm-color-emphasis-0);
+}
+
+.platformGuide__grid h3,
+.trustPanel__grid h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.platformGuide__grid p,
+.trustPanel__grid p {
+  color: var(--ifm-color-emphasis-800);
+  margin-bottom: 0;
+}
+
+.trustDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.signPathAttribution {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700) !important;
 }
 
 @media screen and (max-width: 996px) {
@@ -104,8 +147,5 @@
   }
   .platformCard{
     flex: 1 1 140px;
-  }
-  .release__signing {
-    text-align: center;
   }
 }

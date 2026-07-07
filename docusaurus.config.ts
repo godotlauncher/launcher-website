@@ -10,7 +10,7 @@ const config: Config = {
     title: "Godot Launcher",
 
     tagline:
-        "A standalone app to streamline Godot downloads, manage multiple Godot versions, and automate new project setups - so you can focus on building great games.",
+        "Less setup between you and your next Godot project.",
     favicon: "img/favicon-16x16.png",
 
     // Set the production url of your site here
@@ -53,7 +53,7 @@ const config: Config = {
                     showReadingTime: true,
                     blogTitle: "Godot Launcher Blog",
                     blogDescription:
-                        "Stay up to date with the latest news and updates from the Godot Launcher team.",
+                        "Stay up to date with the latest news and updates from the Godot Launcher project.",
                     blogSidebarTitle: "All posts",
                     blogSidebarCount: "ALL",
                 },

@@ -17,6 +17,22 @@
   justify-content: center;
 }
 
+.heroBrand {
+  margin: 0 auto 0.75rem;
+  max-width: 760px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  opacity: 0.8;
+}
+
+.heroDescription {
+  margin: 0 auto 1.75rem;
+  max-width: 760px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
 .heroLink {
   color: var(--ifm-color-base);
   text-decoration: underline;
@@ -85,6 +101,19 @@
   color: var(--ifm-color-base);
 }
 
+.signPathAttribution {
+  margin: 0.75rem auto 0;
+  max-width: 560px;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  opacity: 0.72;
+}
+
+.signPathAttribution a {
+  color: inherit;
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
@@ -92,5 +121,13 @@
 
   .hero__subtitle {
     font-size: 1.3rem;
+  }
+
+  .heroBrand {
+    font-size: 1rem;
+  }
+
+  .heroDescription {
+    font-size: 1rem;
   }
 }

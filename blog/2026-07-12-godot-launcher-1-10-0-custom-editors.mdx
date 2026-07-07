@@ -1,0 +1,139 @@
+---
+title: "Godot Launcher 1.10.0 - Use Custom Godot Editor Builds"
+description: Register your own Godot builds, pick them per project, and keep importing projects even when an editor is missing.
+subtitle: Custom editor builds, smoother imports, and safer VS Code config recovery.
+version: 1.10.0
+slug: /godot-launcher-1-10-0-custom-editors
+date: 2026-07-12
+image: /img/blog/images/1.10.0/custom-editors.webp
+authors:
+  - mariodebono
+tags:
+  - godot
+  - godot-launcher
+  - custom-editor
+  - quality-of-life
+  - release
+---
+
+import ThemedImage from '@theme/ThemedImage';
+
+Godot Launcher 1.10.0 is for projects that do not always fit the default path: local engine builds, patched Godot editors, older projects that ask for a missing editor, and VS Code config files that need a careful recovery path.
+
+You can now register your own Godot builds next to official releases, pick them per project, and keep importing projects even when the exact editor is not installed yet.
+
+<!-- truncate -->
+
+**Highlights**
+
+- Use custom-built Godot editors next to official releases.
+- Create a custom editor manifest directly from Installs.
+- Import projects even when their requested editor is missing.
+- Recover broken VS Code config files without losing the originals.
+- Rename launcher project entries from the project settings drawer.
+
+## Use your own Godot builds
+
+Custom-built Godot editors now live alongside official releases in **Installs**. Registered builds get a **Custom** badge, and you can select them for projects just like any other installed editor.
+
+This is useful if you work with patched engine builds, local engine changes, or builds produced by your team pipeline.
+
+<p>
+  <ThemedImage
+    className="blogThemedImage"
+    alt="Installs view showing registered custom-built Godot editors"
+    decoding="async"
+    loading="lazy"
+    sources={{
+      light: '/img/screenshots/screen_installs_custom_editors_light.webp',
+      dark: '/img/screenshots/screen_installs_custom_editors_dark.webp',
+    }}
+  />
+</p>
+
+Custom builds also appear in project editor selectors, including the new project flow.
+
+<p>
+  <ThemedImage
+    className="blogThemedImage"
+    alt="Create Project view with a custom editor selected"
+    decoding="async"
+    loading="lazy"
+    sources={{
+      light: '/img/screenshots/screen_projects_new_project_custom_editor_light.webp',
+      dark: '/img/screenshots/screen_projects_new_project_custom_editor_dark.webp',
+    }}
+  />
+</p>
+
+If your build does not already have a manifest, open **Custom Editor -> Create custom editor manifest** from Installs. The launcher writes `godotlauncher-editor-manifest.json` to the folder you choose, then registers the editor right away.
+
+The manifest format is defined by the [v1 engine manifest schema](https://github.com/godotlauncher/launcher/blob/main/schemas/v1/engine-manifest.json).
+
+<p>
+  <ThemedImage
+    className="blogThemedImage"
+    alt="Create custom editor manifest drawer"
+    decoding="async"
+    loading="lazy"
+    sources={{
+      light: '/img/screenshots/screen_installs_custom_editor_drawer_light.webp',
+      dark: '/img/screenshots/screen_installs_custom_editor_drawer_dark.webp',
+    }}
+  />
+</p>
+
+## Import projects with missing editors
+
+Adding an existing project is more forgiving in 1.10.0. If a project asks for an editor you do not have installed, the launcher can show an **Editor version required** dialog instead of stopping immediately.
+
+<p>
+  <ThemedImage
+    className="blogThemedImage"
+    alt="Editor version required dialog"
+    decoding="async"
+    loading="lazy"
+    sources={{
+      light: '/img/screenshots/screen_projects_editor_resolution_light.webp',
+      dark: '/img/screenshots/screen_projects_editor_resolution_dark.webp',
+    }}
+  />
+</p>
+
+From there, you can download the requested editor when it is available, use a compatible installed editor as a fallback, or add the project with the editor still marked as missing.
+
+That means importing an older project no longer has to stop just because the exact editor is not installed yet.
+
+## Recover broken VS Code config files
+
+Godot Launcher now handles broken VS Code config files more carefully. If `.vscode/settings.json`, `.vscode/extensions.json`, or `.vscode/launch.json` cannot be safely read, 1.10.0 keeps the original file as a timestamped `.bad` copy, recreates the config it needs, and shows you which paths were recovered.
+
+<p>
+  <ThemedImage
+    className="blogThemedImage"
+    alt="VS Code configuration recovery warning"
+    decoding="async"
+    loading="lazy"
+    sources={{
+      light: '/img/screenshots/screen_projects_vscode_config_recovered_light.webp',
+      dark: '/img/screenshots/screen_projects_vscode_config_recovered_dark.webp',
+    }}
+  />
+</p>
+
+You keep the original file for inspection, and the launcher still gets a valid config it can update. Valid JSONC files with comments or trailing commas are preserved and updated normally.
+
+## Smaller project improvements
+
+This release also adds project rename settings, richer project rows when icon metadata is available, more predictable recent-project ordering, and clearer manual update messaging on rpm-ostree systems.
+
+## Update to 1.10.0
+
+Godot Launcher 1.10.0 is available from the download page. Existing users on a supported updater path can also update from inside the app.
+
+## Related resources
+
+- [Download Godot Launcher](/download/)
+- [Custom-Built Godot Editors](https://docs.godotlauncher.org/guides/custom-editors/)
+- [Add an Existing Project](https://docs.godotlauncher.org/getting-started/add-existing-project/)
+- [Report feedback or issues](https://github.com/godotlauncher/launcher/issues/new/choose)

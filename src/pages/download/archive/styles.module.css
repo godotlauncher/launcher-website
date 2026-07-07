@@ -80,19 +80,19 @@
   border-top: 1px solid var(--ifm-color-emphasis-200);
 }
 
-
 @media screen and (max-width: 996px) {
   .release {
     flex-direction: column;
   }
 
-   .release__downloads {
+  .release__downloads {
     justify-content: center;
     width: 100%;
     flex-wrap: wrap;
     gap: 1.5rem;
   }
-  .platformCard{
+
+  .platformCard {
     flex: 1 1 140px;
   }
 }
