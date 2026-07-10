@@ -154,6 +154,10 @@ const config: Config = {
                             to: "/privacy",
                         },
                         {
+                            label: "Cookie Policy",
+                            to: "/cookies",
+                        },
+                        {
                             html: `<a href="#cookie-settings" data-cc="c-settings" class="footer__link-item">Cookie Settings</a>`,
                         },
                         {
