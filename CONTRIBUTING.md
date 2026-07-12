@@ -120,8 +120,7 @@ The Discord link was outdated. Updated to the current invite URL.
 
 If you're not sure where to start or need guidance, feel free to:
 
-- Ask a question in [Discord](https://discord.gg/Ju9jkFJGvz)
-- Open a [discussion thread](https://github.com/godotlauncher/launcher-website/discussions)
+- Ask questions or share early ideas in [Discord](https://discord.gg/Ju9jkFJGvz)
 - Tag `@mariodebono` or project maintainers in your issue or PR
 
 ---

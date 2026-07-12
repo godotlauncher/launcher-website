@@ -290,7 +290,7 @@ export default function DownloadPage() {
           </p>
           <p>
             If the launcher fails to start with Chromium sandbox errors, see the{" "}
-            <Link to="https://docs.godotlauncher.org/guides/linux-no-sandbox/">
+            <Link to="https://docs.godotlauncher.org/platform/linux-no-sandbox/">
               Linux no-sandbox guide
             </Link>{" "}
             for workaround steps and security considerations.

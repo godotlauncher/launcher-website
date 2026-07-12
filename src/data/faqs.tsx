@@ -72,7 +72,7 @@ export const faqSections: FAQSection[] = [
               It can also register{" "}
               <Link
                 style={{ display: "contents" }}
-                href="https://docs.godotlauncher.org/guides/custom-editors/"
+                href="https://docs.godotlauncher.org/editors/custom-editors/"
               >
                 custom Godot builds
               </Link>
@@ -152,7 +152,7 @@ export const faqSections: FAQSection[] = [
             Yes. Register{" "}
             <Link
               style={{ display: "contents" }}
-              href="https://docs.godotlauncher.org/guides/custom-editors/"
+              href="https://docs.godotlauncher.org/editors/custom-editors/"
             >
               custom Godot builds
             </Link>
@@ -172,7 +172,7 @@ export const faqSections: FAQSection[] = [
             view. The{" "}
             <Link
               style={{ display: "contents" }}
-              href="https://docs.godotlauncher.org/guides/custom-editors/"
+              href="https://docs.godotlauncher.org/editors/custom-editors/"
             >
               custom Godot builds guide
             </Link>
@@ -199,7 +199,7 @@ export const faqSections: FAQSection[] = [
             and each project can be{" "}
             <Link
               style={{ display: "contents" }}
-              href="https://docs.godotlauncher.org/guides/change-project-editor/"
+              href="https://docs.godotlauncher.org/editors/change-project-editor/"
             >
               assigned a specific editor
             </Link>
@@ -218,14 +218,14 @@ export const faqSections: FAQSection[] = [
             Yes. When VS Code and Git are installed, Godot Launcher can{" "}
             <Link
               style={{ display: "contents" }}
-              href="https://docs.godotlauncher.org/guides/vscode-setup-for-godot/"
+              href="https://docs.godotlauncher.org/integrations/vscode-setup-for-godot/"
             >
               configure project-level VS Code settings
             </Link>
             {", recommend Godot extensions, and "}
             <Link
               style={{ display: "contents" }}
-              href="https://docs.godotlauncher.org/guides/using-git-with-godot-launcher/"
+              href="https://docs.godotlauncher.org/integrations/using-git-with-godot-launcher/"
             >
               initialize Git for new projects
             </Link>
@@ -246,7 +246,7 @@ export const faqSections: FAQSection[] = [
               Godot Launcher keeps{" "}
               <Link
                 style={{ display: "contents" }}
-                href="https://docs.godotlauncher.org/guides/editor-settings/"
+                href="https://docs.godotlauncher.org/editors/editor-settings/"
               >
                 editor settings per project
               </Link>{" "}
@@ -287,7 +287,7 @@ export const faqSections: FAQSection[] = [
             Yes. The{" "}
             <Link
               style={{ display: "contents" }}
-              href="https://docs.godotlauncher.org/guides/editor-settings/"
+              href="https://docs.godotlauncher.org/editors/editor-settings/"
             >
               editor settings guide
             </Link>{" "}
@@ -305,7 +305,7 @@ export const faqSections: FAQSection[] = [
             Godot Launcher can{" "}
             <Link
               style={{ display: "contents" }}
-              href="https://docs.godotlauncher.org/guides/manage-launcher-updates/"
+              href="https://docs.godotlauncher.org/settings/updates/"
             >
               check for updates and guide you through supported update flows
             </Link>
@@ -389,7 +389,7 @@ export const faqSections: FAQSection[] = [
                 The{" "}
                 <Link
                   style={{ display: "contents" }}
-                  href="https://docs.godotlauncher.org/guides/windows-winget/"
+                  href="https://docs.godotlauncher.org/platform/windows-winget/"
                 >
                   winget guide
                 </Link>
@@ -465,7 +465,7 @@ export const faqSections: FAQSection[] = [
             {" "}for you. You can also register{" "}
             <Link
               style={{ display: "contents" }}
-              href="https://docs.godotlauncher.org/guides/custom-editors/"
+              href="https://docs.godotlauncher.org/editors/custom-editors/"
             >
               custom Godot builds
             </Link>

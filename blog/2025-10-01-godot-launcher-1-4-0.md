@@ -18,7 +18,7 @@ This release introduces symlink support for Windows users, a convenient change l
 
 ### **Windows Symlink Support**  
 [[PR#17]](https://github.com/godotlauncher/launcher/pull/17) · [[PR#18]](https://github.com/godotlauncher/launcher/pull/18) · [[PR#34]](https://github.com/godotlauncher/launcher/pull/34)  
-[📖 Read the full guide >](https://docs.godotlauncher.org/guides/windows-symlink/)
+[📖 Read the full guide >](https://docs.godotlauncher.org/platform/windows-symlink/)
 
 > Windows-only feature
 
@@ -47,7 +47,7 @@ On Windows, symlinks require elevated permissions. Your user must be an **Admini
 
 ### **No-Sandbox option for Linux**  
 [[PR#36]](https://github.com/godotlauncher/launcher/pull/36)  
-[📖 Read the full guide >](https://docs.godotlauncher.org/guides/linux-no-sandbox/)
+[📖 Read the full guide >](https://docs.godotlauncher.org/platform/linux-no-sandbox/)
 
 Linux builds now support a **no-sandbox mode** using the `--no-sandbox` or `--disable-sandbox` arguments, or the environment variable `GODOT_LAUNCHER_DISABLE_SANDBOX=1`.  
 
