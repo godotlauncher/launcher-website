@@ -1,5 +1,5 @@
 ---
-title: 🚀 Godot Launcher 1.5.0 – Brings Internationalisation
+title: 🚀 Godot Launcher 1.5.0 - Brings Internationalisation
 slug: godot-launcher-1-5-0-internationalisation
 description: Godot Launcher 1.5.0 introduces auto-detected language support, a manual locale picker, and a call for community feedback on AI-seeded translations.
 authors: [mariodebono]
@@ -20,7 +20,7 @@ This release lays the groundwork for future translations, improves the download 
 
 ## A multilingual launcher from first launch
 
-The launcher now defaults to your operating system language while giving you full manual control in **Settings → Language**. The selector covers 14 options at launch:
+The launcher now defaults to your operating system language while giving you full manual control in **Settings > Language**. The selector covers 14 options at launch:
 
 - System (Auto-detect)
 - English
@@ -46,11 +46,11 @@ Right-to-left languages are not available yet, but this foundation gets us much 
 
 ## Localisation that spans the whole app
 
-Switching language updates more than just buttons. Menus, confirmations, installer messages, and the system tray all follow suit so the entire launcher feels familiar in your chosen language. It’s the same streamlined experience for managing Godot downloads and switching versions, just presented in words that feel natural to you and your team.
+Switching language updates more than just buttons. Menus, confirmations, installer messages, and the system tray all follow suit so the entire launcher feels familiar in your chosen language. It's the same streamlined experience for managing Godot downloads and switching versions, just presented in words that feel natural to you and your team.
 
 ## Ready for more languages
 
-Godot Launcher 1.5.0 ships with a solid translation foundation, making it easier to add new locales without disrupting existing ones. We’ll continue to grow the list over time, and today’s work means future updates can focus on delivering polished translations rather than rebuilding the plumbing.
+Godot Launcher 1.5.0 ships with a solid translation foundation, making it easier to add new locales without disrupting existing ones. We'll continue to grow the list over time, and today's work means future updates can focus on delivering polished translations rather than rebuilding the plumbing.
 
 ## Help us polish every translation
 

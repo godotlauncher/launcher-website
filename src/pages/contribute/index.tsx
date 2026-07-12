@@ -1,5 +1,4 @@
 import Link from "@docusaurus/Link";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import { ReactNode } from "react";
 
@@ -9,24 +8,29 @@ export default function Contribute(): ReactNode {
   return (
     <Layout
       title="Contribute"
-      description="Learn how to contribute to Godot Launcher, an open-source project. Discover ways to report bugs, improve code, enhance UX/UI, write documentation, and more."
+      description="Learn how to contribute to Godot Launcher through focused bug reports, code changes, documentation, translations, design feedback, and community support."
     >
       <div className="container">
         <main className="padding-vert--lg">
-          <h1>How to Contribute</h1>
+          <h1>Contribute to Godot Launcher</h1>
           <p>
-            <strong>Godot Launcher</strong> is a community-driven, open-source
-            project. Whether you're a developer, designer, writer, or just who
-            enjoys Godot Launcher, there are many ways you can get involved.
-            Your contributions—big or small—make a real difference.
+            <strong>Godot Launcher</strong> is an open source project. The most
+            useful contributions are specific, reproducible, and scoped: a clear
+            bug report, a focused pull request, a documentation fix, a
+            translation review, or practical feedback from using the launcher
+            with real Godot projects.
+          </p>
+          <p>
+            For larger changes, start with a GitHub issue or Discord discussion
+            before opening a pull request. That keeps design, implementation,
+            and maintenance expectations clear.
           </p>
 
-          <h2>Technical Contributions</h2>
+          <h2>Ways to contribute</h2>
           <ul className={styles.unsortedList}>
             <li>
-              <strong>🪲 Report Bugs and Issues:</strong> As a user, you're in a
-              great position to notice bugs or quirks in the launcher. If you
-              spot something, please submit a{" "}
+              <strong>Report bugs and issues:</strong> If something is broken
+              or unclear, search existing issues first, then open a{" "}
               <Link
                 href="https://github.com/godotlauncher/launcher/issues/new/choose"
                 target="_blank"
@@ -34,18 +38,18 @@ export default function Contribute(): ReactNode {
               >
                 bug report on GitHub
               </Link>
-              . The more details you include, the easier it will be for us to
-              investigate and fix the issue. You're also welcome to discuss
-              issues in our{" "}
+              {". "}
+              Include the launcher version, operating system, what you tried,
+              what happened, and what you expected. You can also discuss
+              questions in the{" "}
               <Link to="/community" title="Join our community">
-                community
+                Godot Launcher community
               </Link>
-              .
+              {"."}
             </li>
             <li>
-              <strong>🔨 Code Contributions:</strong> If you're comfortable with
-              code, we welcome your help fixing bugs, building features, or
-              improving performance. The source code is available on{" "}
+              <strong>Code contributions:</strong> The main app source code is
+              available on{" "}
               <Link
                 href="https://github.com/godotlauncher/launcher"
                 target="_blank"
@@ -53,7 +57,8 @@ export default function Contribute(): ReactNode {
               >
                 GitHub
               </Link>
-              . Be sure to check the{" "}
+              {". "}
+              Read{" "}
               <Link
                 href="https://github.com/godotlauncher/launcher/blob/main/CONTRIBUTING.md"
                 target="_blank"
@@ -61,23 +66,22 @@ export default function Contribute(): ReactNode {
               >
                 CONTRIBUTING.md
               </Link>{" "}
-              for guidelines before submitting a pull request.
-              <p className="alert alert--info margin-top--md">
-                The launcher is built using electron, and has a backend part
-                (nodejs) and a frontend part for the ui (react)
-              </p>
+              before opening a pull request. Keep changes focused and include
+              tests or screenshots when they help reviewers understand the
+              behavior.
             </li>
             <li>
-              <strong>💘 UX/UI Improvements:</strong> Got a good eye for design
-              or user experience? We'd love your help making the interface
-              smoother and more intuitive. You can start a conversation on{" "}
+              <strong>UX and design feedback:</strong> If you notice a confusing
+              flow or have a concrete interface improvement, describe the
+              workflow, what felt unclear, and what you expected instead. Start
+              a discussion on{" "}
               <Link
                 href="https://discord.gg/Ju9jkFJGvz"
                 title="Join our Discord server"
               >
                 Discord
               </Link>{" "}
-              or open an issue via our{" "}
+              or open an issue in the{" "}
               <Link
                 href="https://github.com/godotlauncher/launcher/issues/new/choose"
                 target="_blank"
@@ -85,12 +89,11 @@ export default function Contribute(): ReactNode {
               >
                 GitHub issue tracker
               </Link>
-              .
+              {"."}
             </li>
             <li>
-              <strong>📃Documentation:</strong> Clear documentation is essential
-              for any project. If you enjoy writing or editing technical docs,
-              head over to the{" "}
+              <strong>Documentation:</strong> Documentation improvements belong
+              in the{" "}
               <Link
                 href="https://github.com/godotlauncher/launcher-docs"
                 target="_blank"
@@ -98,7 +101,8 @@ export default function Contribute(): ReactNode {
               >
                 documentation repository
               </Link>
-              . Contributions should follow the guidelines in the{" "}
+              {". "}
+              Follow its{" "}
               <Link
                 href="https://github.com/godotlauncher/launcher-docs/blob/main/CONTRIBUTING.md"
                 target="_blank"
@@ -106,44 +110,42 @@ export default function Contribute(): ReactNode {
               >
                 CONTRIBUTING.md
               </Link>{" "}
-              file.
+              before submitting docs changes. Small corrections, missing setup
+              steps, and clearer troubleshooting notes are useful contributions.
             </li>
             <li>
-              <strong>🌎 Translations:</strong> The launcher now ships with 14
-              locales, and we’re ready to keep expanding. If you’re fluent in
-              another language, check the{" "}
-              <Link to="/contributing/translations" title="Read the translation contribution guide">
+              <strong>Translations:</strong> Help review existing translations
+              or add a new locale through the{" "}
+              <Link
+                to="/contributing/translations"
+                title="Read the translation contribution guide"
+              >
                 translation contribution guide
               </Link>{" "}
-              for tips on reviewing existing strings or adding a brand-new
-              locale. You can still drop into our{" "}
+              {". "}
+              Use the{" "}
               <Link to="/community" title="Join our community">
                 community
               </Link>{" "}
-              to coordinate efforts or ask questions.
-              <p className="alert alert--info margin-top--md">
-                Developers interested in the technical side will find links to
-                the localisation docs, test suite, and pull request checklist in
-                the guide as well.
-              </p>
+              to coordinate reviews or ask questions.
             </li>
           </ul>
 
-          <h2>Other Ways to Help</h2>
+          <h2>Community support</h2>
           <ul className={styles.unsortedList}>
             <li>
-              <strong>🤝 Community Support:</strong> Helping others is a great
-              way to give back. Whether you're answering questions, sharing
-              tips, or guiding new users, your experience is valuable. Join our{" "}
+              <strong>Help other users:</strong> Answer questions, point people
+              to docs, or share context from your own Godot Launcher setup in
+              the{" "}
               <Link to="/community" title="Join our community">
-                community
+                community channels
               </Link>{" "}
-              and become part of the conversation.
+              {"."}
             </li>
             <li>
-              <strong>💬 Spread the Word:</strong> Love what we're building?
-              Help us grow! Share Godot Launcher with your network, write about
-              it, or star the project on{" "}
+              <strong>Share useful feedback:</strong> If Godot Launcher helps or
+              gets in the way of your workflow, open an issue, join the
+              discussion, or star the project on{" "}
               <Link
                 href="https://github.com/godotlauncher/launcher"
                 target="_blank"
@@ -151,7 +153,7 @@ export default function Contribute(): ReactNode {
               >
                 GitHub
               </Link>
-              . Every bit of visibility helps.
+              {"."}
             </li>
           </ul>
         </main>

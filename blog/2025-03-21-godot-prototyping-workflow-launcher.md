@@ -37,7 +37,7 @@ But there's a downside: setting up new Godot projects repeatedly can become tedi
 - Installing and configuring the [Godot Tools VSCode Extension](https://marketplace.visualstudio.com/items?itemName=geequlim.godot-tools).
 - Managing multiple editor instances separately (for example, client and server editors), ensuring each instance remains independent and conflict-free.
 
-Doing this once isn't an issue—but when done repeatedly, it quickly becomes cumbersome.
+Doing this once isn't an issue - but when done repeatedly, it quickly becomes cumbersome.
 
 ## Enter Godot Launcher
 
@@ -61,6 +61,6 @@ I hope you find Godot Launcher useful and continue sharing your passion and idea
 
 ## Give It a Spin!
 
-If you're someone like me—constantly juggling ideas and seeking a smoother workflow—check out [Godot Launcher](https://godotlauncher.org). It's completely open-source, community-driven, and frankly, makes prototyping in Godot fun and frustration-free again.
+If you're someone like me - constantly juggling ideas and seeking a smoother workflow - check out [Godot Launcher](https://godotlauncher.org). It's completely open-source, community-driven, and frankly, makes prototyping in Godot fun and frustration-free again.
 
 Happy prototyping!

@@ -39,9 +39,14 @@ export const CTADownload: FC = () => {
     <header className={clsx("hero", styles.ctaBanner)}>
       <div className="container">
         <Heading as="h2" className={styles.ctaTitle}>
-          Download Godot Launcher for Windows, macOS, and Linux
+          Download Godot Launcher
         </Heading>
-        <p className={styles.ctaSubtitle}>Latest release: {latest.tag_name}</p>
+        <p className={styles.ctaSubtitle}>
+          Available for Windows, macOS, and Linux.<br /> Manage Godot versions, custom
+          Godot builds, VS Code, Git, and project settings in one app.
+          <br />
+          Latest release: {latest.tag_name}.
+        </p>
         <div className={styles.ctaActions}>
           {platform && selectedOption && !isLinux ? (
             <>
@@ -64,14 +69,18 @@ export const CTADownload: FC = () => {
                 color="primary"
                 className={styles.ctaPrimary}
               />
-              <p className={styles.ctaMeta}>Pick AppImage, deb, or rpm from the download page.</p>
+              <p className={styles.ctaMeta}>
+                Choose AppImage, .deb, or .rpm from the download page.
+              </p>
             </>
           ) : (
             <>
               <Link to="/download" className={clsx("button button--primary button--md", styles.ctaPrimary)}>
                 Download Godot Launcher ({latest.tag_name})
               </Link>
-              <p className={styles.ctaMeta}>Choose your OS to grab the right installer.</p>
+              <p className={styles.ctaMeta}>
+                Choose your OS to get the right installer.
+              </p>
             </>
           )}
         </div>

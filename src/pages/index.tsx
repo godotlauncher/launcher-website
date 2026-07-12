@@ -34,7 +34,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title="The Companion App for Godot Engine"
-      description={siteConfig.tagline}
+      description="Godot Launcher helps you manage Godot versions, custom Godot builds, project setup, VS Code, Git, and per-project editor settings in one open source app."
     >
       <Head>
         <script type="application/ld+json">
@@ -44,11 +44,10 @@ export default function Home(): ReactNode {
             name: "Godot Launcher",
             operatingSystem: "Windows, macOS, Linux",
             applicationCategory: "DeveloperApplication",
-            description: `Godot Launcher is a cross-platform, open-source tool that helps
-              you download, manage, and organize multiple versions of the Godot
-              Engine. Whether you're developing 2D or 3D games, this tool
-              streamlines your workflow with powerful features like Git
-              integration, system tray access, and per-project settings.`,
+            description: `Godot Launcher is a cross-platform, open source companion app
+              for Godot Engine that helps you manage Godot versions, register and use
+              custom Godot builds, set up projects, and keep per-project editor
+              settings organized.`,
             url: "https://godotlauncher.org",
             image:
               "https://godotlauncher.org/img/screenshots/screen_projects_view_dark.webp",
@@ -73,25 +72,14 @@ export default function Home(): ReactNode {
 
       <main>
         <div className="container">
-          <div className="secondary-tagline">
-            <h2>What is Godot Launcher?</h2>
-            <p>
-              Godot Launcher is a cross-platform, open-source tool that helps
-              you download, manage, and organize multiple versions of the
-              Godot Engine. Whether you're developing 2D or 3D games, this tool
-              streamlines your workflow with powerful features like Git
-              integration, system tray access, and per-project settings.
-            </p>
-          </div>
-
           <ProjectViewScreenShot />
 
           <div className="secondary-tagline ">
-            <Heading as="h2">Why use Godot Launcher?</Heading>
+            <Heading as="h2">Manage the setup around Godot</Heading>
             <p>
-              Godot Launcher is a companion app for Godot Engine. It simplifies
-              the Godot download experience by allowing you to install, and
-              switch between multiple Godot versions without hassle.
+              Godot Launcher keeps official Godot releases, custom Godot builds,
+              project setup, VS Code, Git, and per-project editor settings in
+              one place.
             </p>
           </div>
           <HomepageFeatures />

@@ -36,11 +36,18 @@ export const HomepageHeader: FC = () => {
   return (
     <header className={clsx("hero shadow--lw", styles.heroBanner)}>
       <div className="container">
+        <p className={styles.heroBrand}>
+          Godot Launcher
+        </p>
         <Heading as="h1" className={clsx("hero__title", styles.hero__title)}>
-          A Companion App for Godot Engine
+          The Companion App for Godot Engine
         </Heading>
         <p className={clsx("hero__subtitle", styles.hero__subtitle)}>
           {siteConfig.tagline}
+        </p>
+        <p className={styles.heroDescription}>
+          Manage Godot versions, custom Godot builds, and project tooling in one
+          place.
         </p>
         <div className={styles.buttons}>
           <HeroDownloadButton color="primary" />
@@ -62,6 +69,12 @@ export const HomepageHeader: FC = () => {
 
               </code>
             </center>
+            <p className={styles.signPathAttribution}>
+              Free code signing provided by{" "}
+              <Link href="https://signpath.io/">SignPath.io</Link>, certificate
+              by{" "}
+              <Link href="https://signpath.org/">SignPath Foundation</Link>.
+            </p>
 
 
           </div>

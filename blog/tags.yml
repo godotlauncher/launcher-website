@@ -8,6 +8,11 @@ godot:
   permalink: /godot-launcher
   description: Posts about the Godot Launcher open-source tool
 
+"custom-editor":
+  label: Custom-Built Godot Editor
+  permalink: /custom-editor
+  description: Posts about using custom-built Godot editors with Godot Launcher
+
 "godot-workflow":
   label: Godot Workflow
   permalink: /godot-workflow
@@ -72,5 +77,3 @@ godot:
   label: Localisation
   permalink: /localisation
   description: Posts about translating and localising Godot Launcher
-
-

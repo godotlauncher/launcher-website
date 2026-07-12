@@ -27,7 +27,7 @@ Most importantly, Godot Launcher will download the right Godot editor for your O
 
 ## Refresh cache with one click
 
-Need to clear out old editor downloads or force the latest builds straight from the official Godot Engine release repos? Head to `Settings → Installs` and use the new **Refresh cache** button. It wipes previously cached releases and repopulates them so you always see the most up-to-date options for every OS and architecture, which was essential for rolling out the new Windows arm 64 packages.
+Need to clear out old editor downloads or force the latest builds straight from the official Godot Engine release repos? Head to `Settings > Installs` and use the new **Refresh cache** button. It wipes previously cached releases and repopulates them so you always see the most up-to-date options for every OS and architecture, which was essential for rolling out the new Windows arm 64 packages.
 
 ## Safer migrations for future updates
 
@@ -39,7 +39,7 @@ Some users saw phantom projects that refused to leave the list after the underly
 
 ## Small patch, same quick install
 
-This update is intentionally light: no flashy feature toggles, just better platform coverage, easier maintenance tools, and a cleaner project grid. Grab the latest installer or update inside the app and you’ll be on 1.7.0 within a minute. If you rely on the launcher for every godot download, this patch keeps launches predictable while we line up bigger improvements for the next release.
+This update is intentionally light: no flashy feature toggles, just better platform coverage, easier maintenance tools, and a cleaner project grid. Grab the latest installer or update inside the app and you'll be on 1.7.0 within a minute. If you rely on the launcher for every godot download, this patch keeps launches predictable while we line up bigger improvements for the next release.
 
 ## Related resources
 

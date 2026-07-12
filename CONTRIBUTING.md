@@ -118,14 +118,13 @@ The Discord link was outdated. Updated to the current invite URL.
 
 ## Need Help?
 
-If you’re not sure where to start or need guidance, feel free to:
+If you're not sure where to start or need guidance, feel free to:
 
-- Ask a question in [Discord](https://discord.gg/Ju9jkFJGvz)
-- Open a [discussion thread](https://github.com/godotlauncher/launcher-website/discussions)
+- Ask questions or share early ideas in [Discord](https://discord.gg/Ju9jkFJGvz)
 - Tag `@mariodebono` or project maintainers in your issue or PR
 
 ---
 
 ## Thank You!
 
-Every contribution makes the Godot Launcher community stronger. Whether you're fixing a link, suggesting new content, or building a better UI—**thank you for being part of it!**
+Every contribution makes the Godot Launcher community stronger. Whether you're fixing a link, suggesting new content, or building a better UI - **thank you for being part of it!**

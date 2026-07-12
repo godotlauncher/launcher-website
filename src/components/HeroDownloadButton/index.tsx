@@ -55,7 +55,7 @@ export const HeroDownloadButton: FC<HeroDownloadButtonProps> = ({ className, col
       <div className={clsx(styles.heroDownloadGroup, className)}>
         <DownloadButton
           platform="Linux"
-          title={`Linux – ${downloads.primary.archLabel}`}
+          title={`Linux - ${downloads.primary.archLabel}`}
           href={downloads.primary.href}
           size="lg"
           color={preferredColor}
@@ -92,7 +92,7 @@ export const HeroDownloadButton: FC<HeroDownloadButtonProps> = ({ className, col
           <DownloadButton
             key={option.id}
             platform="Linux"
-            title={`Linux – ${option.archLabel}`}
+            title={`Linux - ${option.archLabel}`}
             href={option.href}
             size="lg"
             color={preferredColor}

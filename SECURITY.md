@@ -15,7 +15,7 @@ Please include:
 - Potential impact.
 - Any suggested mitigation or patch (optional but appreciated).
 
-We aim to respond within **72 hours** and provide a fix within **7–14 days**, depending on severity.
+We aim to respond within **72 hours** and provide a fix within **7-14 days**, depending on severity.
 
 ---
 

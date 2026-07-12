@@ -60,6 +60,16 @@ export const SUPPORTED_PLATFORMS: SupportedPlatform[] = [
   "Linux",
 ];
 
+const RELEASE_DATE_FORMATTER = new Intl.DateTimeFormat("en-US", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+  timeZone: "UTC",
+});
+
+export const formatReleaseDate = (publishedAt: string): string =>
+  RELEASE_DATE_FORMATTER.format(new Date(publishedAt));
+
 const hasRequiredExtension = (
   platform: SupportedPlatform,
   lowerName: string

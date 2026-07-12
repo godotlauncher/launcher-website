@@ -14,93 +14,93 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Effortless Godot Version Management',
+    title: 'Manage Godot Versions',
     sources: {
-      light: '/img/features/Effortless_Godot_Version_Management_Light.webp',
-      dark: '/img/features/Effortless_Godot_Version_Management_Dark.webp',
+      light: '/img/features/Effortless_Godot_Version_Management_Current_Light.png',
+      dark: '/img/features/Effortless_Godot_Version_Management_Current_Dark.png',
     },
-    size: { width: 300, height: 234 },
+    size: { width: 410, height: 320 },
     description: (
       <>
-        Easily <strong>download and manage multiple Godot Engine versions</strong> in one place. Switch between stable releases and experimental builds with just a few clicks — no manual installs needed.
+        Download official Godot releases and choose the right editor for each project.
       </>
     ),
   },
   {
-    title: 'Cross-Platform Godot Downloads',
+    title: 'Use Custom Godot Builds',
     sources: {
-      light: '/img/features/Cross_Platform_Light.webp',
-      dark: '/img/features/Cross_Platform_Dark.webp',
+      light: '/img/features/Effortless_Godot_Version_Management_Custom_Light.png',
+      dark: '/img/features/Effortless_Godot_Version_Management_Custom_Dark.png',
     },
-    size: { width: 300, height: 234 },
+    size: { width: 410, height: 320 },
     description: (
       <>
-        Download and launch Godot on <strong>Windows, macOS, and Linux</strong>. The Launcher works wherever you develop, with full support for all major operating systems.
+        Register locally compiled or team-distributed Godot editor builds and use them like official releases.
       </>
     ),
   },
   {
-    title: 'Multilingual Experience Out of the Box',
-    sources: {
-      light: '/img/features/Multilingual_Interface_Light.webp',
-      dark: '/img/features/Multilingual_Interface_Dark.webp',
-    },
-    size: { width: 300, height: 234 },
-    description: (
-      <>
-        Let every teammate feel at home with <strong>automatic language detection and 13+ localised interfaces</strong>. Switch languages anytime and the entire launcher — menus, dialogs, and tray — updates instantly.
-      </>
-    ),
-  },
-  {
-    title: 'Quick Project Setup with Git & VSCode',
+    title: 'Start Projects Ready',
     sources: {
       light: '/img/features/Quick_Project_Setup_Light.webp',
       dark: '/img/features/Quick_Project_Setup_Dark.webp',
     },
-    size: { width: 300, height: 234 },
+    size: { width: 420, height: 320 },
     description: (
       <>
-        Start a new Godot project instantly with <strong>Git and VSCode initialized automatically</strong>. Your repo is ready to go with an initial commit — no extra setup required.
+        Create Godot projects with Git and VS Code configuration already prepared.
       </>
     ),
   },
   {
-    title: 'Per-Project Editor Settings',
+    title: 'Keep Project Settings Separate',
     sources: {
       light: '/img/features/Per_Project_Editor_Settings_Light.webp',
       dark: '/img/features/Per_Project_Editor_Settings_Dark.webp',
     },
-    size: { width: 300, height: 234 },
+    size: { width: 410, height: 320 },
     description: (
       <>
-        Keep your editor preferences isolated per project. Godot Launcher ensures <strong>no conflicting settings</strong>, no matter how many projects you're working on.
+        Keep editor settings isolated per project, so switching projects does not overwrite your setup.
       </>
     ),
   },
   {
-    title: 'Quick Access from System Tray',
+    title: 'Work Across Platforms',
+    sources: {
+      light: '/img/features/Cross_Platform.webp',
+      dark: '/img/features/Cross_Platform.webp',
+    },
+    size: { width: 410, height: 320 },
+    description: (
+      <>
+        Download and launch Godot on <strong>Windows, macOS, and Linux</strong>.
+      </>
+    ),
+  },
+  {
+    title: 'Open Recent Projects Quickly',
     sources: {
       light: '/img/features/Quick_Edit_From_System_Tray_Light.webp',
       dark: '/img/features/Quick_Edit_From_System_Tray_Dark.webp',
     },
-    size: { width: 300, height: 234 },
+    size: { width: 410, height: 320 },
     description: (
       <>
-        Instantly reopen recent projects from the system tray. <strong>No need to relaunch Godot manually</strong> or browse folders — stay in the flow.
+        Reopen recent projects from the system tray without browsing folders.
       </>
     ),
   },
   {
-    title: 'Automatic Updates',
+    title: 'Stay Current',
     sources: {
       light: '/img/features/Automatic_Updates_Light.webp',
       dark: '/img/features/Automatic_Updates_Dark.webp',
     },
-    size: { width: 300, height: 234 },
+    size: { width: 410, height: 320 },
     description: (
       <>
-        Stay up to date with the latest improvements. The Launcher <strong>notifies you when new versions are available</strong>, so you're always running the best version of Godot.
+        Get notified when new Godot Launcher updates are available.
       </>
     ),
   },
