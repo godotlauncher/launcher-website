@@ -45,7 +45,7 @@ export default function Home(): ReactNode {
             operatingSystem: "Windows, macOS, Linux",
             applicationCategory: "DeveloperApplication",
             description: `Godot Launcher is a cross-platform, open source companion app
-              for Godot Engine that helps you manage Godot versions, register
+              for Godot Engine that helps you manage Godot versions, register and use
               custom Godot builds, set up projects, and keep per-project editor
               settings organized.`,
             url: "https://godotlauncher.org",
