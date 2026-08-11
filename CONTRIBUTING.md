@@ -17,6 +17,7 @@ If you're looking to contribute to the Godot Launcher app or its documentation, 
 - [Reporting Issues](#reporting-issues)
 - [Proposing Features or Content](#proposing-features-or-content)
 - [Contributing Code](#contributing-code)
+- [AI-Assisted Contributions](#ai-assisted-contributions)
 - [Pull Request Guidelines](#pull-request-guidelines)
 - [Styling and Content Standards](#styling-and-content-standards)
 - [Quickstart Guide](#quickstart-guide)
@@ -71,6 +72,12 @@ Before submitting a pull request:
 - Review the existing structure and style
 - Keep your PR focused on a single improvement
 - Test your changes locally
+
+---
+
+## AI-Assisted Contributions
+
+This repository follows the project-wide [AI-Assisted Contributions Policy](https://github.com/godotlauncher/launcher/blob/main/AI_POLICY.md). AI-assisted tools may be used, but their output is treated as untrusted input. Contributors remain responsible for understanding, reviewing, adapting, testing, and maintaining everything they submit.
 
 ---
 
