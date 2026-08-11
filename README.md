@@ -19,7 +19,7 @@ Make sure to follow the existing structure and style for consistency.
 
 ## 🚀 Development
 
-This website is built using **Node.js 22+** and **npm**. To run it locally:
+This website is built using **Node.js 24 LTS** and **npm**. To run it locally:
 
 ### 1. Fork and clone the repository
 
