@@ -25,6 +25,19 @@ export default function Contribute(): ReactNode {
             before opening a pull request. That keeps design, implementation,
             and maintenance expectations clear.
           </p>
+          <p>
+            AI-assisted tools may be used under the project-wide{" "}
+            <Link
+              href="https://github.com/godotlauncher/launcher/blob/main/AI_POLICY.md"
+              target="_blank"
+              title="Read the AI-assisted contributions policy"
+            >
+              AI-Assisted Contributions Policy
+            </Link>
+            {". "}
+            Contributors remain responsible for understanding, reviewing,
+            adapting, testing, and maintaining everything they submit.
+          </p>
 
           <h2>Ways to contribute</h2>
           <ul className={styles.unsortedList}>
