@@ -64,23 +64,16 @@ npm run serve
 - `/src` - Website source (components, pages, etc.)
 - `/src/pages` - Website pages
 - `/static` - Static assets (images, icons, etc.)
-- `/static/img/blog/images/<version>` - Immutable media used by release posts
+- `/static/img/blog/images/<version>` - Media used by release posts
 - `docusaurus.config.ts` - Site configuration
 
-## Release Post Media
+## Media
 
-Published release posts must not reference the synchronized current media
-under `/img/screenshots/` or `/img/features/`. Those directories follow the
-latest launcher UI and may replace or remove files during media sync.
-
-Before publishing a release post, copy each referenced image into
-`static/img/blog/images/<version>/` and use that immutable path in the post.
-Keep current homepage and product media in the synchronized directories.
-
-The workspace media sync selects current screenshots from literal
-`/img/screenshots/<file>` references in Website source. It copies only those
-canonical files into `static/img/screenshots/` and removes unreferenced files
-from that mutable directory. Immutable release-post media is outside the sync.
+- For current Website pages, place screenshots in `static/img/screenshots/`,
+  animations in `static/img/animations/`, and feature images in
+  `static/img/features/`.
+- For release posts, copy each image into
+  `static/img/blog/images/<version>/` and reference it from that location.
 
 ---
 

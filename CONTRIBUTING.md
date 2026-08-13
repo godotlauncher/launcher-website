@@ -110,13 +110,11 @@ The Discord link was outdated. Updated to the current invite URL.
 - Prefer clarity and accessibility over visual complexity.
 - Write in American English.
 - Keep content concise and user-friendly.
-- Store release-post media under `static/img/blog/images/<version>/` and link
-  to that immutable path. Do not link a published post to current synchronized
-  media under `/img/screenshots/` or `/img/features/`.
-- Current product pages may reference canonical screenshots through
-  `/img/screenshots/<file>`. The workspace sync publishes only files that have
-  a literal current-source reference and removes unreferenced files from that
-  mutable directory.
+- For current Website pages, place screenshots in `static/img/screenshots/`,
+  animations in `static/img/animations/`, and feature images in
+  `static/img/features/`.
+- For release posts, copy each image into
+  `static/img/blog/images/<version>/` and reference it from that location.
 
 ---
 

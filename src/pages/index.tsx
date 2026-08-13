@@ -5,7 +5,7 @@ import Heading from "@theme/Heading";
 import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
 
-import { ProjectViewScreenShot } from "../components/ProjectViewScreenShot";
+import { CreateProjectAnimation } from "../components/create-project-animation";
 import { HomepageHeader } from "../components/Header";
 import { CTADownload } from "../components/CTADownload";
 import FAQStructuredData from "../components/FAQStructuredData";
@@ -50,7 +50,7 @@ export default function Home(): ReactNode {
               settings organized.`,
             url: "https://godotlauncher.org",
             image:
-              "https://godotlauncher.org/img/screenshots/screen_projects_view_dark.webp",
+              "https://godotlauncher.org/img/Godot-Launcher-Social-Card.jpg",
             author: {
               "@type": "Organization",
               name: "Godot Launcher Project",
@@ -72,7 +72,7 @@ export default function Home(): ReactNode {
 
       <main>
         <div className="container">
-          <ProjectViewScreenShot />
+          <CreateProjectAnimation />
 
           <div className="secondary-tagline ">
             <Heading as="h2">Manage the setup around Godot</Heading>
