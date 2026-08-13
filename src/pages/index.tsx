@@ -34,7 +34,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title="The Companion App for Godot Engine"
-      description="Godot Launcher helps you manage Godot versions, custom Godot builds, project setup, VS Code, Git, and per-project editor settings in one open source app."
+      description="Manage Godot versions and custom builds, choose Visual Studio Code or VSCodium for each project, and initialize Git with Godot Launcher."
     >
       <Head>
         <script type="application/ld+json">
@@ -44,10 +44,8 @@ export default function Home(): ReactNode {
             name: "Godot Launcher",
             operatingSystem: "Windows, macOS, Linux",
             applicationCategory: "DeveloperApplication",
-            description: `Godot Launcher is a cross-platform, open source companion app
-              for Godot Engine that helps you manage Godot versions, register and use
-              custom Godot builds, set up projects, and keep per-project editor
-              settings organized.`,
+            description:
+              "Godot Launcher is a cross-platform, open source companion app for Godot Engine. Manage official and custom Godot editors, choose VS Code or VSCodium for each project, and initialize Git.",
             url: "https://godotlauncher.org",
             image:
               "https://godotlauncher.org/img/Godot-Launcher-Social-Card.jpg",
@@ -77,9 +75,9 @@ export default function Home(): ReactNode {
           <div className="secondary-tagline ">
             <Heading as="h2">Manage the setup around Godot</Heading>
             <p>
-              Godot Launcher keeps official Godot releases, custom Godot builds,
-              project setup, VS Code, Git, and per-project editor settings in
-              one place.
+              Manage official Godot releases and custom builds, choose Visual
+              Studio Code or VSCodium for each project, and initialize Git when
+              you need it.
             </p>
           </div>
           <HomepageFeatures />

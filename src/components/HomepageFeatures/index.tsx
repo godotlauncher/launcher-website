@@ -27,6 +27,20 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
+    title: 'Create Projects With Git',
+    sources: {
+      light: '/img/features/Git_Project_Setup_Light.webp',
+      dark: '/img/features/Git_Project_Setup_Dark.webp',
+    },
+    alt: 'New Project form with Initialize Git Repository enabled',
+    size: { width: 410, height: 320 },
+    description: (
+      <>
+        Create projects with Git ready from the start, or initialize it later in Project Settings.
+      </>
+    ),
+  },
+  {
     title: 'Use Custom Godot Builds',
     sources: {
       light: '/img/features/Effortless_Godot_Version_Management_Custom_Light.png',
@@ -40,7 +54,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Start Projects Ready',
+    title: 'Choose Your Code Editor',
     sources: {
       light: '/img/features/Quick_Project_Setup_Light.webp',
       dark: '/img/features/Quick_Project_Setup_Dark.webp',
@@ -48,7 +62,7 @@ const FeatureList: FeatureItem[] = [
     size: { width: 420, height: 320 },
     description: (
       <>
-        Create Godot projects with Git and VS Code configuration already prepared.
+        Choose Visual Studio Code or VSCodium when you create a project, or change it later in Project Settings.
       </>
     ),
   },
