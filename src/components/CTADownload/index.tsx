@@ -43,7 +43,7 @@ export const CTADownload: FC = () => {
         </Heading>
         <p className={styles.ctaSubtitle}>
           Available for Windows, macOS, and Linux.<br /> Manage Godot versions
-          and custom builds, choose a code editor for each project, and
+          and custom builds, set up Visual Studio Code or VSCodium, and
           initialize Git in one app.
           <br />
           Latest release: {latest.tag_name}.

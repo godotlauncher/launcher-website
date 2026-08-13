@@ -48,6 +48,16 @@ godot:
   permalink: /vscode
   description: Posts about using Visual Studio Code with Godot
 
+"vscodium":
+  label: VSCodium
+  permalink: /vscodium
+  description: Posts about using VSCodium with Godot
+
+"code-editor":
+  label: Code Editor
+  permalink: /code-editor
+  description: Posts about choosing and configuring code editors for Godot projects
+
 "quality-of-life":
   label: Quality of Life
   permalink: /quality-of-life

@@ -34,7 +34,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title="The Companion App for Godot Engine"
-      description="Manage Godot versions and custom builds, choose Visual Studio Code or VSCodium for each project, and initialize Git with Godot Launcher."
+      description="Manage Godot versions and custom builds, set up Visual Studio Code or VSCodium, and initialize Git with Godot Launcher."
     >
       <Head>
         <script type="application/ld+json">
@@ -45,7 +45,7 @@ export default function Home(): ReactNode {
             operatingSystem: "Windows, macOS, Linux",
             applicationCategory: "DeveloperApplication",
             description:
-              "Godot Launcher is a cross-platform, open source companion app for Godot Engine. Manage official and custom Godot editors, choose VS Code or VSCodium for each project, and initialize Git.",
+              "Godot Launcher is a cross-platform, open source companion app for Godot Engine. Manage official and custom Godot editors, set up VS Code or VSCodium, and initialize Git.",
             url: "https://godotlauncher.org",
             image:
               "https://godotlauncher.org/img/Godot-Launcher-Social-Card.jpg",
@@ -75,9 +75,8 @@ export default function Home(): ReactNode {
           <div className="secondary-tagline ">
             <Heading as="h2">Manage the setup around Godot</Heading>
             <p>
-              Manage official Godot releases and custom builds, choose Visual
-              Studio Code or VSCodium for each project, and initialize Git when
-              you need it.
+              Manage official Godot releases and custom builds, set up Visual
+              Studio Code or VSCodium, and initialize Git when you need it.
             </p>
           </div>
           <HomepageFeatures />

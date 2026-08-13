@@ -27,7 +27,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Create Projects With Git',
+    title: 'Git Setup for Godot Projects',
     sources: {
       light: '/img/features/Git_Project_Setup_Light.webp',
       dark: '/img/features/Git_Project_Setup_Dark.webp',
@@ -36,7 +36,7 @@ const FeatureList: FeatureItem[] = [
     size: { width: 410, height: 320 },
     description: (
       <>
-        Create projects with Git ready from the start, or initialize it later in Project Settings.
+        Initialize Git when you create a project or later from Project Settings.
       </>
     ),
   },
@@ -54,15 +54,16 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Choose Your Code Editor',
+    title: 'Code Editor Setup Without the Chore',
     sources: {
       light: '/img/features/Quick_Project_Setup_Light.webp',
       dark: '/img/features/Quick_Project_Setup_Dark.webp',
     },
+    alt: 'Code Editor menu with Visual Studio Code and VSCodium options',
     size: { width: 420, height: 320 },
     description: (
       <>
-        Choose Visual Studio Code or VSCodium when you create a project, or change it later in Project Settings.
+        Godot Launcher configures Visual Studio Code or VSCodium for your Godot project. Use a different editor per project when needed.
       </>
     ),
   },

@@ -216,13 +216,13 @@ export const faqSections: FAQSection[] = [
         featureOrder: 1,
       },
       {
-        question: "Can I choose a code editor for each project?",
+        question: "Which code editors does Godot Launcher support?",
         answer:
-          "Yes. Choose Visual Studio Code, VSCodium, or None for each project. Your default code editor is selected automatically for new projects, and you can change the choice later in Project Settings. If the selected editor is unavailable, choose another editor or launch without a code editor.",
+          "Godot Launcher supports Visual Studio Code and VSCodium on Windows, macOS, and Linux. The launcher can find either editor, configure Godot to open scripts in it, and set a default for new projects. You can also choose a different editor for a project when needed.",
         answerHTML: (
           <>
             <p>
-              Yes. Choose{" "}
+              Godot Launcher supports{" "}
               <Link
                 style={{ display: "contents" }}
                 href="https://docs.godotlauncher.org/integrations/vscode-setup-for-godot/"
@@ -236,19 +236,17 @@ export const faqSections: FAQSection[] = [
               >
                 VSCodium
               </Link>
-              {", or "}<strong>None</strong> for each project. Your{" "}
+              {" on Windows, macOS, and Linux. It can find either editor and configure Godot to open scripts in it."}
+            </p>
+            <p>
               <Link
                 style={{ display: "contents" }}
                 href="https://docs.godotlauncher.org/settings/code-editors/"
               >
-                default code editor
+                Code Editor Settings
               </Link>
-              {" "}is selected automatically for new projects, and you can
-              change the choice later in <strong>Project Settings</strong>.
-            </p>
-            <p>
-              If the selected editor is unavailable, choose another editor or
-              launch without a code editor.
+              {" lets you set a default for new projects."}
+              {" You can also choose a different editor for a project when needed."}
             </p>
           </>
         ),
@@ -258,14 +256,14 @@ export const faqSections: FAQSection[] = [
       {
         question: "Can Godot Launcher initialize Git?",
         answer:
-          "Yes. When Git is available, new projects can start with Git already set up, including Godot ignore rules, a main branch, and an initial commit. If Git needs your name and email, add them or skip the first commit. For existing projects, Project Settings initializes Git without adding setup files or creating a commit.",
+          "Yes. Godot Launcher can handle Git setup for new Godot projects, including Godot ignore rules, a main branch, and an initial commit. If Git needs your name and email, add them or skip the first commit. For existing projects, Project Settings initializes Git without adding setup files or creating a commit.",
         answerHTML: (
           <>
             <p>
-              Yes. When Git is available, new projects can start with Git
-              already set up, including Godot ignore rules, a <code>main</code>
-              {" "}branch, and an initial commit. If Git needs your name and
-              email, add them or skip the first commit.
+              Yes. Godot Launcher can handle Git setup for new Godot projects,
+              including Godot ignore rules, a <code>main</code> branch, and an
+              initial commit. If Git needs your name and email, add them or
+              skip the first commit.
             </p>
             <p>
               For existing projects, <strong>Project Settings</strong>
