@@ -276,11 +276,11 @@ export default function DownloadPage() {
         <p>Godot Launcher supports the following operating systems:</p>
         <h3>Windows</h3>
         <ul>
-          <li> Windows 10 or later (64-bit)</li>
+          <li>Windows 10 or later (x64 or ARM64)</li>
         </ul>
         <h3>macOS</h3>
         <ul>
-          <li>macOS 10.15 Catalina or later</li>
+          <li>macOS 12 Monterey or later</li>
         </ul>
         <h3>Linux</h3>
         <Admonition type="info" title="Note: Linux AppImage">
