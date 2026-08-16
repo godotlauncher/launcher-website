@@ -110,6 +110,11 @@ The Discord link was outdated. Updated to the current invite URL.
 - Prefer clarity and accessibility over visual complexity.
 - Write in American English.
 - Keep content concise and user-friendly.
+- For current Website pages, place screenshots in `static/img/screenshots/`,
+  animations in `static/img/animations/`, and feature images in
+  `static/img/features/`.
+- For release posts, copy each image into
+  `static/img/blog/images/<version>/` and reference it from that location.
 
 ---
 

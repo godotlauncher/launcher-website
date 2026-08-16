@@ -42,8 +42,9 @@ export const CTADownload: FC = () => {
           Download Godot Launcher
         </Heading>
         <p className={styles.ctaSubtitle}>
-          Available for Windows, macOS, and Linux.<br /> Manage Godot versions, custom
-          Godot builds, VS Code, Git, and project settings in one app.
+          Available for Windows, macOS, and Linux.<br /> Manage Godot versions
+          and custom builds, set up Visual Studio Code or VSCodium, and
+          initialize Git in one app.
           <br />
           Latest release: {latest.tag_name}.
         </p>

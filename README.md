@@ -64,7 +64,16 @@ npm run serve
 - `/src` - Website source (components, pages, etc.)
 - `/src/pages` - Website pages
 - `/static` - Static assets (images, icons, etc.)
-- `docusaurus.config.js` - Site configuration
+- `/static/img/blog/images/<version>` - Media used by release posts
+- `docusaurus.config.ts` - Site configuration
+
+## Media
+
+- For current Website pages, place screenshots in `static/img/screenshots/`,
+  animations in `static/img/animations/`, and feature images in
+  `static/img/features/`.
+- For release posts, copy each image into
+  `static/img/blog/images/<version>/` and reference it from that location.
 
 ---
 

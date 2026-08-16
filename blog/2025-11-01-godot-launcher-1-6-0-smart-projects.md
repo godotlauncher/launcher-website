@@ -41,4 +41,4 @@ Update inside the app or grab the latest installer from the download page to try
 - [Download Godot Launcher](/download/)
 - [Report feedback or issues](https://github.com/godotlauncher/launcher/issues/new/choose)
 - [Join the community discussions](/community/)
-- [Visit the documentation pages](https://docs.godotlauncher.org)
+- [Visit the 1.10 documentation](https://docs.godotlauncher.org/1.10/)
