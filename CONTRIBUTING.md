@@ -17,6 +17,7 @@ If you're looking to contribute to the Godot Launcher app or its documentation, 
 - [Reporting Issues](#reporting-issues)
 - [Proposing Features or Content](#proposing-features-or-content)
 - [Contributing Code](#contributing-code)
+- [AI-Assisted Contributions](#ai-assisted-contributions)
 - [Pull Request Guidelines](#pull-request-guidelines)
 - [Styling and Content Standards](#styling-and-content-standards)
 - [Quickstart Guide](#quickstart-guide)
@@ -74,6 +75,12 @@ Before submitting a pull request:
 
 ---
 
+## AI-Assisted Contributions
+
+This repository follows the project-wide [AI-Assisted Contributions Policy](https://github.com/godotlauncher/launcher/blob/main/AI_POLICY.md). AI-assisted tools may be used, but their output is treated as untrusted input. Contributors remain responsible for understanding, reviewing, adapting, testing, and maintaining everything they submit.
+
+---
+
 ## Pull Request Guidelines
 
 ### Keep PRs Focused
@@ -103,6 +110,11 @@ The Discord link was outdated. Updated to the current invite URL.
 - Prefer clarity and accessibility over visual complexity.
 - Write in American English.
 - Keep content concise and user-friendly.
+- For current Website pages, place screenshots in `static/img/screenshots/`,
+  animations in `static/img/animations/`, and feature images in
+  `static/img/features/`.
+- For release posts, copy each image into
+  `static/img/blog/images/<version>/` and reference it from that location.
 
 ---
 

@@ -1,8 +1,8 @@
 {
   "name": "launcher-website",
-  "version": "1.10.1",
+  "version": "1.11.0",
   "private": true,
-  "packageManager": "npm@11.16.0",
+  "packageManager": "npm@12.0.2",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
@@ -22,15 +22,16 @@
     "clsx": "^2.1.1",
     "estree-util-value-to-estree": "^3.5.0",
     "image-size": "^2.0.2",
-    "lucide-react": "^1.22.0",
+    "lucide-react": "^1.31.0",
     "prism-react-renderer": "^2.4.1",
-    "react": "^19.2.7",
-    "react-dom": "^19.2.7"
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.10.2",
     "@docusaurus/tsconfig": "^3.10.2",
     "@docusaurus/types": "^3.10.2",
+    "@types/node": "^24.13.3",
     "dotenv": "^17.4.2",
     "typescript": "^5.9.3"
   },
@@ -47,6 +48,6 @@
     ]
   },
   "engines": {
-    "node": ">=22.0"
+    "node": "24.x"
   }
 }

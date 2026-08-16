@@ -23,7 +23,7 @@ export const faqSections: FAQSection[] = [
       {
         question: "What is Godot Launcher?",
         answer:
-          "Godot Launcher is a free, open source companion app for Godot Engine. It helps manage Godot versions, custom Godot builds, projects, VS Code, Git, and per-project editor settings.",
+          "Godot Launcher is a free, open source companion app for Godot Engine. It helps manage Godot versions, custom Godot builds, projects, code editors, Git, and per-project editor settings.",
         featured: true,
         featureOrder: 0,
       },
@@ -54,30 +54,36 @@ export const faqSections: FAQSection[] = [
           </p>
         ),
         featured: true,
-        featureOrder: 5,
+        featureOrder: 6,
       },
       {
         question:
           "How is Godot Launcher different from downloading Godot manually?",
         answer:
-          "Manual downloads give you the editor files. Godot Launcher keeps your Godot versions, custom Godot builds, project editor choices, VS Code setup, Git setup, and per-project editor settings organized in one place.",
+          "Manual downloads give you the editor files. Godot Launcher keeps your Godot versions, custom builds, project tools, and per-project settings organized in one place. It can also configure Visual Studio Code or VSCodium and initialize Git.",
         answerHTML: (
           <>
             <p>
               Manual downloads give you the editor files. Godot Launcher keeps
-              your Godot versions, project editor choices, and per-project editor
+              your Godot versions, custom builds, project tools, and per-project
               settings organized in one place.
             </p>
             <p>
-              It can also register{" "}
+              It can also configure{" "}
               <Link
                 style={{ display: "contents" }}
-                href="https://docs.godotlauncher.org/editors/custom-editors/"
+                href="https://docs.godotlauncher.org/integrations/vscode-setup-for-godot/"
               >
-                custom Godot builds
+                Visual Studio Code
               </Link>
-              {", "}configure VS Code project files, and initialize Git when you
-              create a project.
+              {" or "}
+              <Link
+                style={{ display: "contents" }}
+                href="https://docs.godotlauncher.org/integrations/vscodium-setup-for-godot/"
+              >
+                VSCodium
+              </Link>
+              {" and initialize Git."}
             </p>
           </>
         ),
@@ -86,13 +92,13 @@ export const faqSections: FAQSection[] = [
       {
         question: "Does it work offline?",
         answer:
-          "Yes. After the Godot versions you need are downloaded, you can launch those local editors without downloading them again.",
+          "Yes. You can open local projects with installed Godot versions while offline. You need an internet connection to download editors, refresh the release list, or update Godot Launcher.",
         featureOrder: 3,
       },
       {
         question: "Which platforms does it support?",
         answer:
-          "Godot Launcher is cross-platform and supports Windows, macOS, and Linux.",
+          "Godot Launcher supports Windows 10 or later on x64 and ARM64, macOS 12 Monterey or later on Intel and Apple silicon, and modern Linux distributions on x64 and ARM64.",
         featured: false,
       },
       {
@@ -185,7 +191,7 @@ export const faqSections: FAQSection[] = [
       {
         question: "Can I manage multiple Godot versions with the launcher?",
         answer:
-          "Yes. Godot Launcher can download and manage multiple Godot versions, and each project can be assigned a specific editor.",
+          "Yes. Godot Launcher can download and manage multiple Godot versions, and each project can use a compatible installed editor.",
         answerHTML: (
           <p>
             Yes. Godot Launcher can{" "}
@@ -201,7 +207,7 @@ export const faqSections: FAQSection[] = [
               style={{ display: "contents" }}
               href="https://docs.godotlauncher.org/editors/change-project-editor/"
             >
-              assigned a specific editor
+              assigned a compatible editor
             </Link>
             {"."}
           </p>
@@ -210,54 +216,87 @@ export const faqSections: FAQSection[] = [
         featureOrder: 1,
       },
       {
-        question: "Can Godot Launcher help with VS Code and Git setup?",
+        question: "Which code editors does Godot Launcher support?",
         answer:
-          "Yes. When VS Code and Git are installed, Godot Launcher can configure project-level VS Code settings, recommend Godot extensions, and initialize Git for new projects.",
+          "Godot Launcher supports Visual Studio Code and VSCodium on Windows, macOS, and Linux. The launcher can find either editor, configure Godot to open scripts in it, and set a default for new projects. You can also choose a different editor for a project when needed.",
         answerHTML: (
-          <p>
-            Yes. When VS Code and Git are installed, Godot Launcher can{" "}
-            <Link
-              style={{ display: "contents" }}
-              href="https://docs.godotlauncher.org/integrations/vscode-setup-for-godot/"
-            >
-              configure project-level VS Code settings
-            </Link>
-            {", recommend Godot extensions, and "}
-            <Link
-              style={{ display: "contents" }}
-              href="https://docs.godotlauncher.org/integrations/using-git-with-godot-launcher/"
-            >
-              initialize Git for new projects
-            </Link>
-            {"."}
-          </p>
+          <>
+            <p>
+              Godot Launcher supports{" "}
+              <Link
+                style={{ display: "contents" }}
+                href="https://docs.godotlauncher.org/integrations/vscode-setup-for-godot/"
+              >
+                Visual Studio Code
+              </Link>
+              {", "}
+              <Link
+                style={{ display: "contents" }}
+                href="https://docs.godotlauncher.org/integrations/vscodium-setup-for-godot/"
+              >
+                VSCodium
+              </Link>
+              {" on Windows, macOS, and Linux. It can find either editor and configure Godot to open scripts in it."}
+            </p>
+            <p>
+              <Link
+                style={{ display: "contents" }}
+                href="https://docs.godotlauncher.org/settings/code-editors/"
+              >
+                Code Editor Settings
+              </Link>
+              {" lets you set a default for new projects."}
+              {" You can also choose a different editor for a project when needed."}
+            </p>
+          </>
         ),
         featured: true,
         featureOrder: 3,
       },
       {
-        question:
-          "How does the launcher handle project settings and configurations?",
+        question: "Can Godot Launcher initialize Git?",
         answer:
-          "Godot Launcher keeps editor settings per project so different projects can maintain separate editor preferences, including GDScript language server and debugger port settings. This is useful when opening related projects, such as a client and server, side by side.",
+          "Yes. Godot Launcher can handle Git setup for new Godot projects, including Godot ignore rules, a main branch, and an initial commit. If Git needs your name and email, add them or skip the first commit. For existing projects, Project Settings initializes Git without adding setup files or creating a commit.",
         answerHTML: (
           <>
             <p>
-              Godot Launcher keeps{" "}
-              <Link
-                style={{ display: "contents" }}
-                href="https://docs.godotlauncher.org/editors/editor-settings/"
-              >
-                editor settings per project
-              </Link>{" "}
-              so different projects can maintain separate editor preferences,
-              including GDScript language server and debugger port settings.
+              Yes. Godot Launcher can handle Git setup for new Godot projects,
+              including Godot ignore rules, a <code>main</code> branch, and an
+              initial commit. If Git needs your name and email, add them or
+              skip the first commit.
             </p>
             <p>
-              This is useful when opening related projects, such as a client and
-              server, side by side.
+              For existing projects, <strong>Project Settings</strong>
+              {" "}initializes Git without adding setup files or creating a
+              commit. See{" "}
+              <Link
+                style={{ display: "contents" }}
+                href="https://docs.godotlauncher.org/integrations/using-git-with-godot-launcher/"
+              >
+                Using Git With Godot Launcher
+              </Link>
+              {" "}for both workflows.
             </p>
           </>
+        ),
+        featured: true,
+        featureOrder: 4,
+      },
+      {
+        question: "Does each project keep separate Godot editor settings?",
+        answer:
+          "Yes. Each project keeps its own Godot editor settings, so changes in one project do not affect another.",
+        answerHTML: (
+          <p>
+            Yes. Each project keeps its own{" "}
+            <Link
+              style={{ display: "contents" }}
+              href="https://docs.godotlauncher.org/editors/editor-settings/"
+            >
+              Godot editor settings
+            </Link>
+            {", "}so changes in one project do not affect another.
+          </p>
         ),
       },
       {
@@ -299,7 +338,7 @@ export const faqSections: FAQSection[] = [
       {
         question: "Will the launcher update itself automatically?",
         answer:
-          "Godot Launcher can check for updates and guide you through supported update flows. Some platforms or package types may require manual updates.",
+          "Godot Launcher can check for updates automatically, but it does not download them automatically. When an update is available, you choose when to download and restart. Some platforms or package types require a manual update.",
         answerHTML: (
           <p>
             Godot Launcher can{" "}
@@ -307,10 +346,11 @@ export const faqSections: FAQSection[] = [
               style={{ display: "contents" }}
               href="https://docs.godotlauncher.org/settings/updates/"
             >
-              check for updates and guide you through supported update flows
+              check for updates automatically
             </Link>
-            {". "}
-            Some platforms or package types may require manual updates.
+            {", but it does not download them automatically. When an update is "}
+            available, you choose when to download and restart. Some platforms
+            or package types require a manual update.
           </p>
         ),
       },
@@ -472,7 +512,7 @@ export const faqSections: FAQSection[] = [
             {" "}when needed.
           </p>
         ),
-        featureOrder: 4,
+        featureOrder: 5,
         featured: true,
       },
     ],

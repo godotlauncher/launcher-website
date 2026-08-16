@@ -5,7 +5,7 @@ import Heading from "@theme/Heading";
 import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
 
-import { ProjectViewScreenShot } from "../components/ProjectViewScreenShot";
+import { CreateProjectAnimation } from "../components/create-project-animation";
 import { HomepageHeader } from "../components/Header";
 import { CTADownload } from "../components/CTADownload";
 import FAQStructuredData from "../components/FAQStructuredData";
@@ -34,7 +34,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title="The Companion App for Godot Engine"
-      description="Godot Launcher helps you manage Godot versions, custom Godot builds, project setup, VS Code, Git, and per-project editor settings in one open source app."
+      description="Manage Godot versions and custom builds, set up Visual Studio Code or VSCodium, and initialize Git with Godot Launcher."
     >
       <Head>
         <script type="application/ld+json">
@@ -44,13 +44,11 @@ export default function Home(): ReactNode {
             name: "Godot Launcher",
             operatingSystem: "Windows, macOS, Linux",
             applicationCategory: "DeveloperApplication",
-            description: `Godot Launcher is a cross-platform, open source companion app
-              for Godot Engine that helps you manage Godot versions, register and use
-              custom Godot builds, set up projects, and keep per-project editor
-              settings organized.`,
+            description:
+              "Godot Launcher is a cross-platform, open source companion app for Godot Engine. Manage official and custom Godot editors, set up VS Code or VSCodium, and initialize Git.",
             url: "https://godotlauncher.org",
             image:
-              "https://godotlauncher.org/img/screenshots/screen_projects_view_dark.webp",
+              "https://godotlauncher.org/img/Godot-Launcher-Social-Card.jpg",
             author: {
               "@type": "Organization",
               name: "Godot Launcher Project",
@@ -72,14 +70,13 @@ export default function Home(): ReactNode {
 
       <main>
         <div className="container">
-          <ProjectViewScreenShot />
+          <CreateProjectAnimation />
 
           <div className="secondary-tagline ">
             <Heading as="h2">Manage the setup around Godot</Heading>
             <p>
-              Godot Launcher keeps official Godot releases, custom Godot builds,
-              project setup, VS Code, Git, and per-project editor settings in
-              one place.
+              Manage official Godot releases and custom builds, set up Visual
+              Studio Code or VSCodium, and initialize Git when you need it.
             </p>
           </div>
           <HomepageFeatures />

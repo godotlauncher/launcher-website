@@ -54,7 +54,7 @@ Godot Launcher 1.5.0 ships with a solid translation foundation, making it easier
 
 ## Help us polish every translation
 
-AI helped us bootstrap the first draft of each locale, but human review keeps the experience authentic. Visit the on-site [translation contribution guide](/contributing/translations) for ways to share feedback, or follow the [full checklist](https://docs.godotlauncher.org/contributing/translations/) if you want to dive into the files. Each improvement flows into future launcher releases and expands how many teams can work comfortably in their native language.
+AI helped us bootstrap the first draft of each locale, but human review keeps the experience authentic. Visit the on-site [translation contribution guide](/contributing/translations) for ways to share feedback, or follow the [full checklist](https://docs.godotlauncher.org/1.10/contributing/translations/) if you want to dive into the files. Each improvement flows into future launcher releases and expands how many teams can work comfortably in their native language.
 
 ## Upgrade to Godot Launcher 1.5.0 today
 
@@ -63,5 +63,5 @@ Update from within the launcher or grab the latest installer on the [download pa
 ## Related resources
 
 - [Download Godot Launcher](/download/)
-- [Help improve translations](https://docs.godotlauncher.org/contributing/translations/)
+- [Help improve translations](https://docs.godotlauncher.org/1.10/contributing/translations/)
 - [Join the community discussions](/community/)

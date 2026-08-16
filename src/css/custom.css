@@ -114,3 +114,37 @@ html {
   border-radius: 12px;
   background: var(--ifm-background-color);
 }
+
+/* Keep cookie consent actions large enough to read and use comfortably. */
+#cm {
+  width: min(42rem, calc(100vw - 2rem)) !important;
+  max-width: none !important;
+}
+
+#c-bns .c-bn,
+#s-bns .c-bn {
+  min-height: 3rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 600px) {
+  #cm {
+    width: calc(100vw - 2rem) !important;
+  }
+
+  #c-bns {
+    flex-direction: column;
+  }
+
+  #c-bns .c-bn {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #c-bns .c-bn + .c-bn {
+    margin-top: 0.5rem;
+  }
+}
