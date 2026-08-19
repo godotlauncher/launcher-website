@@ -1,6 +1,6 @@
 {
   "name": "launcher-website",
-  "version": "1.11.0",
+  "version": "1.11.1",
   "private": true,
   "packageManager": "npm@12.0.2",
   "scripts": {
