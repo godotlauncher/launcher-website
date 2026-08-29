@@ -41,6 +41,20 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
+    title: 'Import Projects from GitHub',
+    sources: {
+      light: '/img/features/GitHub_Repository_Integration_Light.webp',
+      dark: '/img/features/GitHub_Repository_Integration_Dark.webp',
+    },
+    alt: 'Import from GitHub dialog with a selected repository',
+    size: { width: 410, height: 320 },
+    description: (
+      <>
+        Connect GitHub to browse and import accessible repositories, including private repositories, directly into Godot Launcher.
+      </>
+    ),
+  },
+  {
     title: 'Use Custom Godot Builds',
     sources: {
       light: '/img/features/Effortless_Godot_Version_Management_Custom_Light.png',
