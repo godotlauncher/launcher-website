@@ -6,7 +6,7 @@ This repository powers the [official Godot Launcher website](https://godotlaunch
 
 If you're looking to contribute to the Godot Launcher app or its documentation, check out these repos:
 
-- **Launcher app:** [github.com/godotlauncher/launcher](https://github.com/godotlauncher/launcher)
+- **Godot Launcher app:** [github.com/godotlauncher/launcher](https://github.com/godotlauncher/launcher)
 - **Documentation site:** [github.com/godotlauncher/launcher-docs](https://github.com/godotlauncher/launcher-docs)
 
 ---

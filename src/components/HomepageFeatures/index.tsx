@@ -41,6 +41,20 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
+    title: 'Create and Import with GitHub',
+    sources: {
+      light: '/img/features/GitHub_Repository_Integration_Light.webp',
+      dark: '/img/features/GitHub_Repository_Integration_Dark.webp',
+    },
+    alt: 'Import from GitHub dialog with a selected repository',
+    size: { width: 410, height: 320 },
+    description: (
+      <>
+        Publish a new project to a private GitHub repository, or browse and import repositories you can access.
+      </>
+    ),
+  },
+  {
     title: 'Use Custom Godot Builds',
     sources: {
       light: '/img/features/Effortless_Godot_Version_Management_Custom_Light.png',
