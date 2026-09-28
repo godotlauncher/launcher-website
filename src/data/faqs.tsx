@@ -300,6 +300,11 @@ export const faqSections: FAQSection[] = [
         ),
       },
       {
+        question: "Can I organise projects with tags?",
+        answer:
+          "Yes. Add coloured tags from a project's tag icon, then use the Tags filter to show projects matching any selected tag. Manage shared names, colours and unused tags in Settings > Projects > Manage tags. Tags are stored by Godot Launcher on this computer and do not change your Godot project files.",
+      },
+      {
         question: "Can I use Godot Launcher with existing projects?",
         answer:
           "Yes. You can add an existing Godot project and choose which editor should be used for it.",
