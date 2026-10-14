@@ -7,7 +7,7 @@ export default function Faqs(): ReactNode {
   return (
     <Layout
       title="FAQs"
-      description="Find answers to frequently asked questions about Godot Launcher, including features, installation, troubleshooting, and more. Learn how this open source tool supports Godot project management."
+      description="Find answers about Godot Launcher: move and share Godot export templates, manage editors and projects, install the app and troubleshoot problems."
     >
       <div className="container padding-top--lg padding-bottom-lg">
         <main>
