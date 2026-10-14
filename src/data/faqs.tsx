@@ -147,6 +147,74 @@ export const faqSections: FAQSection[] = [
     ],
   },
   {
+    title: "Export Templates",
+    questions: [
+      {
+        featured: true,
+        featureOrder: 2,
+        question: "Can I move Godot export templates to another drive?",
+        answer:
+          "Yes. Open Settings > Export Templates in Godot Launcher to move Official or Imported storage to another folder or drive. Their locations can be changed separately. Close Godot editors and choose an empty, writable destination folder before moving.",
+        answerHTML: (
+          <p>
+            Yes. Open <strong>Settings &gt; Export Templates</strong> in Godot
+            Launcher to move Official or Imported storage to another folder or
+            drive. Their locations can be changed separately. Close Godot editors
+            and choose an empty, writable destination folder before moving. See{" "}
+            <Link
+              style={{ display: "contents" }}
+              href="https://docs.godotlauncher.org/editors/export-templates/#move-template-storage"
+            >
+              Change the Godot export template location
+            </Link>
+            {" "}for the steps.
+          </p>
+        ),
+      },
+      {
+        question: "Will Godot still find my templates after a storage move?",
+        answer:
+          "Yes. Godot's normal Official template path continues to work after the move, including when you open Godot directly. Open projects through Godot Launcher to use their saved imported-build choices.",
+      },
+      {
+        question: "Can projects share templates without sharing editor settings?",
+        answer:
+          "Yes. Projects using the same Godot version and edition, Standard or .NET, can reuse one Official template collection while keeping their editor preferences separate. Adding or removing shared files affects every project using that collection.",
+      },
+      {
+        question: "Do I need to install every platform's export templates?",
+        answer:
+          "No. Choose the Official files you need and add more later. If individual downloads are unavailable, Godot Launcher offers a full-package download. Imported TPZ builds are managed as complete packages.",
+      },
+      {
+        question: "Can different projects use different custom export templates?",
+        answer:
+          "Yes. Import prepared TPZ packages, give them names and choose a matching build in Project Settings > Export Templates. Choices are saved on this computer for each Godot version and edition. For custom Godot editors, manage templates in Godot.",
+      },
+      {
+        question: "Can I reuse export templates I already have?",
+        answer:
+          "Yes. Godot Launcher uses Official templates in Godot's normal per-user location. For existing project-local files, review whether to keep them as an Imported build, share them, use shared templates or decide later. Share templates and Use shared templates permanently remove local files without a backup. Keep your own copy of originals you may need.",
+        answerHTML: (
+          <p>
+            Yes. Godot Launcher uses Official templates in Godot's normal
+            per-user location. For existing project-local files,{" "}
+            <Link
+              style={{ display: "contents" }}
+              href="https://docs.godotlauncher.org/editors/export-templates/#connect-existing-projects"
+            >
+              review your migration choices
+            </Link>
+            {": "}keep them as an Imported build, share them, use shared templates
+            or decide later. <strong>Share templates</strong> and{" "}
+            <strong>Use shared templates</strong> permanently remove local files
+            without a backup. Keep your own copy of originals you may need.
+          </p>
+        ),
+      },
+    ],
+  },
+  {
     title: "Features & Functionality",
     questions: [
       {
