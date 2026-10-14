@@ -1,0 +1,88 @@
+---
+title: "Godot Launcher 1.13.0: Shared export templates"
+description: Manage shared Godot export templates, import named TPZ builds and organise projects with coloured tags and List view in Godot Launcher 1.13.0.
+subtitle: Share export templates, organise projects with tags and launch Godot in a terminal.
+version: 1.13.0
+slug: /godot-launcher-1-13-0-shared-export-templates
+date: 2026-10-14
+image: /img/blog/images/1.13.0/shared-export-templates.webp
+authors:
+  - mariodebono
+tags:
+  - godot
+  - godot-launcher
+  - godot-workflow
+  - release
+---
+
+import ThemedImage from '@theme/ThemedImage';
+
+Godot Launcher 1.13.0 is ready, with shared export templates, project tags and a few changes to make moving between projects easier.
+
+<!-- truncate -->
+
+## One place for your export templates
+
+If several projects use the same Godot version, they can now share one Official export template collection. Download the files you need, and add more when you're ready for another platform.
+
+<p>
+  <ThemedImage
+    className="blogThemedImage"
+    alt="Godot Launcher export template library with shared Standard and .NET collections"
+    decoding="async"
+    loading="lazy"
+    sources={{
+      light: '/img/blog/images/1.13.0/screen_export_templates_view_light.webp',
+      dark: '/img/blog/images/1.13.0/screen_export_templates_view_dark.webp',
+    }}
+  />
+</p>
+
+Custom templates can have their own named TPZ builds too. And if space is getting tight, you can move template storage to another drive.
+
+For existing projects, a migration wizard lets you decide what to keep, share or leave for later.
+
+:::info
+
+You can move the bulky Official templates to another drive. Godot will still find them, even when you open it directly.
+
+:::
+
+[The guide](https://docs.godotlauncher.org/editors/export-templates/) walks through the choices when you're ready.
+
+## Find the project you're looking for
+
+A few prototypes and experiments can quickly turn into a long project list. Coloured tags help you organise it, with tag filters alongside search.
+
+The new **List** view puts each project on one line, keeping its editor version and actions close. **Compact** and **Cards** are still there too.
+
+<p>
+  <ThemedImage
+    className="blogThemedImage"
+    alt="Godot Launcher List view with one line per project, editor versions and direct actions"
+    decoding="async"
+    loading="lazy"
+    sources={{
+      light: '/img/blog/images/1.13.0/screen_projects_dense_view_light.webp',
+      dark: '/img/blog/images/1.13.0/screen_projects_dense_view_dark.webp',
+    }}
+  />
+</p>
+
+## Keep an eye on Godot's output
+
+Godot can now launch in a terminal. Turn on **Launch in terminal** for the projects where you want it.
+
+This helps debug GDExtension work and other edge cases where the editor can crash.
+
+## A few smaller changes
+
+Cleaning up old editors is easier with bulk removal and **Select unused editors** for launcher-managed versions your registered projects no longer use.
+
+You can also choose whether closing the window quits or goes to the tray.
+
+## Give it a try
+
+[Download 1.13.0](/download/), or use the in-app updater where supported. The [release notes](https://docs.godotlauncher.org/release-notes/1.13.0/) have the full list of changes.
+
+Give it a spin and [tell me how it feels for your projects](/community/).
