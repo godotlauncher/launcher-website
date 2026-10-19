@@ -108,7 +108,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Open Recent Projects Quickly',
+    title: 'Open Pinned and Recent Projects',
     sources: {
       light: '/img/features/Quick_Edit_From_System_Tray_Light.webp',
       dark: '/img/features/Quick_Edit_From_System_Tray_Dark.webp',
@@ -116,7 +116,8 @@ const FeatureList: FeatureItem[] = [
     size: { width: 410, height: 320 },
     description: (
       <>
-        Reopen recent projects from the system tray without browsing folders.
+        Open pinned projects in your chosen order or return to recent projects
+        from the system tray.
       </>
     ),
   },
