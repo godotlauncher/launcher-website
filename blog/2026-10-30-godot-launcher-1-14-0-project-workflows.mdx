@@ -1,0 +1,85 @@
+---
+title: "Godot Launcher 1.14.0: Project workflows and terminal commands"
+description: Duplicate, import and run Godot projects, organise projects together, and manage terminal commands for installed editors in Godot Launcher 1.14.0.
+subtitle: Duplicate and import projects, organise them together, and choose your Godot terminal commands.
+version: 1.14.0
+slug: /godot-launcher-1-14-0-project-workflows
+date: 2026-10-30
+image: /img/blog/images/1.14.0/project-workflows.webp
+authors:
+  - mariodebono
+tags:
+  - godot
+  - godot-launcher
+  - godot-workflow
+  - release
+---
+
+import ThemedImage from '@theme/ThemedImage';
+
+Godot Launcher 1.14.0 adds more ways to bring projects into your workspace, duplicate them and run them directly. It also lets you choose a default `godot` terminal command and give installed editors their own named commands.
+
+<!-- truncate -->
+
+## Bring projects together
+
+Scan a folder for existing projects, or import projects already registered with Godot Project Manager. Review project names, editors and tags before adding them. Your source projects stay in their current folders, and you can choose whether an import downloads missing editors.
+
+Duplicate a project when you want an independent copy. Choose a destination, optionally copy editor preferences or game save data, and start fresh Git history or publish the new project to a private GitHub repository.
+
+<ThemedImage
+  className="blogThemedImage"
+  alt="Godot Launcher duplicate-project form with a new project name, destination and copy options"
+  decoding="async"
+  loading="lazy"
+  sources={{
+    light: '/img/blog/images/1.14.0/screen_projects_duplicate_project_copy_light.webp',
+    dark: '/img/blog/images/1.14.0/screen_projects_duplicate_project_copy_dark.webp',
+  }}
+/>
+
+The [project guides](https://docs.godotlauncher.org/next/projects/manage-projects/) explain importing, duplication and project management.
+
+## Choose your Godot terminal commands
+
+Set an installed editor as your default `godot` command, or create a named alias such as `godot472`. Each editor's Settings groups its command controls together. **Settings > Command line** can create aliases automatically for new editors or help create missing aliases for existing installations.
+
+Prerelease commands keep their stage and number: `4.8-beta1` suggests `godot48b1`, while beta2 suggests `godot48b2`. Existing aliases keep their names. Terminal commands use Godot's normal editor preferences; projects opened through Godot Launcher retain their separate per-project preferences.
+
+<ThemedImage
+  className="blogThemedImage"
+  alt="Installed editor command-line settings with a default Godot command and a named alias"
+  decoding="async"
+  loading="lazy"
+  sources={{
+    light: '/img/blog/images/1.14.0/screen_installs_command_line_settings_light.webp',
+    dark: '/img/blog/images/1.14.0/screen_installs_command_line_settings_dark.webp',
+  }}
+/>
+
+See [Command line settings](https://docs.godotlauncher.org/next/settings/command-line/) for automatic aliases and [Use Godot from a terminal](https://docs.godotlauncher.org/next/getting-started/install-editor/#use-godot-from-a-terminal) for setup and command conflicts.
+
+## Organise and run projects
+
+Select several projects to edit tags, clear New status, pin or unpin them, or remove them from the list together. Choose the order of Pinned, New and Recents, and open pinned projects from the system tray in your chosen order.
+
+**Run project** starts a project's main scene without opening the Godot editor. Open the project in Godot first when it needs asset imports, a C# build or main-scene setup. Godot error messages now appear as warnings without falsely claiming that a running project has failed.
+
+You can also open the configured code editor directly or alongside Godot, and cancel editor downloads from Projects and Create Project.
+
+## A place for future extensions
+
+The new **Extensions** page introduces upcoming ways to extend and customise Godot Launcher and links to the community discussion. Extensions are not available yet. GitHub connections remain under **Settings > Connections**.
+
+## Update to 1.14.0
+
+Download an installer from the [download page](/download/). If your installation supports in-app updates, Godot Launcher can guide you through the update.
+
+The [full release notes](https://docs.godotlauncher.org/release-notes/1.14.0/) cover the changes, including Light theme styling and Linux AppImage compatibility improvements.
+
+## Related resources
+
+- [Godot Launcher 1.14.0 release notes](https://docs.godotlauncher.org/release-notes/1.14.0/)
+- [Download Godot Launcher](/download/)
+- [Report a problem](https://github.com/godotlauncher/launcher/issues/new/choose)
+- [Join the Godot Launcher community](https://godotlauncher.org/community/)
