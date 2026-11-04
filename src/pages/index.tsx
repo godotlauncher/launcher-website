@@ -12,7 +12,9 @@ import FAQStructuredData from "../components/FAQStructuredData";
 import Head from "@docusaurus/Head";
 import Link from "@docusaurus/Link";
 import { faqSections } from "../data/faqs";
+import styles from "./index.module.css";
 
+/** Renders the homepage with theme-aware product media and download sections. */
 export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
 
@@ -33,6 +35,7 @@ export default function Home(): ReactNode {
 
   return (
     <Layout
+      wrapperClassName={styles.homepage}
       title="The Companion App for Godot Engine"
       description="Manage Godot versions and custom builds, set up Visual Studio Code or VSCodium, and initialize Git with Godot Launcher."
     >
@@ -68,39 +71,40 @@ export default function Home(): ReactNode {
       </Head>
       <HomepageHeader />
 
-      <main>
+      <main className={styles.content}>
         <div className="container">
           <CreateProjectAnimation />
 
-          <div className="secondary-tagline ">
+          <div className={styles.featureIntro}>
             <Heading as="h2">Manage the setup around Godot</Heading>
             <p>
               Manage official Godot releases and custom builds, set up Visual
               Studio Code or VSCodium, and initialize Git when you need it.
             </p>
           </div>
-          <HomepageFeatures />
-          <CTADownload />
-          <div className="container">
-            <FAQStructuredData
-              sections={[
-                {
-                  title: "FAQs",
-                  questions: featuredQuestions,
-                },
-              ]}
-            />
-            <div className="margin-bottom--lg">
-              <Link
-                to="/faq"
-                className="button button--secondary button--outline"
-              >
-                See all FAQs
-              </Link>
-            </div>
-          </div>
-          <CTADownload />
         </div>
+
+        <HomepageFeatures />
+        <CTADownload />
+        <div className={`container ${styles.faqSection}`}>
+          <FAQStructuredData
+            sections={[
+              {
+                title: "FAQs",
+                questions: featuredQuestions,
+              },
+            ]}
+          />
+          <div className="margin-bottom--lg">
+            <Link
+              to="/faq"
+              className="button button--secondary button--outline"
+            >
+              See all FAQs
+            </Link>
+          </div>
+        </div>
+        <CTADownload />
       </main>
     </Layout>
   );

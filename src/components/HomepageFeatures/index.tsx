@@ -136,39 +136,43 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
+/**
+ * Renders one feature row with its existing theme-specific product image.
+ * @param props Feature heading, description, image sources and dimensions.
+ */
 function Feature({ title, description, sources, alt, size }: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className={styles.featureImageContainer}>
-        <ThemedImage
-          alt={alt ?? title}
-          className={styles.featureImage}
-          height={size.height}
-          sources={sources}
-          width={size.width}
-        />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+    <div className={styles.feature}>
+      <div className="container">
+        <div className={clsx('row', styles.featureRow)}>
+          <div className={clsx('col col--6', styles.featureContent)}>
+            <Heading as="h3">{title}</Heading>
+            <p>{description}</p>
+          </div>
+          <div className={clsx('col col--6', styles.featureMedia)}>
+            <div className={styles.featureImageContainer}>
+              <ThemedImage
+                alt={alt ?? title}
+                className={styles.featureImage}
+                height={size.height}
+                sources={sources}
+                width={size.width}
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
 }
 
+/** Renders the existing features as alternating text and image rows. */
 export default function HomepageFeatures(): ReactNode {
   return (
-    <>
-
-      <section id="features" className={styles.features}>
-        <div className="container">
-          <div className={clsx('row', styles.featureRow)}>
-            {FeatureList.map((props, idx) => (
-              <Feature key={idx} {...props} />
-            ))}
-          </div>
-        </div>
-      </section>
-    </>
+    <section id="features" className={styles.features}>
+      {FeatureList.map((props, idx) => (
+        <Feature key={idx} {...props} />
+      ))}
+    </section>
   );
 }
