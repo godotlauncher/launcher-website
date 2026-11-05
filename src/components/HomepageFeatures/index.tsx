@@ -3,11 +3,13 @@ import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import ThemedImage from '@theme/ThemedImage';
 import styles from './styles.module.css';
+import FeatureAnimation from './feature-animation.component';
 
 type FeatureItem = {
   title: string;
   sources: ComponentProps<typeof ThemedImage>['sources'];
   alt?: string;
+  videoSources?: { light: string; dark: string };
   size: { width: number, height: number; };
   description: ReactNode;
 };
@@ -23,6 +25,24 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         Download official Godot releases and choose the right editor for each project.
+      </>
+    ),
+  },
+  {
+    title: "Choose your terminal's Godot version",
+    sources: {
+      light: '/img/animations/godot-cli/godot-cli-poster_light.webp',
+      dark: '/img/animations/godot-cli/godot-cli-poster_dark.webp',
+    },
+    videoSources: {
+      light: '/img/animations/godot-cli/godot-cli-anim_light.webm',
+      dark: '/img/animations/godot-cli/godot-cli-anim_dark.webm',
+    },
+    alt: 'Set Godot 4.7.2 as the default CLI, with Godot 4.6.2 available as godot46, then check both versions in a terminal',
+    size: { width: 410, height: 320 },
+    description: (
+      <>
+        Choose which installed editor runs when you type <code>godot</code>, and give other versions their own commands, like <code>godot46</code>.
       </>
     ),
   },
@@ -137,10 +157,10 @@ const FeatureList: FeatureItem[] = [
 ];
 
 /**
- * Renders one feature row with its existing theme-specific product image.
+ * Renders one feature row with themed product media.
  * @param props Feature heading, description, image sources and dimensions.
  */
-function Feature({ title, description, sources, alt, size }: FeatureItem) {
+function Feature({ title, description, sources, videoSources, alt, size }: FeatureItem) {
   return (
     <div className={styles.feature}>
       <div className="container">
@@ -151,13 +171,23 @@ function Feature({ title, description, sources, alt, size }: FeatureItem) {
           </div>
           <div className={clsx('col col--6', styles.featureMedia)}>
             <div className={styles.featureImageContainer}>
-              <ThemedImage
-                alt={alt ?? title}
-                className={styles.featureImage}
-                height={size.height}
-                sources={sources}
-                width={size.width}
-              />
+              {videoSources ? (
+                <FeatureAnimation
+                  alt={alt ?? title}
+                  sources={videoSources}
+                  posters={sources}
+                  width={size.width}
+                  height={size.height}
+                />
+              ) : (
+                <ThemedImage
+                  alt={alt ?? title}
+                  className={styles.featureImage}
+                  height={size.height}
+                  sources={sources}
+                  width={size.width}
+                />
+              )}
             </div>
           </div>
         </div>
