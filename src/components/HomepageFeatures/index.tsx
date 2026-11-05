@@ -3,11 +3,13 @@ import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import ThemedImage from '@theme/ThemedImage';
 import styles from './styles.module.css';
+import FeatureAnimation from './feature-animation.component';
 
 type FeatureItem = {
   title: string;
   sources: ComponentProps<typeof ThemedImage>['sources'];
   alt?: string;
+  videoSources?: { light: string; dark: string };
   size: { width: number, height: number; };
   description: ReactNode;
 };
@@ -23,6 +25,24 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         Download official Godot releases and choose the right editor for each project.
+      </>
+    ),
+  },
+  {
+    title: "Choose your terminal's Godot version",
+    sources: {
+      light: '/img/animations/godot-cli/godot-cli-poster_light.webp',
+      dark: '/img/animations/godot-cli/godot-cli-poster_dark.webp',
+    },
+    videoSources: {
+      light: '/img/animations/godot-cli/godot-cli-anim_light.webm',
+      dark: '/img/animations/godot-cli/godot-cli-anim_dark.webm',
+    },
+    alt: 'Set Godot 4.7.2 as the default CLI, with Godot 4.6.2 available as godot46, then check both versions in a terminal',
+    size: { width: 410, height: 320 },
+    description: (
+      <>
+        Choose which installed editor runs when you type <code>godot</code>, and give other versions their own commands, like <code>godot46</code>.
       </>
     ),
   },
@@ -108,7 +128,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Open Recent Projects Quickly',
+    title: 'Open Pinned and Recent Projects',
     sources: {
       light: '/img/features/Quick_Edit_From_System_Tray_Light.webp',
       dark: '/img/features/Quick_Edit_From_System_Tray_Dark.webp',
@@ -116,7 +136,8 @@ const FeatureList: FeatureItem[] = [
     size: { width: 410, height: 320 },
     description: (
       <>
-        Reopen recent projects from the system tray without browsing folders.
+        Open pinned projects in your chosen order or return to recent projects
+        from the system tray.
       </>
     ),
   },
@@ -135,39 +156,53 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({ title, description, sources, alt, size }: FeatureItem) {
+/**
+ * Renders one feature row with themed product media.
+ * @param props Feature heading, description, image sources and dimensions.
+ */
+function Feature({ title, description, sources, videoSources, alt, size }: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className={styles.featureImageContainer}>
-        <ThemedImage
-          alt={alt ?? title}
-          className={styles.featureImage}
-          height={size.height}
-          sources={sources}
-          width={size.width}
-        />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+    <div className={styles.feature}>
+      <div className="container">
+        <div className={clsx('row', styles.featureRow)}>
+          <div className={clsx('col col--6', styles.featureContent)}>
+            <Heading as="h3">{title}</Heading>
+            <p>{description}</p>
+          </div>
+          <div className={clsx('col col--6', styles.featureMedia)}>
+            <div className={styles.featureImageContainer}>
+              {videoSources ? (
+                <FeatureAnimation
+                  alt={alt ?? title}
+                  sources={videoSources}
+                  posters={sources}
+                  width={size.width}
+                  height={size.height}
+                />
+              ) : (
+                <ThemedImage
+                  alt={alt ?? title}
+                  className={styles.featureImage}
+                  height={size.height}
+                  sources={sources}
+                  width={size.width}
+                />
+              )}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
 }
 
+/** Renders the existing features as alternating text and image rows. */
 export default function HomepageFeatures(): ReactNode {
   return (
-    <>
-
-      <section id="features" className={styles.features}>
-        <div className="container">
-          <div className={clsx('row', styles.featureRow)}>
-            {FeatureList.map((props, idx) => (
-              <Feature key={idx} {...props} />
-            ))}
-          </div>
-        </div>
-      </section>
-    </>
+    <section id="features" className={styles.features}>
+      {FeatureList.map((props, idx) => (
+        <Feature key={idx} {...props} />
+      ))}
+    </section>
   );
 }

@@ -73,37 +73,6 @@ html {
   color: var(--ifm-button-color);
 }
 
-.secondary-tagline {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 16px;
-  text-align: center;
-
-}
-
-.secondary-tagline h2 {
-  line-height: 150%;
-  font-weight: 600;
-  font-size: 30px;
-  margin: 0;
-}
-
-.secondary-tagline p {
-  max-width: 600px;
-  font-size: 20px;
-  margin-top: 16px;
-}
-
-@media screen and (max-width: 996px) {
-  .secondary-tagline {
-    text-align: center;
-    align-items: center;
-    margin: 32px 0;
-  }
-}
-
-
 .blog-wrapper.blog-post-page #__blog-post-container .blogThemedImage {
   display: block;
   max-width: 100%;

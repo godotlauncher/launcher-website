@@ -10,6 +10,7 @@ import styles from "./styles.module.css";
 
 import { Check, Copy } from 'lucide-react';
 
+/** Renders the homepage introduction and platform-specific download controls. */
 export const HomepageHeader: FC = () => {
   const { siteConfig } = useDocusaurusContext();
   const { os } = useAgent();
@@ -34,7 +35,7 @@ export const HomepageHeader: FC = () => {
   };
 
   return (
-    <header className={clsx("hero shadow--lw", styles.heroBanner)}>
+    <header className={clsx("hero", styles.heroBanner)}>
       <div className="container">
         <p className={styles.heroBrand}>
           Godot Launcher

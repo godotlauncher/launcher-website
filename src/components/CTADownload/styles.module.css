@@ -4,11 +4,12 @@
  */
 
 .ctaBanner {
-  padding: 4rem 0;
+  margin-bottom: 3rem;
+  padding: 3rem 0;
   text-align: left;
   position: relative;
   overflow: hidden;
-  min-height: 200px;
+  background-color: var(--homepage-band-surface);
 }
 
 .ctaTitle {
@@ -30,10 +31,22 @@
 
 .ctaPrimary {
   width: auto;
+  max-width: 100%;
+  white-space: normal;
 }
 
 .ctaMeta {
   margin: 0;
   font-size: 0.9rem;
   color: var(--ifm-color-emphasis-700);
+}
+
+@media screen and (max-width: 600px) {
+  .ctaBanner {
+    padding: 2rem 0;
+  }
+
+  .ctaTitle {
+    font-size: 1.75rem;
+  }
 }

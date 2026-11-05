@@ -1,7 +1,8 @@
 .animation {
   display: flex;
   justify-content: center;
-  margin: 24px;
+  margin: 1.5rem auto 0;
+  padding: 0 1rem;
 }
 
 .animationImage {
@@ -9,7 +10,13 @@
   max-width: 1024px;
   height: auto;
   margin: 0 auto;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--homepage-border-color);
   border-radius: 8px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--homepage-media-shadow);
+}
+
+@media screen and (max-width: 600px) {
+  .animation {
+    padding: 0;
+  }
 }

@@ -1,0 +1,70 @@
+.homepage {
+  --homepage-surface: #ffffff;
+  --homepage-band-surface: #eef0f3;
+  --homepage-feature-surface: #f8f9fa;
+  --homepage-media-surface: #f6f7f9;
+  --homepage-border-color: rgba(28, 30, 33, 0.1);
+  --homepage-media-shadow: 0 4px 14px rgba(28, 30, 33, 0.04);
+  --ifm-hero-background-color: var(--homepage-band-surface);
+  --ifm-hero-text-color: var(--ifm-font-color-base);
+
+  background-color: var(--homepage-surface);
+}
+
+[data-theme='dark'] .homepage {
+  --homepage-surface: #1b1b1d;
+  --homepage-band-surface: #252528;
+  --homepage-feature-surface: #202022;
+  --homepage-media-surface: #202022;
+  --homepage-border-color: rgba(255, 255, 255, 0.12);
+  --homepage-media-shadow: none;
+}
+
+.content > :last-child {
+  margin-bottom: 0;
+}
+
+.featureIntro {
+  margin: 3rem auto 0;
+  padding: 2rem 1rem 0;
+  text-align: center;
+}
+
+.featureIntro h2 {
+  margin: 0 auto;
+  max-width: 960px;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.featureIntro p {
+  margin: 1rem auto 0;
+  max-width: 720px;
+  color: var(--ifm-color-emphasis-800);
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+
+.faqSection {
+  max-width: 900px;
+  padding-bottom: 2rem;
+}
+
+@media screen and (max-width: 996px) {
+  .featureIntro {
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .featureIntro {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .featureIntro p {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,74 @@
+---
+title: "Godot Launcher 1.14: Project copies and terminal commands"
+description: Duplicate Godot projects, choose terminal commands for installed editors and organise your project list in Godot Launcher 1.14.
+subtitle: Make a project copy, bring existing projects together and choose which Godot version your terminal opens.
+version: 1.14.0
+slug: /godot-launcher-1-14-0-project-workflows
+date: 2026-11-04
+image: /img/blog/images/1.14.0/project-workflows.webp
+authors:
+  - mariodebono
+tags:
+  - godot
+  - godot-launcher
+  - godot-workflow
+  - release
+---
+
+import ThemedImage from '@theme/ThemedImage';
+
+Godot Launcher 1.14 adds project duplication, so you can use an existing project as the starting point for something new. This release also adds terminal commands for installed editors and bulk actions for managing your project list.
+
+<!-- truncate -->
+
+## Take a project in a new direction
+
+Duplicate a prototype for an experiment, or start another project from work you already have. You can copy its editor preferences and game save data along with the project files.
+
+<ThemedImage
+  className="blogThemedImage"
+  alt="Godot Launcher duplicate-project form with a new project name, destination and copy options"
+  decoding="async"
+  loading="lazy"
+  sources={{
+    light: '/img/blog/images/1.14.0/screen_projects_duplicate_project_copy_light.webp',
+    dark: '/img/blog/images/1.14.0/screen_projects_duplicate_project_copy_dark.webp',
+  }}
+/>
+
+You can also bring existing work into the launcher by scanning a folder or importing projects registered with Godot Project Manager. The [project guides](https://docs.godotlauncher.org/projects/manage-projects/) cover importing and duplication.
+
+## Choose which Godot your terminal opens
+
+If you keep different Godot versions for different projects, give each editor its own terminal command. Choose which version opens with `godot`, and use named commands for the others. The launcher can create them automatically when you install an editor.
+
+<ThemedImage
+  className="blogThemedImage"
+  alt="Installed editor command-line settings with a default Godot command and a named alias"
+  decoding="async"
+  loading="lazy"
+  sources={{
+    light: '/img/blog/images/1.14.0/screen_installs_command_line_settings_light.webp',
+    dark: '/img/blog/images/1.14.0/screen_installs_command_line_settings_dark.webp',
+  }}
+/>
+
+See [Use Godot from a terminal](https://docs.godotlauncher.org/getting-started/install-editor/#use-godot-from-a-terminal) to get started.
+
+## Manage a growing project list
+
+Change tags or pins for several projects at once. You can arrange the **Pinned**, **New** and **Recents** groups, and open pinned projects from the system tray.
+
+**Run project** starts a game's main scene directly from the launcher. Open the project in Godot first if it needs asset imports, a C# build or main-scene setup. You can also open a project's code editor on its own or alongside Godot.
+
+## A few worthwhile fixes
+
+The Light theme has been fixed, restoring its intended colours and flat controls. This release also improves Linux AppImage compatibility when launching Godot and external tools.
+
+## Extensions are coming
+
+Extensions are part of what's next for Godot Launcher. If you have ideas you'd like to discuss, [join us on Discord](https://discord.gg/Ju9jkFJGvz).
+
+## Try 1.14
+
+[Download Godot Launcher](/download/), or use the in-app updater where supported. The [release notes](https://docs.godotlauncher.org/release-notes/1.14.0/) have the full list of changes.
